@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学习主页 · CAD消防设计与考证知识库</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div class="crumb">个人知识库 / 学习主页</div>
+      <h1>CAD消防设计与考证 · 个人学习库</h1>
+      <div class="sub">纯本地运行的个人知识库：目录架构、笔记模板、进度追踪、工具速查一站整合。数据保存在本机浏览器，断网可完整使用。</div>
+    </div>
+
+    <!-- 学习状态总览 -->
+    <div class="grid-4" id="statRow">
+      <div class="stat accent">
+        <div class="k">技能树总掌握度</div>
+        <div class="v"><span id="stSkillPct">0</span><small> %</small></div>
+        <div class="tip" id="stSkillTip">0 / 0 个技能点</div>
+      </div>
+      <div class="stat">
+        <div class="k">实战测验正确率</div>
+        <div class="v" id="stQuizPct">—</div>
+        <div class="tip" id="stQuizTip">已完成 0 / 22 题</div>
+      </div>
+      <div class="stat">
+        <div class="k">错题本</div>
+        <div class="v" id="stMistakeCount">0</div>
+        <div class="tip" id="stMistakeTip">待复盘 0 题</div>
+      </div>
+      <div class="stat">
+        <div class="k" id="stExamName">一消倒计时</div>
+        <div class="v" id="stExamDays">—</div>
+        <div class="tip" id="stExamTip">在进度追踪页设置考试日期</div>
+      </div>
+    </div>
+
+    <!-- 知识库目录架构 -->
+    <div class="card" style="margin-top:18px;">
+      <h2>🗂️ 知识库目录架构 <span class="tag">个人专属</span></h2>
+      <p class="muted" style="margin-bottom:14px;">按「实战技能 → 考证辅导 → 实战工具」三条主线组织，一条主线一个区域，一个区域一个页面文件。</p>
+      <div class="tree">
+        <div class="node"><span class="ico">🧯</span><b>CAD消防设计与考证知识库</b><span class="desc">本知识库的根目录</span></div>
+        <div class="children">
+          <div class="node"><span class="ico">✒️</span><b>01 CAD实战技能</b><span class="desc">四级技能树：Lv.1入门 → Lv.2规范 → Lv.3专业 → Lv.4实战</span></div>
+          <div class="children">
+            <div class="node"><span class="ico">·</span>每级技能点均可勾选打卡，自动汇总掌握度</div>
+          </div>
+          <div class="node"><span class="ico">🎖️</span><b>02 考证辅导</b><span class="desc">消防设施操作员 / 一级消防工程师</span></div>
+          <div class="children">
+            <div class="node"><span class="ico">·</span>考试概览（科目、方式、成绩管理）、高频数字速记表与四阶段备考规划</div>
+          </div>
+          <div class="node"><span class="ico">🎯</span><b>实战测验</b><span class="desc">22 题内置高频考点题库，在线答题即时判分，错题一键进错题本</span></div>
+          <div class="node"><span class="ico">📝</span><b>03 笔记模板</b><span class="desc">三套可直接填写归档的个人模板</span></div>
+          <div class="children">
+            <div class="node"><span class="ico">·</span>CAD画图复盘与避坑记录</div>
+            <div class="node"><span class="ico">·</span>核心规范记忆与实操对应</div>
+            <div class="node"><span class="ico">·</span>考证刷题错题本（含状态流转）</div>
+          </div>
+          <div class="node"><span class="ico">📈</span><b>04 进度追踪</b><span class="desc">技能掌握度、考试倒计时、每周学习日志</span></div>
+          <div class="node"><span class="ico">🧰</span><b>05 实战工具箱</b><span class="desc">快捷键速查、核心规范索引、建站工具推荐</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区域导航 -->
+    <h2 style="font-size:17px;font-weight:700;margin:26px 0 14px;">进入各区域</h2>
+    <div class="zone-grid">
+      <a class="zone" href="CAD实战技能.html">
+        <div class="zico" style="background:var(--blue-soft);">✒️</div>
+        <div>
+          <h3><span class="num">01</span>CAD实战技能</h3>
+          <p>Lv.1–Lv.4 四级技能树，逐项勾选打卡，掌握度实时汇总。</p>
+          <div class="go">开始打卡 →</div>
+        </div>
+      </a>
+      <a class="zone" href="考证辅导.html">
+        <div class="zico" style="background:var(--red-soft);">🎖️</div>
+        <div>
+          <h3><span class="num">02</span>考证辅导</h3>
+          <p>消防设施操作员与一消的考试概览、高频数字速记表、四阶段备考规划。</p>
+          <div class="go">查看规划 →</div>
+        </div>
+      </a>
+      <a class="zone" href="实战测验.html">
+        <div class="zico" style="background:var(--blue-soft);">🎯</div>
+        <div>
+          <h3><span class="num">03</span>实战测验</h3>
+          <p>22 题内置高频考点题库，在线答题即时判分看解析，错题一键进错题本。</p>
+          <div class="go">开始答题 →</div>
+        </div>
+      </a>
+      <a class="zone" href="笔记模板.html">
+        <div class="zico" style="background:var(--green-soft);">📝</div>
+        <div>
+          <h3><span class="num">04</span>笔记模板</h3>
+          <p>CAD复盘避坑、规范实操对应、刷题错题本，填写即归档，可查可删。</p>
+          <div class="go">写一条笔记 →</div>
+        </div>
+      </a>
+      <a class="zone" href="进度追踪.html">
+        <div class="zico" style="background:var(--amber-soft);">📈</div>
+        <div>
+          <h3><span class="num">05</span>进度追踪</h3>
+          <p>总掌握度、考试倒计时、每周学习日志，数据可导出备份。</p>
+          <div class="go">记录本周 →</div>
+        </div>
+      </a>
+      <a class="zone" href="实战工具箱.html">
+        <div class="zico" style="background:var(--gray-soft);">🧰</div>
+        <div>
+          <h3><span class="num">06</span>实战工具箱</h3>
+          <p>CAD快捷键速查、消防图例符号、出图自查清单、规范索引、建站工具推荐。</p>
+          <div class="go">查工具 →</div>
+        </div>
+      </a>
+      <div class="zone" style="cursor:default;">
+        <div class="zico" style="background:var(--red-soft);">💾</div>
+        <div>
+          <h3><span class="num">备份</span>数据安全</h3>
+          <p>学习数据保存在本机浏览器。建议定期在「进度追踪」页导出 JSON 备份。</p>
+          <div class="go" style="color:var(--ink-3);">防换机、防清理数据丢失</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 使用建议 -->
+    <div class="card" style="margin-top:18px;">
+      <h2>💡 日常使用建议</h2>
+      <div class="note blue">
+        <b>每日节奏：</b>画图练习 30 分钟（按当前等级技能清单练）＋ 刷题 30 分钟（错题当天录入错题本）。<br>
+        <b>每周节奏：</b>周日在「进度追踪」记录本周时长与重点，勾选新掌握的技能点。<br>
+        <b>每次出图后：</b>在「笔记模板」花 5 分钟做一次复盘，避坑记录越积越值钱。<br>
+        <b>每月节奏：</b>导出一次 JSON 备份；对照规范索引，把本月新接触的条文补进「规范实操对应」笔记。
+      </div>
+    </div>
+
+    <div class="foot">CAD消防设计与考证个人学习库 · 纯本地运行，无任何外部请求</div>
+  </main>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+DB.load();
+renderNav('学习主页.html');
+
+// 状态总览
+(function () {
+  const st = skillStats();
+  document.getElementById('stSkillPct').textContent = st.pct;
+  document.getElementById('stSkillTip').textContent = st.done + ' / ' + st.total + ' 个技能点';
+
+  document.getElementById('stQuizTip').textContent =
+    '已完成 ' + (DB.data.quiz.answered || 0) + ' / ' + QUIZ_BANK.length + ' 题';
+  document.getElementById('stQuizPct').textContent = DB.data.quiz.answered
+    ? Math.round(DB.data.quiz.correct / DB.data.quiz.answered * 100) + '%' : '—';
+  document.getElementById('stMistakeCount').textContent = DB.data.mistakes.length;
+  const pending = DB.data.mistakes.filter(m => m.status === '未复盘').length;
+  document.getElementById('stMistakeTip').textContent = '待复盘 ' + pending + ' 题';
+
+  // 倒计时：优先展示较近的一场考试
+  const widgets = examWidgets();
+  const withDays = widgets
+    .map((w, i) => ({ w, d: daysUntil(w.dateStr), i }))
+    .filter(x => x.d !== null && x.d >= 0)
+    .sort((a, b) => a.d - b.d);
+  const first = withDays.length ? widgets[withDays[0].i] : widgets[0];
+  document.getElementById('stExamName').textContent = first.name + '倒计时';
+  document.getElementById('stExamDays').textContent = first.value;
+  document.getElementById('stExamTip').textContent = first.tip;
+})();
+</script>
+</body>
+</html>
