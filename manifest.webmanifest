@@ -1,0 +1,14 @@
+{
+  "name": "CAD消防设计与考证学习知识库",
+  "short_name": "CAD消防学习库",
+  "description": "个人学习知识库：CAD技能树、考证辅导、内置题库、笔记模板、进度追踪，离线可用。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f3f7",
+  "theme_color": "#c0322b",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

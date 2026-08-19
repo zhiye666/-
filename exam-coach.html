@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考证辅导 · CAD消防设计与考证知识库</title>
+<meta name="description" content="考证辅导：考试概览、高频数字速记表与备考规划。">
+<meta name="theme-color" content="#c0322b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div class="crumb"><a href="index.html">个人知识库</a> / 考证辅导</div>
+      <h1>🎖️ 考证辅导</h1>
+      <div class="sub">消防设施操作员 与 一级注册消防工程师 的考试概览、备考规划与高频考点。数字均标注条文出处，考前最后就背这一页。</div>
+    </div>
+
+    <!-- ============ 消防设施操作员 ============ -->
+    <div class="card">
+      <h2>🚒 消防设施操作员 <span class="tag">职业技能等级证书</span></h2>
+      <div class="grid-2" style="gap:14px;">
+        <div>
+          <h3 style="margin-top:0;">考试概览</h3>
+          <table>
+            <tbody>
+              <tr><th style="width:110px;">等级方向</th><td>初级 / 中级 / 高级；常见方向为<b>监控操作</b>与<b>维修保养</b></td></tr>
+              <tr><th>考试科目</th><td>① 理论知识（机考，200题，单选/多选/判断）<br>② 技能操作（实操考核）</td></tr>
+              <tr><th>合格标准</th><td>理论 60 分及格；实操按技能考核要求执行</td></tr>
+              <tr><th>组织方式</th><td>由各地消防行业职业技能鉴定站分批次组织，通过消防职业技能鉴定考试网报名</td></tr>
+              <tr><th>职业标准</th><td>《消防设施操作员国家职业标准（2026年版）》已颁布，2026年10月1日起施行</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0;">备考要点（理论）</h3>
+          <div class="note blue" style="margin-bottom:10px;">理论机考内容是"死的"：燃烧基础、建筑防火、电气消防、消防设施原理、法律法规。多刷题 + 记数字是性价比最高的路线。</div>
+          <div class="check-list" id="czChecklist"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 一级消防工程师 ============ -->
+    <div class="card">
+      <h2>📕 一级注册消防工程师 <span class="tag">全国统考</span></h2>
+      <h3 style="margin-top:0;">三个科目</h3>
+      <div class="grid-3" id="yxSubjects"></div>
+
+      <h3>合格与成绩管理</h3>
+      <table>
+        <tbody>
+          <tr><th style="width:150px;">合格标准</th><td>各科满分 120 分，合格线为满分的 60%（即 72 分），全国统一执行</td></tr>
+          <tr><th>成绩管理</th><td>考全科：连续 <b>3 个考试年度</b>内通过全部 3 科；免试一科人员：连续 <b>2 年</b>内通过剩余 2 科</td></tr>
+          <tr><th>考试时间</th><td>近年一般安排在 11 月上旬（如 2026 年度为 11 月 7—8 日），具体以当年中国人事考试网及各地考务通知为准</td></tr>
+          <tr><th>报名渠道</th><td>中国人事考试网（报名、缴费、成绩查询）</td></tr>
+        </tbody>
+      </table>
+
+      <h3>学习顺序建议</h3>
+      <div class="note green">
+        <b>技术实务 → 综合能力 → 案例分析。</b>实务是地基（先理解原理），综合是应用（结合规范细节与实操），案例是输出（后期集中突破）。
+        若备考周期超过一年，建议第一年主攻「实务 + 综合」，第二年专攻「案例」，利用好 3 年滚动期。
+      </div>
+    </div>
+
+    <!-- ============ 高频数字速记 ============ -->
+    <div class="card">
+      <h2>🔢 高频数字速记表 <span class="tag">考点密集区</span></h2>
+      <p class="muted" style="margin-bottom:12px;">考证和画图都绕不开的数字，全部标注条文出处。记忆方法：按组记、编口诀、用「实战测验」反复检验。</p>
+      <div id="keyNumbers"></div>
+      <div class="note amber" style="margin-top:12px;">
+        📌 规范会不定期修订，条文编号以现行版本为准。本页数字依据 2026 年 8 月核实的现行规范整理，用于备考记忆，正式场合请核对规范原文。
+      </div>
+    </div>
+
+    <!-- ============ 四阶段备考规划 ============ -->
+    <div class="card">
+      <h2>🗺️ 通用四阶段备考规划 <span class="tag">适用于两证</span></h2>
+      <table>
+        <thead>
+          <tr><th style="width:120px;">阶段</th><th style="width:120px;">建议时长</th><th>做什么</th><th>完成标志</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>① 基础阶段</b></td><td>总周期 40%</td>
+            <td>通读教材/讲义，建立知识框架；CAD 侧同步练 Lv.1–Lv.2 技能点</td>
+            <td>能画出每章的思维导图</td>
+          </tr>
+          <tr>
+            <td><b>② 强化阶段</b></td><td>总周期 30%</td>
+            <td>分模块刷题 + 规范条文对照实操；错题全部录入错题本；「实战测验」每周至少一轮</td>
+            <td>分模块正确率 ≥ 75%</td>
+          </tr>
+          <tr>
+            <td><b>③ 冲刺阶段</b></td><td>总周期 20%</td>
+            <td>成套模拟卷限时训练；二刷错题本「未复盘 + 已复盘未掌握」</td>
+            <td>模拟卷稳定过合格线</td>
+          </tr>
+          <tr>
+            <td><b>④ 考前一周</b></td><td>最后一周</td>
+            <td>只过错题本与本页高频数字表；调整作息，模拟真实考试时段</td>
+            <td>错题本清零，心态平稳</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note amber" style="margin-top:12px;">
+        ⏰ 在「<a href="progress.html" style="text-decoration:underline;">进度追踪</a>」页设置考试日期后，倒计时会自动显示在主页与进度页。
+      </div>
+    </div>
+
+    <!-- ============ 信息核实提醒 ============ -->
+    <div class="note">
+      📌 本页考务信息依据近年公开考务通知整理（截至 2026 年 8 月）。报考条件、考试批次、收费标准等每年可能调整，
+      报名前务必核对官方最新通知：一消看<b>中国人事考试网</b>与本省人事考试机构通知；操作员看<b>消防职业技能鉴定考试网</b>及本省鉴定站公告。
+    </div>
+
+    <div class="foot">考证辅导 · 数据保存在本机浏览器</div>
+  </main>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+DB.load();
+renderNav('exam-coach.html');
+
+// 一消三科
+document.getElementById('yxSubjects').innerHTML = YIXIAO_SUBJECTS.map((s, i) => `
+  <div class="card" style="margin:0;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <span class="lv lv4" style="min-width:auto;">科目${i + 1}</span>
+      <b style="font-size:14px;">${esc(s.name)}</b>
+    </div>
+    <div class="small" style="margin-bottom:6px;">题型：${esc(s.type)}</div>
+    <div class="muted" style="font-size:13px;">${esc(s.desc)}</div>
+    <div class="note blue" style="margin-top:10px;font-size:12.5px;padding:8px 12px;">策略：${esc(s.focus)}</div>
+  </div>`).join('');
+
+// 高频数字速记
+document.getElementById('keyNumbers').innerHTML = KEY_NUMBERS.map(g => `
+  <h3 style="margin-top:16px;">${esc(g.group)}</h3>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead><tr><th style="width:42%;">参数项</th><th>数值 / 要求</th><th style="width:22%;">出处</th></tr></thead>
+    <tbody>
+      ${g.items.map(r => `<tr><td>${esc(r[0])}</td><td><b>${esc(r[1])}</b></td><td class="small">${esc(r[2])}</td></tr>`).join('')}
+    </tbody>
+  </table>
+  </div>`).join('');
+
+// 消操理论备考清单（勾选保存）
+const CZ_ITEMS = [
+  '燃烧基础与火灾分类（燃烧条件、火灾类型）',
+  '建筑防火基本常识（防火分区、疏散概念）',
+  '电气消防基础（火灾报警、应急照明概念）',
+  '消防设施原理：消火栓 / 喷淋 / 报警 / 防排烟',
+  '法律法规与职业道德（高频送分题）',
+  '高频数字专项：本页速记表全部过一遍',
+  '近 3 年理论真题至少完整刷 2 遍',
+  '实操口述训练：会边操作边讲出要点',
+];
+const czBox = document.getElementById('czChecklist');
+function renderCz() {
+  czBox.innerHTML = CZ_ITEMS.map((it, i) => {
+    const checked = DB.data.skills['cz|' + i] ? ' checked' : '';
+    return `<label class="check-item${checked ? ' done' : ''}">
+      <input type="checkbox" data-i="${i}"${checked}><span class="t">${esc(it)}</span>
+    </label>`;
+  }).join('');
+  czBox.querySelectorAll('input').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked) DB.data.skills['cz|' + cb.dataset.i] = true;
+      else delete DB.data.skills['cz|' + cb.dataset.i];
+      cb.closest('.check-item').classList.toggle('done', cb.checked);
+      DB.save();
+    });
+  });
+}
+renderCz();
+</script>
+</body>
+</html>

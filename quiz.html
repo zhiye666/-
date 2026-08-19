@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实战测验 · CAD消防设计与考证知识库</title>
+<meta name="description" content="实战测验：内置高频考点题库，即时判分。">
+<meta name="theme-color" content="#c0322b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div class="crumb"><a href="index.html">个人知识库</a> / 实战测验</div>
+      <div class="head-line">
+        <div>
+          <h1>🎯 实战测验</h1>
+          <div class="sub">内置 36 题高频考点题库（每题标注规范出处）：点击选项即时判分、显示解析；答错的题可一键加入错题本，与「笔记模板」页的错题系统互通。</div>
+        </div>
+        <button class="btn ghost" id="btnResetQuiz">重新开始</button>
+      </div>
+    </div>
+
+    <!-- 测验状态 -->
+    <div class="card" style="padding:16px 20px;">
+      <div class="quiz-progress">
+        <span id="quizStat">已完成 0 / 36</span>
+        <div class="bar green"><i id="quizBar" style="width:0%"></i></div>
+        <span class="pct" id="quizPct">—</span>
+      </div>
+      <div class="filter-group" id="catFilter"></div>
+      <div class="small" style="margin-top:10px;">题库依据现行规范条文与公开考务信息整理（2026 年 8 月核实），规范修订后请以现行文本为准。</div>
+    </div>
+
+    <!-- 题目区 -->
+    <div id="quizArea" style="margin-top:16px;display:flex;flex-direction:column;gap:14px;"></div>
+
+    <div class="foot">答题记录保存在本机浏览器 · 点「重新开始」清空本轮作答</div>
+  </main>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+DB.load();
+renderNav('quiz.html');
+
+const LETTERS = ['A', 'B', 'C', 'D'];
+const quizArea = document.getElementById('quizArea');
+let catFilter = '全部';
+
+/* 会话状态持久化 */
+if (!DB.data.quiz.session) DB.data.quiz.session = {};
+
+const CATS = ['全部'].concat([...new Set(QUIZ_BANK.map(q => q.cat))]);
+const catBox = document.getElementById('catFilter');
+catBox.innerHTML = CATS.map(c =>
+  `<button class="filter-btn${c === '全部' ? ' active' : ''}" data-cat="${c}">${c}</button>`).join('');
+catBox.querySelectorAll('.filter-btn').forEach(b => {
+  b.onclick = () => {
+    catBox.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    catFilter = b.dataset.cat;
+    renderQuiz();
+  };
+});
+
+function updateStat() {
+  const answered = Object.keys(DB.data.quiz.session).length;
+  const correct = Object.values(DB.data.quiz.session).filter(s => s.correct).length;
+  document.getElementById('quizStat').textContent =
+    `已完成 ${answered} / ${QUIZ_BANK.length} · 答对 ${correct}`;
+  const pct = QUIZ_BANK.length ? Math.round(answered / QUIZ_BANK.length * 100) : 0;
+  document.getElementById('quizBar').style.width = pct + '%';
+  document.getElementById('quizPct').textContent =
+    answered ? `正确率 ${Math.round(correct / answered * 100)}%` : '—';
+  DB.data.quiz.answered = answered;
+  DB.data.quiz.correct = correct;
+}
+
+function renderQuiz() {
+  const list = QUIZ_BANK
+    .map((q, i) => ({ q, gi: i }))
+    .filter(x => catFilter === '全部' || x.q.cat === catFilter);
+
+  quizArea.innerHTML = list.map(({ q, gi }) => {
+    const s = DB.data.quiz.session[gi]; // {pick, correct, added}
+    const answered = !!s;
+    const opts = q.opts.map((o, oi) => {
+      let cls = 'opt-btn';
+      if (answered) {
+        cls += ' locked';
+        if (oi === q.a) cls += ' right';
+        else if (oi === s.pick) cls += ' wrong';
+        else cls += ' dim';
+      }
+      return `<button class="${cls}" data-gi="${gi}" data-oi="${oi}">
+        <span class="opt-key">${LETTERS[oi]}</span><span>${esc(o)}</span>
+      </button>`;
+    }).join('');
+    const expHtml = answered ? `
+      <div class="exp-box">
+        <div class="note ${s.correct ? 'green' : 'red'}">
+          ${s.correct ? '✓ 回答正确。' : '✗ 回答错误，正确答案是 ' + LETTERS[q.a] + '。'} ${esc(q.exp)}
+        </div>
+        ${!s.correct ? `<div style="margin-top:8px;"><button class="btn small green" data-add-mk="${gi}"${s.added ? ' disabled' : ''}>${s.added ? '已加入错题本' : '加入错题本'}</button></div>` : ''}
+      </div>` : '';
+    return `
+    <div class="quiz-q">
+      <div class="q-head">
+        <span class="chip red">${esc(q.cat)}</span>
+        <span class="small">第 ${gi + 1} 题</span>
+        ${answered ? `<span class="chip ${s.correct ? 'green' : 'amber'}">${s.correct ? '答对' : '答错'}</span>` : ''}
+      </div>
+      <div class="q-text">${esc(q.q)}</div>
+      <div class="opt-grid">${opts}</div>
+      ${expHtml}
+    </div>`;
+  }).join('');
+
+  // 选项点击
+  quizArea.querySelectorAll('.opt-btn').forEach(btn => {
+    btn.onclick = () => {
+      const gi = Number(btn.dataset.gi);
+      if (DB.data.quiz.session[gi]) return;
+      const pick = Number(btn.dataset.oi);
+      const correct = pick === QUIZ_BANK[gi].a;
+      DB.data.quiz.session[gi] = { pick, correct, added: false };
+      DB.save();
+      renderQuiz();
+      updateStat();
+    };
+  });
+
+  // 加入错题本
+  quizArea.querySelectorAll('[data-add-mk]').forEach(btn => {
+    btn.onclick = () => {
+      const gi = Number(btn.dataset.addMk);
+      const q = QUIZ_BANK[gi];
+      const s = DB.data.quiz.session[gi];
+      if (s.added) return;
+      DB.data.mistakes.push({
+        id: uid(), date: fmtDate(new Date().toISOString()),
+        subject: '规范专项（实战测验）',
+        source: '实战测验 第 ' + (gi + 1) + ' 题',
+        question: q.q,
+        my: LETTERS[s.pick], right: LETTERS[q.a],
+        why: '在线测验答错',
+        note: q.exp, status: '未复盘'
+      });
+      s.added = true;
+      DB.save();
+      renderQuiz();
+      toast('已加入错题本，可在「笔记模板」页复盘');
+    };
+  });
+}
+
+document.getElementById('btnResetQuiz').onclick = () => {
+  if (!confirm('清空本轮全部作答记录，重新开始？')) return;
+  DB.data.quiz.session = {};
+  DB.save();
+  renderQuiz();
+  updateStat();
+  toast('已重置，开始新一轮测验');
+};
+
+renderQuiz();
+updateStat();
+</script>
+</body>
+</html>
