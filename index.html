@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消防学习中心 · 从零基础到精通的游戏化学习平台</title>
+<meta name="description" content="消防学习中心：12大板块系统学习，游戏化关卡路径，规范速查、在线题库、工程计算器、CAD制图指南，从零基础到精通。">
+<link rel="stylesheet" href="assets/fire.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ========== Hero ========== -->
+  <section class="hero reveal">
+    <h1><span class="hero-fire">🔥</span> 消防学习中心</h1>
+    <p>从零基础到精通的游戏化消防学习平台。12大知识板块、5个学习阶段、10级成长体系——像玩游戏一样学消防，每一步都有收获。</p>
+    <div class="hero-actions">
+      <a href="#quest-map" class="btn btn-primary">🗺️ 开始学习之旅</a>
+      <a href="basic-theory.html" class="btn btn-outline">🚀 直接进入第一课</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>12</b><span>知识板块</span></div>
+      <div class="hero-stat"><b>5</b><span>学习阶段</span></div>
+      <div class="hero-stat"><b>10</b><span>等级体系</span></div>
+      <div class="hero-stat"><b>4</b><span>工程计算器</span></div>
+    </div>
+  </section>
+
+  <!-- ========== 学习状态 ========== -->
+  <section class="card reveal" id="dashboard">
+    <h2>📊 我的学习状态</h2>
+    <div class="dash-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:20px;">
+      <div class="dash-card" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--side);border-radius:var(--radius);">
+        <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#e09612);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🏅</div>
+        <div>
+          <b id="homeLevel" style="font-size:20px;font-weight:800;display:block;">Lv.1</b>
+          <span class="muted" style="font-size:12px;">当前等级</span>
+        </div>
+      </div>
+      <div class="dash-card" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--side);border-radius:var(--radius);">
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(200,16,46,.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">⚡</div>
+        <div>
+          <b id="homeXP" style="font-size:20px;font-weight:800;display:block;">0</b>
+          <span class="muted" style="font-size:12px;">经验值 XP</span>
+        </div>
+      </div>
+      <div class="dash-card" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--side);border-radius:var(--radius);">
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(245,166,35,.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🔥</div>
+        <div>
+          <b id="homeStreak" style="font-size:20px;font-weight:800;display:block;">1天</b>
+          <span class="muted" style="font-size:12px;">连续学习</span>
+        </div>
+      </div>
+      <div class="dash-card" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--side);border-radius:var(--radius);">
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(34,160,107,.1);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">✅</div>
+        <div>
+          <b data-total-progress style="font-size:20px;font-weight:800;display:block;">0%</b>
+          <span class="muted" style="font-size:12px;">总进度</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 游戏化关卡地图 ========== -->
+  <section class="card reveal" id="quest-map">
+    <h2>🗺️ 学习关卡地图 <span class="tag">从零基础到精通</span></h2>
+    <p class="muted" style="margin-bottom:8px;">12 个关卡对应 12 大知识板块，状态随你的真实学习进度自动点亮：绿色已通关、红色进行中。所有关卡都可自由进入，随时想学哪关学哪关。</p>
+    <div class="qm-legend">
+      <span class="qm-lg"><i class="qm-dot done"></i>已通关</span>
+      <span class="qm-lg"><i class="qm-dot current"></i>进行中</span>
+      <span class="qm-lg"><i class="qm-dot todo"></i>未开始</span>
+    </div>
+    <div class="qm-wrap">
+      <div class="qm-grid" id="questMap"><!-- 由 fire.js 动态渲染 --></div>
+    </div>
+  </section>
+
+  <!-- ========== 学习目录 ========== -->
+  <section class="card reveal" id="catalog">
+    <h2>📑 学习目录 <span class="tag blue">12大板块</span></h2>
+    <p class="muted" style="margin-bottom:16px;">按知识体系分类，点击任意板块直接进入学习。每个板块内含子分类导航和交互练习。</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+      <div style="padding:16px;background:var(--side);border-radius:var(--radius);">
+        <h4 style="font-size:13px;color:var(--red);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">📖 知识体系</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <a href="basic-theory.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">📚 基础理论</a>
+          <a href="regulations.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">⚖️ 法规标准</a>
+          <a href="building-fire.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🏢 建筑防火</a>
+          <a href="fire-systems.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">💧 消防系统</a>
+          <a href="equipment.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🧯 器材装备</a>
+        </div>
+      </div>
+      <div style="padding:16px;background:var(--side);border-radius:var(--radius);">
+        <h4 style="font-size:13px;color:var(--blue);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">🔧 实战应用</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <a href="cad-engineering.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">✒️ 工程与CAD</a>
+          <a href="safety-mgmt.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🛡️ 安全管理</a>
+          <a href="escape.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🏃 科普逃生</a>
+          <a href="special-fire.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">⚗️ 特殊消防</a>
+          <a href="smart-fire.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🤖 智慧消防</a>
+        </div>
+      </div>
+      <div style="padding:16px;background:var(--side);border-radius:var(--radius);">
+        <h4 style="font-size:13px;color:var(--green);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">🎯 考试提升</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <a href="cases.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🔍 案例调查</a>
+          <a href="certification.html" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🎖️ 考试认证</a>
+        </div>
+        <h4 style="font-size:13px;color:var(--gold);font-weight:700;margin:14px 0 10px;text-transform:uppercase;letter-spacing:1px;">⚡ 快捷工具</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <a href="building-fire.html#calc-evacuation" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🚪 疏散宽度计算</a>
+          <a href="equipment.html#calc-extinguisher" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">🧯 灭火器配置</a>
+          <a href="fire-systems.html#calc-watertank" style="font-size:13.5px;color:var(--ink-2);padding:6px 0;display:flex;align-items:center;gap:8px;">💧 消防水池</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 成就墙 ========== -->
+  <section class="card reveal" id="achievements">
+    <h2>🏆 成就徽章 <span class="tag amber">解锁成就获取XP</span></h2>
+    <p class="muted" style="margin-bottom:16px;">学习过程中自动解锁成就，每个成就奖励15经验值。</p>
+    <div class="achievement-grid" id="achievementGrid"></div>
+  </section>
+
+  <!-- ========== 快速入口 ========== -->
+  <section style="margin-top:4px;" class="reveal">
+    <div class="stat-row">
+      <a href="regulations.html" class="stat-box" style="text-decoration:none;cursor:pointer;transition:all .2s;">
+        <b style="font-size:24px;">📖</b><span>规范速查</span>
+      </a>
+      <a href="certification.html#sec-quiz" class="stat-box" style="text-decoration:none;cursor:pointer;transition:all .2s;">
+        <b style="font-size:24px;">🎯</b><span>在线题库</span>
+      </a>
+      <a href="cad-engineering.html" class="stat-box" style="text-decoration:none;cursor:pointer;transition:all .2s;">
+        <b style="font-size:24px;">✒️</b><span>CAD制图</span>
+      </a>
+      <a href="escape.html" class="stat-box" style="text-decoration:none;cursor:pointer;transition:all .2s;">
+        <b style="font-size:24px;">🏃</b><span>逃生指南</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="card reveal" style="margin-top:20px;" id="daily-challenge">
+    <h2>🎯 每日一题</h2>
+    <p>每天一道消防知识题，坚持打卡积累经验值！</p>
+    <div data-daily-q></div>
+  </section>
+
+  <div class="note red" style="margin-top:20px;">
+    ⚠️ <b>免责声明：</b>本平台内容仅供学习参考，规范条文可能随版本更新而变化，实际工程设计、消防验收和考试备考请以<b>现行规范正式出版物</b>及官方最新公告为准。
+  </div>
+</div>
+
+<script src="assets/fire.js"></script>
+</body>
+</html>

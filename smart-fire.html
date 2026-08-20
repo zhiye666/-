@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智慧消防 · 物联网与AI技术应用 · 消防学习中心</title>
+<meta name="description" content="智慧消防技术全解：物联网感知、AI视频识别、远程监控、智慧用电、应急指挥，四层架构、五大应用场景与未来趋势，配合随堂测验和学习笔记。">
+<link rel="stylesheet" href="assets/fire.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== 页面头部 ========== -->
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">首页</a> / 知识体系 / 智慧消防</div>
+    <h1><span class="ph-ico">🤖</span>智慧消防技术与应用</h1>
+    <p class="sub">物联网、人工智能、大数据、云计算——新一代信息技术与消防业务深度融合，构建"预防为主、防消结合"的智能化消防安全体系。</p>
+  </div>
+
+  <!-- ========== 关键数字 ========== -->
+  <div class="stat-row reveal">
+    <div class="stat-box"><b>5大</b><span>核心技术</span></div>
+    <div class="stat-box"><b>7×24</b><span>小时监控</span></div>
+    <div class="stat-box"><b>30秒</b><span>预警响应</span></div>
+    <div class="stat-box"><b>95%</b><span>预警准确率</span></div>
+  </div>
+
+  <!-- ========== 主体布局：侧边栏 + 内容 ========== -->
+  <div class="doc-layout">
+    <aside class="doc-sidebar reveal">
+      <div class="ds-title">📂 本页分类</div>
+      <ul class="ds-nav">
+        <li><a href="#" class="active" data-sidebar-tab="core"><span class="ds-num">1</span>概念架构</a></li>
+        <li><a href="#" data-sidebar-tab="tech"><span class="ds-num">2</span>核心技术</a></li>
+        <li><a href="#" data-sidebar-tab="apps"><span class="ds-num">3</span>应用展望</a></li>
+        <li><a href="#" data-sidebar-tab="practice"><span class="ds-num">4</span>练习笔记</a></li>
+      </ul>
+      <div class="ds-progress">
+        <div class="dsp-label"><span>学习进度</span><span data-sidebar-progress>0%</span></div>
+        <div class="dsp-bar"><div class="dsp-fill" data-sidebar-fill style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main class="doc-content">
+      <div class="sub-tabs" data-sub-tabs="smart">
+        <button class="sub-tab active" data-sub-target="core">💡 概念架构</button>
+        <button class="sub-tab" data-sub-target="tech">📡 核心技术</button>
+        <button class="sub-tab" data-sub-target="apps">🏙️ 应用展望</button>
+        <button class="sub-tab" data-sub-target="practice">🎯 练习笔记</button>
+      </div>
+
+      <!-- ===== 概念架构 ===== -->
+      <div class="sub-panel active" data-sub-panel="smart" data-sub-name="core">
+
+  <!-- ========== 概念与对比 ========== -->
+  <div class="card reveal" id="concept">
+    <h2>💡 智慧消防概念</h2>
+
+    <div class="def-box">
+      <div class="def-term">智慧消防（Smart Fire Protection）</div>
+      <div class="def-text">智慧消防是指综合运用物联网、云计算、大数据、人工智能、移动互联网等新一代信息技术，通过对火灾风险的实时感知、智能分析、精准预警和科学处置，实现消防安全管理从"被动应对"向"主动预防"转变、从"经验判断"向"数据驱动"转变的智能化消防安全管理模式。</div>
+    </div>
+
+    <h3>核心理念</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🛡️</span>
+        <h4>预防为主</h4>
+        <p>通过全天候实时监测和智能预警，将火灾隐患消灭在萌芽状态，实现从"消"到"防"的转变。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🤝</span>
+        <h4>防消结合</h4>
+        <p>防火管理与灭火救援信息互通、数据共享，形成"防"与"消"的闭环管理和协同联动。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚀</span>
+        <h4>科技赋能</h4>
+        <p>以物联网、AI、大数据等技术手段提升消防安全管理的精细化、智能化和科学化水平。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:24px;">智慧消防 vs 传统消防</h3>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h4>🏢 传统消防</h4>
+        <ul>
+          <li>依赖人工巡查，检查频次有限</li>
+          <li>发现隐患滞后，被动接警处置</li>
+          <li>信息孤岛，各系统互不联通</li>
+          <li>经验驱动，决策依赖个人能力</li>
+          <li>纸质档案，数据分散难追溯</li>
+          <li>设备故障难以及时发现</li>
+          <li>应急指挥信息不对称</li>
+          <li>管理模式粗放，覆盖面有限</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>🤖 智慧消防</h4>
+        <ul>
+          <li>7×24小时自动监测，实时感知</li>
+          <li>智能预警，将隐患消灭于萌芽</li>
+          <li>万物互联，数据汇聚统一平台</li>
+          <li>数据驱动，AI辅助科学决策</li>
+          <li>数字档案，全生命周期可追溯</li>
+          <li>设备状态实时监控，故障自动报警</li>
+          <li>GIS一张图，透明化指挥调度</li>
+          <li>精细化管理，覆盖全社会单位</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 系统架构 ========== -->
+  <div class="card reveal" id="architecture">
+    <h2>🏗️ 智慧消防四层架构</h2>
+    <p>智慧消防系统自下而上分为感知层、网络层、平台层和应用层，各层协同工作，构成完整的技术体系。点击节点查看详情。</p>
+
+    <div data-system-flow>
+      <div class="system-flow">
+        <div class="sf-node" data-title="感知层" data-desc="通过各类传感器、探测器、摄像头等终端设备，实时采集烟雾、温度、水压、电气参数、视频图像等消防安全相关数据。" data-detail="主要设备包括：独立式感烟探测器、感温探测器、水压传感器、水位传感器、电气火灾监控探测器、可燃气体探测器、AI视频摄像头、消火栓智能终端等。">
+          <span class="sn-icon">📡</span>
+          <div class="sn-label">感知层</div>
+          <div class="sn-sub">数据采集</div>
+        </div>
+        <div class="sf-arrow">→</div>
+        <div class="sf-node" data-title="网络层" data-desc="通过NB-IoT、LoRa、4G/5G、WiFi、有线网络等通信方式，将感知层采集的数据安全、稳定地传输到云平台。" data-detail="低功耗广域网（NB-IoT/LoRa）适合低速率、大连接的传感器；5G适合高清视频和实时控制；有线网络适合固定站点的高可靠传输。">
+          <span class="sn-icon">🌐</span>
+          <div class="sn-label">网络层</div>
+          <div class="sn-sub">数据传输</div>
+        </div>
+        <div class="sf-arrow">→</div>
+        <div class="sf-node" data-title="平台层" data-desc="基于云计算和大数据技术，对海量消防数据进行存储、处理、分析和挖掘，提供设备管理、数据引擎、AI算法等基础能力。" data-detail="平台层包括：设备接入管理、实时数据库、时序数据库、AI算法引擎、规则引擎、GIS服务、消息推送、开放API等核心服务。">
+          <span class="sn-icon">☁️</span>
+          <div class="sn-label">平台层</div>
+          <div class="sn-sub">数据处理</div>
+        </div>
+        <div class="sf-arrow">→</div>
+        <div class="sf-node" data-title="应用层" data-desc="面向不同用户提供具体应用功能，包括消防监控、预警管理、隐患排查、应急指挥、数据分析、政务监管等业务系统。" data-detail="面向用户：政府消防监管部门、企事业单位、消防技术服务机构、社区物业、社会公众。多端覆盖：PC端管理平台、移动端APP、微信小程序、指挥大屏。">
+          <span class="sn-icon">📱</span>
+          <div class="sn-label">应用层</div>
+          <div class="sn-sub">业务服务</div>
+        </div>
+      </div>
+      <div class="sf-info" style="margin-top:16px;"></div>
+    </div>
+  </div>
+
+      </div><!-- /core panel -->
+
+      <!-- ===== 核心技术 ===== -->
+      <div class="sub-panel" data-sub-panel="smart" data-sub-name="tech">
+
+  <!-- ========== 物联网消防 ========== -->
+  <div class="card reveal" id="iot">
+    <h2>📶 物联网消防感知</h2>
+    <p>物联网（IoT）是智慧消防的"神经系统"，通过部署在建筑各处的智能传感器，实现消防安全数据的自动采集和实时上传。</p>
+
+    <h3>数据流转过程</h3>
+    <div class="roadmap">
+      <div class="rm-step done">
+        <div class="rm-dot">1</div>
+        <div class="rm-content">
+          <h4>数据采集</h4>
+          <p>烟感、温感、水压、电气等传感器实时监测环境参数和设备状态</p>
+        </div>
+      </div>
+      <div class="rm-step done">
+        <div class="rm-dot">2</div>
+        <div class="rm-content">
+          <h4>数据传输</h4>
+          <p>通过NB-IoT/LoRa/5G等无线网络将数据上传至云平台</p>
+        </div>
+      </div>
+      <div class="rm-step current">
+        <div class="rm-dot">3</div>
+        <div class="rm-content">
+          <h4>云平台分析</h4>
+          <p>平台对数据进行存储、比对、分析，触发报警规则和智能研判</p>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">4</div>
+        <div class="rm-content">
+          <h4>预警处置</h4>
+          <p>通过APP、短信、电话等方式推送警情，联动人员核查和处置</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:24px;">传感器类型</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">💨</span>
+        <h4>感烟探测器</h4>
+        <p>检测烟雾浓度，火灾早期阴燃阶段即可报警。独立式智能烟感可无线联网，适合老旧小区、"九小场所"。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🌡️</span>
+        <h4>感温探测器</h4>
+        <p>监测环境温度或温升速率，适用于厨房、车库、粉尘场所等不宜使用感烟探测器的位置。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">💧</span>
+        <h4>水压传感器</h4>
+        <p>实时监测消火栓、喷淋管网的水压，发现水压不足或管网漏水，确保消防供水可靠。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🏊</span>
+        <h4>水位传感器</h4>
+        <p>监测消防水池、高位水箱的水位，防止水位过低影响灭火用水，自动提醒补水。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">⚡</span>
+        <h4>电气火灾监控</h4>
+        <p>监测剩余电流、线缆温度、故障电弧等电气参数，提前发现电气火灾隐患。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🔥</span>
+        <h4>可燃气体探测器</h4>
+        <p>监测天然气、液化石油气等可燃气体浓度，达到爆炸下限前报警并可联动切断阀门。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== AI视频识别 ========== -->
+  <div class="card reveal" id="ai">
+    <h2>👁️ AI视频智能识别</h2>
+    <p>基于深度学习的计算机视觉技术，利用已有的视频监控摄像头实现火灾和消防安全隐患的自动识别，让普通摄像头成为"智能安全员"。</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🔥</span>
+        <h4>火焰识别</h4>
+        <p>实时识别视频画面中的火焰特征，秒级报警。相比传统感烟探测器，可在火焰出现初期即发现，尤其适合高大空间和室外场所。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">☁️</span>
+        <h4>烟雾识别</h4>
+        <p>通过分析烟雾的颜色、纹理、运动扩散特征识别早期烟雾，在阴燃阶段即发出预警，为人员疏散争取时间。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚧</span>
+        <h4>通道占用识别</h4>
+        <p>自动识别疏散通道、安全出口被堵塞、占用或锁闭的情况，及时通知管理人员整改，保障"生命通道"畅通。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🧯</span>
+        <h4>消防设施异常识别</h4>
+        <p>识别灭火器缺失、防火门未关闭、消火栓被遮挡、消防车道被占用等异常状态，实现消防设施可视化管理。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px;">技术原理</h3>
+    <div class="note blue">
+      <b>🔬 技术路径：</b>AI视频识别采用深度卷积神经网络（CNN），通过数十万张火焰、烟雾和各类消防安全隐患图像训练模型，使其具备自动特征提取和分类识别能力。前端摄像机内置AI芯片可实现边缘计算（本地识别、即时报警），也可将视频流传至云端进行集中分析。系统识别到异常后，自动截取图像/短视频并推送报警信息，经人工核实后联动处置。
+    </div>
+  </div>
+
+  <!-- ========== 远程监控 ========== -->
+  <div class="card reveal" id="remote">
+    <h2>🖥️ 消防远程监控</h2>
+    <p>消防远程监控系统通过物联网技术将建筑消防设施的运行状态实时传输到监控中心，实现消防设施"无人值守、有警必知"。</p>
+
+    <div class="info-card-grid">
+      <div class="info-card">
+        <div class="ic-icon">🎛️</div>
+        <h4>消防控制室远程监控</h4>
+        <p>远程监测火灾报警控制器的开机、故障、报警等状态，实时获取火警信息，确保控制室24小时有人值守。</p>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">🔔</div>
+        <h4>消防设施状态监测</h4>
+        <p>监测喷淋泵、消火栓泵、防排烟风机、防火卷帘等消防设备的运行状态，故障自动告警。</p>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">💧</div>
+        <h4>水压水位监测</h4>
+        <p>实时采集消火栓管网压力和消防水池/水箱水位数据，水压不足或水位过低时自动报警。</p>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">⚡</div>
+        <h4>电气火灾监控</h4>
+        <p>在线监测配电线路的剩余电流、线缆温度等参数，发现电气异常及时预警，预防电气火灾。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 智慧用电 ========== -->
+  <div class="card reveal" id="electric">
+    <h2>⚡ 智慧用电安全管理</h2>
+    <p>电气原因占火灾总数的40%以上，是火灾防控的重中之重。智慧用电安全管理系统通过实时监测电气线路参数，从源头上预防电气火灾。</p>
+
+    <h3>电气火灾监控系统三大监测参数</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🔌</span>
+        <h4>剩余电流监测</h4>
+        <p>实时检测线路中的剩余电流（漏电电流）。当剩余电流超过设定阈值时报警，可发现线路绝缘老化、破损等隐患。</p>
+        <div class="bar-row" style="margin-top:8px;">
+          <div class="bar-label"><span>报警阈值</span><span>300~500mA</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:50%;"></div></div>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🌡️</span>
+        <h4>线缆温度监测</h4>
+        <p>在配电柜、接头、关键线路节点安装温度传感器，实时监测线缆温度，发现过载、接触不良等导致的异常升温。</p>
+        <div class="bar-row" style="margin-top:8px;">
+          <div class="bar-label"><span>报警温度</span><span>≥70℃</span></div>
+          <div class="bar-track"><div class="bar-fill amber" style="width:70%;"></div></div>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="f-ico">⚡</span>
+        <h4>故障电弧探测</h4>
+        <p>检测线路中的故障电弧（电火花），这是传统断路器无法发现的隐患。故障电弧温度可达数千摄氏度，极易引燃周边可燃物。</p>
+        <div class="bar-row" style="margin-top:8px;">
+          <div class="bar-label"><span>响应时间</span><span>≤1秒</span></div>
+          <div class="bar-track"><div class="bar-fill green" style="width:95%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px;">工作原理与安装要求</h3>
+    <div class="howto">
+      <div class="howto-step">
+        <div class="hs-num">1</div>
+        <div class="hs-body">
+          <h4>探测器安装</h4>
+          <p>在配电柜进线端或重要出线回路安装剩余电流互感器、温度传感器和故障电弧探测器，实时采集电气参数。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">2</div>
+        <div class="hs-body">
+          <h4>数据传输与分析</h4>
+          <p>探测器将数据通过NB-IoT/4G/有线网络传输至云平台，平台对数据进行实时分析、趋势预判和阈值比对。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">3</div>
+        <div class="hs-body">
+          <h4>分级预警</h4>
+          <p>当参数超过预警阈值时，系统通过APP推送、短信、电话等方式向安全管理人员发送预警信息。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">4</div>
+        <div class="hs-body">
+          <h4>隐患整改闭环</h4>
+          <p>管理人员收到预警后现场排查，在系统中记录整改情况，形成"监测—预警—整改—销案"的闭环管理。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note amber" style="margin-top:14px;">
+      <b>📌 安装场所：</b>养老机构、学校、医院、商场、宾馆、劳动密集型企业、易燃易爆场所、文物建筑、高层公共建筑等场所应安装电气火灾监控系统。探测器应安装在配电柜（箱）的进线端或重点出线回路。
+    </div>
+  </div>
+
+  <!-- ========== 智慧应急指挥 ========== -->
+  <div class="card reveal" id="command">
+    <h2>🚨 智慧应急指挥</h2>
+    <p>智慧应急指挥系统整合GIS地图、大数据、无人机、移动通信等技术，实现接警、调度、处置、战评全流程数字化、可视化、智能化。</p>
+
+    <h3>应急指挥全流程</h3>
+    <div class="timeline">
+      <div class="tl-item major">
+        <div class="tl-dot"></div>
+        <div class="tl-date">第一步</div>
+        <div class="tl-title">📞 智能接警</div>
+        <div class="tl-desc">系统自动识别报警人位置，调取周边消防水源、道路、建筑和消防力量信息，一键生成作战预案初稿。多警情智能识别，避免重复派警。</div>
+      </div>
+      <div class="tl-item major">
+        <div class="tl-dot"></div>
+        <div class="tl-date">第二步</div>
+        <div class="tl-title">🚒 智能调度</div>
+        <div class="tl-desc">基于GIS地图和实时路况，自动规划最优出警路线，科学调派最近的消防车辆和装备。同步推送着火建筑图纸、消防设施分布、危险品种类等信息给出动力量。</div>
+      </div>
+      <div class="tl-item major">
+        <div class="tl-dot"></div>
+        <div class="tl-date">第三步</div>
+        <div class="tl-title">🎯 现场处置</div>
+        <div class="tl-desc">无人机实时回传火场图像，内攻人员佩戴定位设备实时追踪，指挥大屏实时展示火场态势。数字化预案动态调整，辅助指挥员科学决策。</div>
+      </div>
+      <div class="tl-item major">
+        <div class="tl-dot"></div>
+        <div class="tl-date">第四步</div>
+        <div class="tl-title">📊 战评总结</div>
+        <div class="tl-desc">系统自动记录接警时间、出动时间、到场时间、出水时间、处置过程等数据，生成电子战评报告。通过大数据复盘分析，持续优化作战预案和训练方案。</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px;">核心技术支撑</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🗺️</span>
+        <h4>GIS一张图</h4>
+        <p>电子地图上叠加消防水源、消防站点、重点单位、危险区域等图层，实现"看得见、调得动"。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📈</span>
+        <h4>大数据分析</h4>
+        <p>分析历史火灾数据、气象数据、城市运行数据，预测火灾高风险区域和时段，指导精准防控。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚁</span>
+        <h4>无人机侦察</h4>
+        <p>快速升空获取火场全景图像和热成像数据，特别适用于高层建筑、大跨度厂房和危险化学品事故。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🧠</span>
+        <h4>智能调度</h4>
+        <p>根据火灾类型、等级和位置，自动推荐最优车辆编队、行驶路线和战术方案。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📋</span>
+        <h4>数字化预案</h4>
+        <p>重点单位预案三维化、动态化，火灾时自动推送建筑结构、疏散通道、消防设施等关键信息。</p>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /tech panel -->
+
+      <!-- ===== 应用展望 ===== -->
+      <div class="sub-panel" data-sub-panel="smart" data-sub-name="apps">
+
+  <!-- ========== 应用场景（标签页） ========== -->
+  <div class="card reveal" id="scenario">
+    <h2>🏙️ 智慧消防应用场景</h2>
+    <p>智慧消防技术在不同场景下的应用重点各有侧重，点击标签了解各领域应用方案。</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="s-city">🏙️ 城市级</button>
+      <button class="tab" data-tab="s-mall">🏬 商业综合体</button>
+      <button class="tab" data-tab="s-park">🏭 工业园区</button>
+      <button class="tab" data-tab="s-home">🏠 社区家庭</button>
+      <button class="tab" data-tab="s-heritage">🏛️ 文物古建</button>
+    </div>
+
+    <div class="tab-panel active" id="s-city">
+      <h3>城市级智慧消防</h3>
+      <p>面向政府消防监管部门，构建覆盖全市的消防安全"一张图"，实现对消防安全态势的宏观把控和精准治理。</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">🗺️</span><h4>城市消防物联网</h4><p>汇聚全市消防设施、危险源、消防力量等数据，形成城市消防大数据中心。</p></div>
+        <div class="feature"><span class="f-ico">🔥</span><h4>火灾风险预警</h4><p>基于气象、历史火灾、隐患数据等，预测高风险区域，指导消防检查和力量部署。</p></div>
+        <div class="feature"><span class="f-ico">🚒</span><h4>智能接处警</h4><p>一体化接警、调度、指挥系统，缩短响应时间，提高灭火救援效率。</p></div>
+        <div class="feature"><span class="f-ico">📊</span><h4>消防信用监管</h4><p>对单位消防安全状况进行评分评级，实施差异化监管，落实"双随机一公开"。</p></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="s-mall">
+      <h3>商业综合体智慧消防</h3>
+      <p>大型商业综合体建筑面积大、业态复杂、人员密集，是智慧消防的重点应用场景。</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">👁️</span><h4>AI视频监控</h4><p>识别消防通道堵塞、防火门未关、抽烟等违规行为，自动告警。</p></div>
+        <div class="feature"><span class="f-ico">💨</span><h4>智能烟感联网</h4><p>所有火灾探测器接入监控平台，火警信息秒级推送至安保和管理人员。</p></div>
+        <div class="feature"><span class="f-ico">💧</span><h4>消防水系统监测</h4><p>实时监测消火栓和喷淋系统的水压、水位，确保消防水系统完好有效。</p></div>
+        <div class="feature"><span class="f-ico">🚪</span><h4>智能疏散引导</h4><p>火灾时根据火源位置动态调整疏散指示标志，引导人员避开危险区域。</p></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="s-park">
+      <h3>工业园区智慧消防</h3>
+      <p>工业园区企业集中、危化品多、火灾风险高，需要建立园区级的智慧消防联防联控体系。</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">☢️</span><h4>危化品监测</h4><p>实时监测可燃气体、有毒气体浓度，超标立即报警并联动通风和切断装置。</p></div>
+        <div class="feature"><span class="f-ico">⚡</span><h4>电气火灾监控</h4><p>全面覆盖园区企业配电系统，预防电气火灾，实现隐患线上跟踪整改。</p></div>
+        <div class="feature"><span class="f-ico">🚁</span><h4>无人机巡查</h4><p>定期自动巡航，发现违规动火、消防通道占用等问题，红外热成像检测设备温度异常。</p></div>
+        <div class="feature"><span class="f-ico">🤝</span><h4>园区联防联控</h4><p>建立园区微型消防站和企业消防队联动机制，统一调度、协同作战。</p></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="s-home">
+      <h3>社区家庭智慧消防</h3>
+      <p>居民住宅火灾占比最高，智慧消防延伸至社区和家庭，打通消防安全"最后一公里"。</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">🏠</span><h4>独立智能烟感</h4><p>安装独立式光电感烟探测器，报警信息推送至业主、物业和社区网格员手机。</p></div>
+        <div class="feature"><span class="f-ico">🔌</span><h4>智慧用电</h4><p>家用智能配电箱监测漏电、过载、电弧，人走自动断电，预防电气火灾。</p></div>
+        <div class="feature"><span class="f-ico">🔥</span><h4>可燃气体报警</h4><p>厨房安装燃气报警器，检测到泄漏自动报警并可联动关闭燃气阀门。</p></div>
+        <div class="feature"><span class="f-ico">📱</span><h4>社区消防APP</h4><p>居民可通过APP举报火灾隐患、学习消防知识、接收预警信息，形成群防群治。</p></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="s-heritage">
+      <h3>文物古建智慧消防</h3>
+      <p>文物古建筑不可再生、耐火等级低，智慧消防技术是保护文物安全的重要手段。</p>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-ico">💨</span><h4>吸气式感烟探测</h4><p>高灵敏度空气采样探测，在火灾极早期发现烟雾，适合古建高大空间。</p></div>
+        <div class="feature"><span class="f-ico">⚡</span><h4>电气安全监控</h4><p>对古建内电气线路进行实时监测和智慧用电管理，消除电气火灾隐患。</p></div>
+        <div class="feature"><span class="f-ico">💧</span><h4>细水雾灭火</h4><p>采用高压细水雾灭火系统，灭火效率高且水渍损失小，最大限度保护文物。</p></div>
+        <div class="feature"><span class="f-ico">👁️</span><h4>AI烟火识别</h4><p>视频监控结合AI算法，24小时自动识别火焰和烟雾，特别适合古建群室外区域。</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 未来趋势 ========== -->
+  <div class="card reveal" id="future">
+    <h2>🔮 未来发展趋势</h2>
+    <p>随着技术的不断进步，智慧消防将向更加智能化、立体化、人性化的方向发展。</p>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🌀</span>
+        <h4>数字孪生</h4>
+        <p>构建建筑和城市的三维数字模型，实时映射消防状态，可进行火灾模拟推演、虚拟演练和预案优化，实现"虚实结合"的智慧管理。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📶</span>
+        <h4>5G技术应用</h4>
+        <p>5G的大带宽、低时延特性支持4K/8K高清视频实时回传、消防员AR辅助决策、远程专家指导等新应用。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🤖</span>
+        <h4>灭火机器人</h4>
+        <p>消防机器人可替代消防员进入高温、浓烟、有毒、爆炸危险环境执行侦察和灭火任务，大幅降低人员伤亡风险。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚁</span>
+        <h4>无人机集群</h4>
+        <p>多架无人机协同作业，同时进行空中侦察、物资投送、通信中继和三维建模，提升复杂灾害事故处置能力。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📊</span>
+        <h4>大数据预测</h4>
+        <p>融合气象、交通、用电、人口等多源数据，建立火灾风险预测模型，实现从"事后处置"到"事前预测"的跨越。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🔗</span>
+        <h4>区块链档案</h4>
+        <p>利用区块链不可篡改的特性，记录消防设施检测、维护、隐患整改等数据，建立可信的消防安全电子档案。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 产品选型指南 ========== -->
+  <div class="card reveal" id="selection">
+    <h2>🛒 智慧消防产品选型指南</h2>
+    <p>市场上智慧消防产品种类繁多，选型时应从实际需求出发，综合考虑可靠性、兼容性和经济性。点击展开查看要点。</p>
+
+    <div class="accordion">
+      <div class="acc-item open">
+        <button class="acc-head">
+          <span>📡 一、感知设备选型要点</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul>
+              <li><b>探测器认证：</b>选择通过国家强制性产品认证（CCCF）的产品，确保质量可靠</li>
+              <li><b>通信方式：</b>根据现场条件选择NB-IoT（广覆盖、低功耗）、LoRa（自组网）或4G/5G</li>
+              <li><b>电池寿命：</b>独立式无线探测器电池寿命应不少于3年，具备低电量报警功能</li>
+              <li><b>防护等级：</b>室外和潮湿场所应选择IP65以上防护等级的设备</li>
+              <li><b>误报率：</b>选择具备智能算法、可区分真实火情和环境干扰的探测器</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>☁️ 二、平台选型要点</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul>
+              <li><b>接入能力：</b>平台应支持多厂商、多协议设备接入，避免被单一厂商锁定</li>
+              <li><b>高可用性：</b>云平台应具备99.9%以上的可用性，数据多备份，确保不丢失</li>
+              <li><b>数据安全：</b>数据传输和存储应加密，符合网络安全等级保护要求</li>
+              <li><b>API开放：</b>提供标准开放接口，支持与现有消防管理系统、政务平台对接</li>
+              <li><b>持续升级：</b>厂商应具备持续迭代更新能力，AI算法能不断优化升级</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>💰 三、建设模式选择</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>常见建设模式有三种：</p>
+            <ul>
+              <li><b>自建模式：</b>单位一次性采购设备和平台，自主运维。适合预算充足、有技术能力的大型单位。</li>
+              <li><b>租赁模式（SaaS）：</b>按年支付服务费，厂商提供设备和平台服务。适合中小企业，初期投入低。</li>
+              <li><b>政府购买服务：</b>政府统一招标建设，第三方机构运营服务。适合城市级和区域级项目。</li>
+            </ul>
+            <p>选型时应进行充分的市场调研和产品测试，优先选择有成功案例和良好口碑的厂商，避免盲目追求新技术而忽视实用性和可靠性。</p>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>⚠️ 四、常见误区</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul>
+              <li><b>重建设轻运维：</b>智慧消防不是"一装了之"，需要持续的运维管理和隐患整改闭环</li>
+              <li><b>重硬件轻软件：</b>传感器只是基础，数据分析能力和业务流程管理才是核心价值</li>
+              <li><b>盲目追求全覆盖：</b>应优先覆盖高风险区域和关键部位，循序渐进、分步实施</li>
+              <li><b>忽视人员培训：</b>系统再好也需要人来使用和响应，必须加强管理人员培训</li>
+              <li><b>数据孤岛：</b>避免各子系统各自为政，应统一平台、数据共享，发挥整体效能</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /apps panel -->
+
+      <!-- ===== 练习笔记 ===== -->
+      <div class="sub-panel" data-sub-panel="smart" data-sub-name="practice">
+
+  <!-- ========== 随堂测验 ========== -->
+  <div class="card reveal" id="quiz">
+    <h2>📝 随堂测验 <span class="tag blue">5题</span></h2>
+    <p>完成以下5道题，检验你对智慧消防知识的掌握程度。</p>
+
+    <div data-mini-quiz="smart" data-questions='[
+      {"q":"智慧消防四层架构中，负责数据采集的是哪一层？","opts":["网络层","感知层","平台层","应用层"],"ans":1,"explain":"感知层通过各类传感器、探测器、摄像头等终端设备，实时采集烟雾、温度、水压、电气参数等数据，是智慧消防的数据源头。"},
+      {"q":"智慧用电系统监测的三大参数不包括？","opts":["剩余电流","线缆温度","故障电弧","线路电压"],"ans":3,"explain":"智慧用电系统主要监测剩余电流（漏电）、线缆温度和故障电弧三大电气火灾隐患参数，线路电压不是主要监测指标。"},
+      {"q":"AI视频识别在消防领域的应用不包括下列哪项？","opts":["火焰识别","烟雾识别","人员考勤","消防通道占用识别"],"ans":2,"explain":"AI视频消防应用主要包括火焰识别、烟雾识别、通道占用识别和消防设施异常识别，人员考勤不属于消防安全范畴。"},
+      {"q":"下列哪项技术最适合用于文物古建筑的早期火灾探测？","opts":["普通感温探测器","吸气式感烟探测","火焰探测器","手动报警按钮"],"ans":1,"explain":"吸气式感烟探测器通过主动采样空气进行分析，灵敏度极高，可在火灾极早期发现烟雾，且不需要在古建筑内大量布线，适合文物保护场所。"},
+      {"q":"智慧消防与传统消防最本质的区别是？","opts":["使用更多摄像头","从被动应对转向主动预防、数据驱动","不需要消防员","只需要电脑管理"],"ans":1,"explain":"智慧消防的核心是利用物联网、AI、大数据等技术，实现从被动接警处置向主动监测预警、从经验判断向数据驱动的根本转变，是管理模式的升级而非简单技术叠加。"}
+    ]'>
+      <div class="mq-prog" style="color:var(--ink-3);font-size:13px;margin-bottom:12px;font-weight:600;"></div>
+      <div class="mq-q" style="font-size:16px;font-weight:700;margin-bottom:14px;"></div>
+      <div class="mq-opts" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div style="margin-top:16px;display:flex;gap:10px;align-items:center;">
+        <button class="btn btn-red mq-next">下一题 →</button>
+        <button class="btn btn-ghost mq-retry">重新测试</button>
+      </div>
+      <div class="mq-result" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- ========== 学习关卡 ========== -->
+  <div class="card reveal">
+    <h2>🏆 学习关卡</h2>
+    <p>完成以下四个关卡，系统将自动记录你的学习进度。</p>
+    <div data-checkpoints="smart">
+      <div class="checkpoint">
+        <div class="cp-icon">💡</div>
+        <div class="cp-info">
+          <h4>关卡一：概念架构</h4>
+          <p>掌握智慧消防的定义、核心理念和四层技术架构</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">📡</div>
+        <div class="cp-info">
+          <h4>关卡二：核心技术</h4>
+          <p>理解物联网感知、AI识别、远程监控、智慧用电的技术原理</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🚨</div>
+        <div class="cp-info">
+          <h4>关卡三：应用与趋势</h4>
+          <p>了解五大应用场景和六大未来发展方向</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">📝</div>
+        <div class="cp-info">
+          <h4>关卡四：测验通关</h4>
+          <p>完成随堂测验，正确率≥80%</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 笔记区 ========== -->
+  <div class="card reveal">
+    <h2>📓 学习笔记</h2>
+    <p>记录你在学习智慧消防过程中的心得、疑问和重点内容，笔记自动保存到浏览器本地。</p>
+    <div class="note-editor" data-notes="smart">
+      <textarea placeholder="在这里输入你的笔记... 例如：智慧消防的四层架构是感知层→网络层→平台层→应用层；智慧用电主要监测剩余电流、线缆温度和故障电弧..."></textarea>
+      <div class="note-actions">
+        <button class="btn btn-red" data-save-note>💾 保存笔记</button>
+      </div>
+      <div class="note-list"></div>
+    </div>
+  </div>
+
+      </div><!-- /practice panel -->
+
+    </main>
+  </div><!-- /doc-layout -->
+
+  <!-- 上下页导航 -->
+  <div class="page-nav">
+    <a href="special-fire.html" class="pn-prev">
+      <span>←</span>
+      <div><span class="pn-label">上一关卡</span><span class="pn-title">特殊场所消防 ⚗️</span></div>
+    </a>
+    <a href="cases.html" class="pn-next">
+      <span>→</span>
+      <div><span class="pn-label">下一关卡</span><span class="pn-title">案例调查 🔍</span></div>
+    </a>
+  </div>
+
+  <div class="note blue">
+    📌 <b>学习建议：</b>智慧消防是传统消防业务与新一代信息技术的深度融合。建议先理解"感知—传输—平台—应用"四层架构的逻辑关系，再逐一学习物联网、AI识别、智慧用电等核心技术，最后结合应用场景思考技术落地。完成本页后可继续学习<a href="cases.html">火灾案例调查</a>。
+  </div>
+
+</div>
+<script src="assets/fire.js"></script>
+</body>
+</html>

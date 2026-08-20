@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特殊消防 · 消防学习中心</title>
+<link rel="stylesheet" href="assets/fire.css">
+</head>
+<body>
+<div class="container">
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">首页</a> / 特殊消防</div>
+    <h1><span class="ph-ico">⚗️</span>特殊场所消防</h1>
+    <p class="sub">古建筑、地铁隧道、地下空间、石油化工、电力设施——特殊场所火灾危险性大、扑救难度高，需要针对性的消防技术与战术。</p>
+  </div>
+
+  <div class="stat-row reveal">
+    <div class="stat-box"><b>5类</b><span>特殊场所</span></div>
+    <div class="stat-box"><b>3种</b><span>特殊灭火剂</span></div>
+    <div class="stat-box"><b>100%</b><span>古建筑不可再生</span></div>
+    <div class="stat-box"><b>≥10km</b><span>特长隧道</span></div>
+  </div>
+
+  <!-- ========== 主体布局：侧边栏 + 内容 ========== -->
+  <div class="doc-layout">
+    <aside class="doc-sidebar reveal">
+      <div class="ds-title">📂 本页分类</div>
+      <ul class="ds-nav">
+        <li><a href="#" class="active" data-sidebar-tab="core"><span class="ds-num">1</span>核心知识</a></li>
+        <li><a href="#" data-sidebar-tab="agents"><span class="ds-num">2</span>灭火剂与对比</a></li>
+        <li><a href="#" data-sidebar-tab="practice"><span class="ds-num">3</span>实战练习</a></li>
+        <li><a href="#" data-sidebar-tab="notes"><span class="ds-num">4</span>学习笔记</a></li>
+      </ul>
+      <div class="ds-progress">
+        <div class="dsp-label"><span>学习进度</span><span data-sidebar-progress>0%</span></div>
+        <div class="dsp-bar"><div class="dsp-fill" data-sidebar-fill style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main class="doc-content">
+      <div class="sub-tabs" data-sub-tabs="special">
+        <button class="sub-tab active" data-sub-target="core">📚 核心知识</button>
+        <button class="sub-tab" data-sub-target="agents">🧪 灭火剂与对比</button>
+        <button class="sub-tab" data-sub-target="practice">🎯 实战练习</button>
+        <button class="sub-tab" data-sub-target="notes">📒 学习笔记</button>
+      </div>
+
+      <!-- ===== 核心知识 ===== -->
+      <div class="sub-panel active" data-sub-panel="special" data-sub-name="core">
+
+  <!-- ========== 五类特殊场所（标签页） ========== -->
+  <div class="card reveal" id="venues">
+    <h2>🏛️ 五类特殊场所消防</h2>
+    <p>不同特殊场所的火灾特性差异显著，点击下方标签页逐一了解其火灾危险性、防火措施和灭火要点。</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="t-ancient">🏛️ 古建筑</button>
+      <button class="tab" data-tab="t-metro">🚇 地铁隧道</button>
+      <button class="tab" data-tab="t-underground">🕳️ 地下空间</button>
+      <button class="tab" data-tab="t-petrochem">🛢️ 石油化工</button>
+      <button class="tab" data-tab="t-power">⚡ 电力设施</button>
+    </div>
+
+    <!-- 古建筑 -->
+    <div class="tab-panel active" id="t-ancient">
+      <h3 id="ancient">🏛️ 古建筑消防</h3>
+      <p>古建筑是珍贵的历史文化遗产，多为木结构或砖木结构，耐火等级低、火灾荷载大，且往往<b>不可再生</b>。巴黎圣母院火灾、云南香格里拉独克宗古城火灾等教训极为深刻。</p>
+
+      <h4>火灾危险性</h4>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">🪵</span>
+          <h4>耐火等级低</h4>
+          <p>以木结构为主，构件表面虽有油漆但木材燃烧性能仍为可燃，火灾蔓延速度快。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">📏</span>
+          <h4>防火间距不足</h4>
+          <p>古建筑群多为连片布局，建筑密度大，防火间距不足，易造成"火烧连营"。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🧯</span>
+          <h4>消防设施缺乏</h4>
+          <p>多数古建筑建设年代久远，未设计消防设施，后期增设受文物保护限制。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">👥</span>
+          <h4>人员密集</h4>
+          <p>旅游旺季游客集中，疏散通道狭窄，安全出口不足，疏散难度大。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">💎</span>
+          <h4>不可再生</h4>
+          <p>每一座古建筑都承载着独特的历史、艺术和科学价值，一旦焚毁无法复原。</p>
+        </div>
+      </div>
+
+      <h4>防火措施</h4>
+      <div class="howto">
+        <div class="howto-step">
+          <div class="hs-num">1</div>
+          <div class="hs-body">
+            <h4>完善消防给水系统</h4>
+            <p>设置室外消火栓、消防水池或天然水源取水设施，确保消防用水量和水压。条件受限时可设置稳压泵和高位消防水箱。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">2</div>
+          <div class="hs-body">
+            <h4>配置灭火器</h4>
+            <p>按A类火灾配置ABC干粉灭火器或水基型灭火器，大殿、经堂等重要场所宜设置气体灭火系统或细水雾灭火系统。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">3</div>
+          <div class="hs-body">
+            <h4>安装火灾自动报警系统</h4>
+            <p>选用适合古建筑环境的火灾探测器（如吸气式感烟探测器），及早发现火情。重要古建筑应与消防部门联网。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">4</div>
+          <div class="hs-body">
+            <h4>设置防雷设施</h4>
+            <p>古建筑高大屋顶和飞檐易遭雷击，应按规范安装避雷针、避雷带并定期检测接地电阻。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">5</div>
+          <div class="hs-body">
+            <h4>建立消防站（点）</h4>
+            <p>规模较大的古建筑群应建立专职消防站或消防点，配备小型消防车和专兼职消防队员。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">6</div>
+          <div class="hs-body">
+            <h4>规范用电用火</h4>
+            <p>严格控制生活用火、宗教用火和电气线路敷设。照明灯具应与可燃物保持安全距离，禁止使用大功率电器。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note amber" style="margin-top:14px;">
+        <b>⚠️ 案例警示：</b>2019年巴黎圣母院火灾即为维修施工期间电气线路短路引燃木质屋架所致；2014年云南香格里拉独克宗古城火灾因客栈内电气故障引发，火势沿连片木结构建筑蔓延，烧毁房屋100余栋。
+      </div>
+    </div>
+
+    <!-- 地铁隧道 -->
+    <div class="tab-panel" id="t-metro">
+      <h3 id="metro">🚇 地铁与隧道消防</h3>
+      <p>地铁和公路隧道属于狭长封闭空间，通风条件差、疏散路径长，火灾烟气和高温危害极大，是世界公认的消防难题。</p>
+
+      <h4>火灾特点</h4>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">🌡️</span>
+          <h4>温度高</h4>
+          <p>封闭空间内热量不易散发，火灾温度可达1000℃以上，对结构和人员威胁极大。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">💨</span>
+          <h4>烟气大</h4>
+          <p>车辆内饰、电缆等燃烧产生大量有毒烟气，隧道内自然通风差，烟气蔓延速度快。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🏃</span>
+          <h4>疏散难</h4>
+          <p>隧道狭长、出口少、疏散距离长，人员在黑暗和浓烟中极易迷失方向。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">📡</span>
+          <h4>通信不畅</h4>
+          <p>地下空间对无线电信号屏蔽严重，影响消防指挥和人员定位。</p>
+        </div>
+      </div>
+
+      <h4>消防设施配置</h4>
+      <table class="tbl">
+        <thead>
+          <tr><th>设施类型</th><th>配置要求</th><th>作用</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>消火栓系统</b></td><td>隧道内每隔50m设置消火栓箱</td><td>提供灭火用水</td></tr>
+          <tr><td><b>自动喷水灭火</b></td><td>地铁站厅、站台、区间隧道</td><td>控火、降温、抑制烟气</td></tr>
+          <tr><td><b>防排烟系统</b></td><td>机械排烟+正压送风</td><td>控制烟气蔓延，保障疏散通道无烟</td></tr>
+          <tr><td><b>应急照明</b></td><td>疏散通道照度≥5.0lx</td><td>停电后提供照明</td></tr>
+          <tr><td><b>导向标识</b></td><td>发光疏散指示标志，间距≤10m</td><td>引导人员沿正确方向疏散</td></tr>
+          <tr><td><b>火灾报警</b></td><td>感温光纤、手动报警按钮、视频监控</td><td>早期发现和确认火灾</td></tr>
+        </tbody>
+      </table>
+
+      <h4>区间疏散</h4>
+      <div class="note red">
+        <b>🚨 区间隧道疏散要点：</b>地铁列车在区间隧道发生火灾时，应尽可能将列车牵引至前方车站疏散；若列车无法继续运行，司机应立即报告行车调度，通过应急广播引导乘客使用列车端头紧急疏散门，沿隧道内疏散平台有序撤离。双线隧道应利用联络通道作为临时避难区域。防排烟系统应按"乘客疏散方向与烟气流动方向相反"的原则运行。
+      </div>
+    </div>
+
+    <!-- 地下空间 -->
+    <div class="tab-panel" id="t-underground">
+      <h3 id="underground">🕳️ 地下空间消防</h3>
+      <p>地下空间包括地下商业街、地下停车场、地下设备用房、人防工程等。与地上建筑相比，地下空间具有封闭性强、自然采光和通风条件差等特点。</p>
+
+      <h4>火灾危险性</h4>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">🚪</span>
+          <h4>安全出口少</h4>
+          <p>地下建筑出入口数量有限，人员对环境不熟悉，火灾时疏散方向难以判断。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🌫️</span>
+          <h4>蓄烟量大</h4>
+          <p>地下空间封闭，烟气无法自然排出，短时间内即可充满整个空间。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">📏</span>
+          <h4>疏散距离长</h4>
+          <p>大型地下商业体平面复杂，疏散距离远超地上建筑，烟气中行走困难。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🔥</span>
+          <h4>扑救难度大</h4>
+          <p>消防人员进攻路线与人员疏散方向冲突，浓烟高温、通信不畅增加内攻难度。</p>
+        </div>
+      </div>
+
+      <h4>防火要求</h4>
+      <div class="checklist" data-checklist="underground">
+        <li><span class="ck-box"></span><span class="ck-text"><b>防火分区：</b>地下建筑防火分区最大允许建筑面积500㎡，设自动喷水灭火系统时可增加至1000㎡。</span></li>
+        <li><span class="ck-box"></span><span class="ck-text"><b>防排烟系统：</b>地下总建筑面积大于200㎡的公共建筑应设置机械排烟设施。</span></li>
+        <li><span class="ck-box"></span><span class="ck-text"><b>应急照明：</b>疏散走道地面最低照度不低于1.0lx，人员密集场所不低于3.0lx。</span></li>
+        <li><span class="ck-box"></span><span class="ck-text"><b>疏散指示：</b>设置灯光疏散指示标志，间距不大于20m；袋形走道不大于10m。</span></li>
+        <li><span class="ck-box"></span><span class="ck-text"><b>安全出口：</b>每个防火分区不少于2个安全出口，且应直通室外或疏散楼梯间。</span></li>
+        <li><span class="ck-box"></span><span class="ck-text"><b>消防通信：</b>设置消防专用电话和应急广播系统，地下与地上通信应可靠。</span></li>
+      </div>
+    </div>
+
+    <!-- 石油化工 -->
+    <div class="tab-panel" id="t-petrochem">
+      <h3 id="petrochem">🛢️ 石油化工消防</h3>
+      <p>石油化工企业生产、储存、运输的物料多为易燃易爆、有毒有害的危险化学品，生产工艺复杂、高温高压，火灾爆炸风险极高。</p>
+
+      <h4>火灾特点</h4>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">💥</span>
+          <h4>爆炸危险</h4>
+          <p>可燃气体、液体蒸气与空气形成爆炸性混合物，遇火源即发生爆炸，破坏力极强。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">⚡</span>
+          <h4>燃烧速度快</h4>
+          <p>轻质油品燃烧速度可达每小时数十厘米，火焰温度高、热辐射强。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">☀️</span>
+          <h4>辐射热强</h4>
+          <p>油罐火灾火焰中心温度可达1400℃，强烈的热辐射可引燃相邻储罐。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🔄</span>
+          <h4>复燃复爆</h4>
+          <p>灭火后若可燃气体未散尽或阀门未切断，极易发生复燃甚至二次爆炸。</p>
+        </div>
+      </div>
+
+      <h4>灭火战术（冷却→堵截→关阀→灭火→监护）</h4>
+      <div data-system-flow>
+        <div class="system-flow">
+          <div class="sf-node" data-title="冷却保护" data-desc="首先用大量水流冷却着火罐及相邻受热辐射威胁的储罐，降低罐体温度，防止变形、爆裂。" data-detail="冷却用水量应经计算确定，对相邻罐的冷却水供给强度不应小于规定值。冷却应均匀，不留空白点。">
+            <span class="sn-icon">❄️</span>
+            <div class="sn-label">冷却</div>
+            <div class="sn-sub">保护罐体</div>
+          </div>
+          <div class="sf-arrow">→</div>
+          <div class="sf-node" data-title="堵截蔓延" data-desc="在火势蔓延方向设置水枪、水炮阵地，堵截火势向相邻装置、储罐和管廊蔓延。" data-detail="遵循"先控制、后消灭"原则，将火势控制在一定范围内，为总攻创造条件。">
+            <span class="sn-icon">🚧</span>
+            <div class="sn-label">堵截</div>
+            <div class="sn-sub">防止蔓延</div>
+          </div>
+          <div class="sf-arrow">→</div>
+          <div class="sf-node" data-title="关阀断料" data-desc="在确保安全的前提下，关闭相关阀门，切断物料来源，防止可燃物料持续泄漏。" data-detail="关阀作业应由企业技术人员配合进行，必要时实施导流、放空。关阀前必须评估管线压力变化。">
+            <span class="sn-icon">🔧</span>
+            <div class="sn-label">关阀</div>
+            <div class="sn-sub">切断料源</div>
+          </div>
+          <div class="sf-arrow">→</div>
+          <div class="sf-node" data-title="灭火总攻" data-desc="在冷却到位、料源切断、准备充分的条件下，集中泡沫、干粉等灭火剂发起总攻，扑灭火灾。" data-detail="根据火灾类型选择泡沫、干粉、砂土等灭火剂。灭火后保持泡沫覆盖，防止复燃。">
+            <span class="sn-icon">🔥</span>
+            <div class="sn-label">灭火</div>
+            <div class="sn-sub">总攻歼灭</div>
+          </div>
+          <div class="sf-arrow">→</div>
+          <div class="sf-node" data-title="现场监护" data-desc="灭火后必须持续冷却和监护，确认无复燃、复爆危险后方可撤离。" data-detail="监护时间一般不少于24小时，重大火灾应延长监护时间。使用仪器检测可燃气体浓度，确认安全。">
+            <span class="sn-icon">👁️</span>
+            <div class="sn-label">监护</div>
+            <div class="sn-sub">防止复燃</div>
+          </div>
+        </div>
+        <div class="sf-info" style="margin-top:16px;"></div>
+      </div>
+
+      <h4>常用灭火剂</h4>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">🫧</span>
+          <h4>泡沫灭火剂</h4>
+          <p>通过泡沫覆盖液面窒息灭火，是扑救石油产品火灾的主要灭火剂。分蛋白、氟蛋白、水成膜等类型。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🧯</span>
+          <h4>干粉灭火剂</h4>
+          <p>通过化学抑制灭火，灭火速度快，适用于气体、液体和电气火灾，常作为辅助灭火手段。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🏖️</span>
+          <h4>砂土</h4>
+          <p>覆盖流散液体火焰，窒息灭火，适用于小面积地面液体火灾，是简易有效的应急材料。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 电力设施 -->
+    <div class="tab-panel" id="t-power">
+      <h3 id="power">⚡ 电力设施消防</h3>
+      <p>电力设施包括发电厂、变电站（所）、换流站、电缆隧道、配电室等，其中充油电气设备（变压器、油断路器等）和电缆是火灾防控重点。</p>
+
+      <h4>变压器火灾</h4>
+      <p>油浸式变压器内部充有大量绝缘油，当内部故障产生电弧使绝缘油分解气化时，可能导致外壳爆裂、喷油燃烧。主要灭火方式：</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="f-ico">🛢️</span>
+          <h4>排油注氮</h4>
+          <p>变压器发生火灾时，快速排出上部热油并注入氮气窒息灭火，灭火速度快、对设备损伤小。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">💦</span>
+          <h4>水喷雾灭火</h4>
+          <p>通过水雾的冷却、窒息和乳化作用灭火，同时对相邻设备进行冷却保护。</p>
+        </div>
+        <div class="feature">
+          <span class="f-ico">🫧</span>
+          <h4>泡沫喷雾灭火</h4>
+          <p>泡沫混合液经喷头雾化后喷出，兼具泡沫覆盖和水雾冷却的双重灭火效果。</p>
+        </div>
+      </div>
+
+      <h4>电缆火灾</h4>
+      <p>电缆隧道、电缆夹层内电缆密集，一旦起火蔓延迅速，且产生大量有毒烟气和腐蚀性气体。主要防控措施：</p>
+      <div class="howto">
+        <div class="howto-step">
+          <div class="hs-num">1</div>
+          <div class="hs-body">
+            <h4>防火封堵</h4>
+            <p>电缆贯穿楼板、墙体处采用防火堵料严密封堵，防止火灾通过电缆孔洞竖向或水平蔓延。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">2</div>
+          <div class="hs-body">
+            <h4>使用阻燃电缆</h4>
+            <p>重要回路应采用阻燃电缆或耐火电缆，在外部火焰作用下能在一定时间内保持正常运行。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">3</div>
+          <div class="hs-body">
+            <h4>涂刷防火涂料</h4>
+            <p>在电缆表面涂刷膨胀型防火涂料，延缓电缆着火和蔓延速度。</p>
+          </div>
+        </div>
+        <div class="howto-step">
+          <div class="hs-num">4</div>
+          <div class="hs-body">
+            <h4>安装火灾报警</h4>
+            <p>电缆隧道、夹层内应设置线型感温火灾探测器（感温电缆或光纤）及火灾自动报警系统。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert danger" style="margin-top:16px;">
+        <div class="alert-icon">⛔</div>
+        <div class="alert-body">
+          <b>严禁用水扑救带电设备火灾！</b>
+          水具有导电性，用水扑救带电设备火灾会造成触电危险，可能导致救援人员伤亡和设备损坏。扑救带电设备火灾应使用二氧化碳、干粉等不导电灭火剂；如需用水，必须先确认设备已断电并做好接地。
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /core panel -->
+
+      <!-- ===== 灭火剂与对比 ===== -->
+      <div class="sub-panel" data-sub-panel="special" data-sub-name="agents">
+
+  <!-- ========== 特殊灭火剂对比 ========== -->
+  <div class="card reveal" id="agents">
+    <h2>🧪 特殊灭火剂对比 <span class="tag">洁净气体</span></h2>
+    <p>不同灭火剂的灭火机理、适用场所和优缺点各有不同，应根据保护对象特性合理选择。</p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>灭火剂</th>
+          <th>适用场所</th>
+          <th>灭火机理</th>
+          <th>优点</th>
+          <th>缺点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>七氟丙烷</b><br><span class="tag green">洁净气体</span></td>
+          <td>机房、配电室、档案室、通信机房等有人场所</td>
+          <td>化学抑制为主，兼有物理冷却</td>
+          <td>灭火效率高、速度快；对设备无损害；环保性能较好</td>
+          <td>受热产生少量HF；需高压储瓶；成本较高</td>
+        </tr>
+        <tr>
+          <td><b>IG541</b><br><span class="tag green">惰性气体</span></td>
+          <td>有人值守的机房、档案馆、博物馆等</td>
+          <td>降低氧气浓度至15%以下窒息灭火</td>
+          <td>纯惰性气体，无毒无残留；对人体安全；环保</td>
+          <td>灭火浓度高，储瓶数量多；占地大；压力高</td>
+        </tr>
+        <tr>
+          <td><b>二氧化碳</b><br><span class="tag blue">气体</span></td>
+          <td>配电室、变压器室、船舱等无人场所</td>
+          <td>窒息（降低氧浓度）+ 冷却</td>
+          <td>灭火速度快；不留痕迹；价格较低</td>
+          <td>对人体有窒息危险；不能用于有人场所；温室气体</td>
+        </tr>
+        <tr>
+          <td><b>泡沫</b><br><span class="tag amber">液体</span></td>
+          <td>石油储罐、化工装置、飞机库等B类火灾</td>
+          <td>覆盖窒息 + 冷却 + 隔离</td>
+          <td>适合大面积液体火灾；防复燃效果好</td>
+          <td>水渍损失大；不适合电气和精密设备；有污染</td>
+        </tr>
+        <tr>
+          <td><b>干粉</b><br><span class="tag">固体</span></td>
+          <td>可燃气体、液体、电气火灾的快速扑救</td>
+          <td>化学抑制（中断链式反应）</td>
+          <td>灭火速度极快；适用范围广；价格便宜</td>
+          <td>无冷却作用，易复燃；粉尘污染严重；对设备有损害</td>
+        </tr>
+        <tr>
+          <td><b>砂土</b><br><span class="tag gray">简易</span></td>
+          <td>小面积地面流散液体火灾、危险品泄漏</td>
+          <td>覆盖窒息 + 吸附液体</td>
+          <td>就地取材；成本极低；操作简单</td>
+          <td>仅适用于小面积火灾；不适合精密设备；清理困难</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note blue" style="margin-top:14px;">
+      <b>💡 选型原则：</b>气体灭火系统适用于扑救电气火灾、固体表面火灾、液体火灾和灭火前能切断气源的气体火灾。选择灭火剂时应综合考虑保护对象类型、人员是否在场、环保要求和经济性。有人值守场所应优先选择七氟丙烷或IG541等洁净气体。
+    </div>
+  </div>
+
+  <!-- ========== 古建筑与现代建筑对比 ========== -->
+  <div class="card reveal" id="compare">
+    <h2>⚖️ 古建筑与现代建筑消防对比</h2>
+    <p>古建筑与现代建筑在结构材料、防火设计、消防设施等方面存在本质差异，消防策略也应有明显区别。</p>
+
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h4>🏛️ 古建筑</h4>
+        <ul>
+          <li>以木结构、砖木结构为主，耐火等级三~四级</li>
+          <li>建筑密度大、防火间距严重不足</li>
+          <li>消防设施先天不足，后期增设受限</li>
+          <li>疏散通道狭窄，安全出口数量少</li>
+          <li>火灾荷载大，木材、油漆、织物等可燃物多</li>
+          <li>文物价值不可替代，灭火时需保护文物</li>
+          <li>以"预防为主、人防技防结合"为核心策略</li>
+          <li>灭火以尽量减少水渍损失为原则</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>🏢 现代建筑</h4>
+        <ul>
+          <li>以钢筋混凝土、钢结构为主，耐火等级一~二级</li>
+          <li>按规范设计防火间距，满足消防要求</li>
+          <li>按规范配置完善的消防设施系统</li>
+          <li>疏散楼梯、安全出口按规范设置</li>
+          <li>火灾荷载相对可控，装修材料有防火要求</li>
+          <li>建筑本身可修复，以保障人员安全为首要</li>
+          <li>以"技防为主、消防设施系统化"为核心策略</li>
+          <li>可充分利用自动喷水、消火栓等系统灭火</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /agents panel -->
+
+      <!-- ===== 实战练习 ===== -->
+      <div class="sub-panel" data-sub-panel="special" data-sub-name="practice">
+
+  <!-- ========== 情景题1：灭火器选择 ========== -->
+  <div class="card reveal" id="scenario1">
+    <h2>🧩 灭火器选择情景题（一）</h2>
+
+    <div class="scenario" data-scenario="special" data-section="special">
+      <div class="scenario-head">
+        <h3>情景一：配电室灭火器选型</h3>
+        <p>某10kV配电室配置灭火器，应优先选择哪类灭火剂？</p>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-scene">
+          某企业新建一座10kV配电室，室内设有高压开关柜、变压器等带电设备，平时有2名值班人员。现需为该配电室配置灭火器，请选择最合适的灭火剂类型。
+        </div>
+        <div class="choice-list">
+          <button class="choice-btn" data-correct="0" data-explain="泡沫含水导电，会损坏电气设备并危及人员安全，不能用于带电火灾。">
+            <span class="cb-letter">A</span>
+            <span>泡沫灭火器</span>
+          </button>
+          <button class="choice-btn" data-correct="1" data-explain="正确！二氧化碳不导电、灭火后不留痕迹，适用于带电设备火灾，但应注意人员安全，灭火后及时通风。">
+            <span class="cb-letter">B</span>
+            <span>二氧化碳灭火器</span>
+          </button>
+          <button class="choice-btn" data-correct="0" data-explain="清水含水导电，严禁用于带电设备火灾，且会严重损坏电气设备。">
+            <span class="cb-letter">C</span>
+            <span>清水灭火器</span>
+          </button>
+          <button class="choice-btn" data-correct="0" data-explain="砂土虽可用于小面积火灾，但会严重损坏精密电气设备，不适合配电室环境。">
+            <span class="cb-letter">D</span>
+            <span>砂土覆盖</span>
+          </button>
+        </div>
+        <div class="choice-feedback"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 情景题2：石化火灾 ========== -->
+  <div class="card reveal">
+    <h2>🧩 灭火器选择情景题（二）</h2>
+
+    <div class="scenario" data-scenario="special2" data-section="special">
+      <div class="scenario-head">
+        <h3>情景二：油罐区火灾扑救</h3>
+        <p>某原油储罐发生火灾，下列灭火战术顺序哪项正确？</p>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-scene">
+          某石油化工厂一座5000m³原油储罐因雷击发生火灾，火焰高度约20米，热辐射强烈，相邻储罐受到严重威胁。消防队到场后，应按什么顺序组织灭火战斗？
+        </div>
+        <div class="choice-list">
+          <button class="choice-btn" data-correct="0" data-explain="直接灭火而不先冷却罐体，高温可能导致储罐变形爆裂，且火焰难以扑灭。">
+            <span class="cb-letter">A</span>
+            <span>立即用泡沫灭火，不需要冷却</span>
+          </button>
+          <button class="choice-btn" data-correct="1" data-explain="正确！石油化工火灾应遵循"先冷却、后灭火"原则，先冷却着火罐和相邻罐，再实施泡沫灭火。">
+            <span class="cb-letter">B</span>
+            <span>先冷却保护罐体，待条件成熟后用泡沫灭火</span>
+          </button>
+          <button class="choice-btn" data-correct="0" data-explain="用水直接喷射油面会导致热油喷溅，造成火势扩大和人员伤亡。">
+            <span class="cb-letter">C</span>
+            <span>用直流水柱直接喷射火焰</span>
+          </button>
+          <button class="choice-btn" data-correct="0" data-explain="等待不可取，应在冷却保护的同时积极做好灭火准备，把握灭火时机。">
+            <span class="cb-letter">D</span>
+            <span>等待油品烧完后火自然熄灭</span>
+          </button>
+        </div>
+        <div class="choice-feedback"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 随堂测验 ========== -->
+  <div class="card reveal" id="quiz">
+    <h2>📝 随堂测验 <span class="tag blue">5题</span></h2>
+    <p>完成以下5道题，检验你对特殊场所消防知识的掌握程度。</p>
+
+    <div data-mini-quiz="special" data-questions='[
+      {"q":"古建筑火灾危险性的最突出特点是？","opts":["建筑面积大","耐火等级低、不可再生","消防设施先进","人员疏散容易"],"ans":1,"explain":"古建筑以木结构为主，耐火等级低，且承载着不可替代的历史文化价值，一旦焚毁无法复原。"},
+      {"q":"地铁隧道火灾中，防排烟系统的运行原则应是？","opts":["烟气流动方向与人员疏散方向一致","人员疏散方向与烟气流动方向相反","全部关闭排烟系统","只开启站台排烟"],"ans":1,"explain":"应保证人员疏散方向为迎新风方向，烟气流动方向与疏散方向相反，即"迎风疏散、顺风排烟"。"},
+      {"q":"扑救带电设备火灾严禁使用哪种灭火剂？","opts":["二氧化碳","干粉","水","七氟丙烷"],"ans":2,"explain":"水具有导电性，用水扑救带电设备火灾会造成触电危险，必须先断电或使用不导电的气体灭火剂。"},
+      {"q":"石油化工储罐火灾灭火的首要战术措施是？","opts":["直接灭火","冷却保护","关阀断料","现场监护"],"ans":1,"explain":"石油化工火灾应首先冷却着火罐和相邻受威胁储罐，防止罐体爆裂和火势蔓延，即"先冷却、后消灭"。"},
+      {"q":"下列哪种灭火剂属于洁净气体，适合有人值守的机房？","opts":["二氧化碳","泡沫","七氟丙烷","干粉"],"ans":2,"explain":"七氟丙烷灭火效率高、对设备无损害，在规定灭火浓度下对人体安全，适合有人值守的机房等场所。二氧化碳对人体有窒息危险，不适合有人场所。"}
+    ]'>
+      <div class="mq-prog" style="color:var(--ink-3);font-size:13px;margin-bottom:12px;font-weight:600;"></div>
+      <div class="mq-q" style="font-size:16px;font-weight:700;margin-bottom:14px;"></div>
+      <div class="mq-opts" style="display:flex;flex-direction:column;gap:10px;"></div>
+      <div style="margin-top:16px;display:flex;gap:10px;align-items:center;">
+        <button class="btn btn-red mq-next">下一题 →</button>
+        <button class="btn btn-ghost mq-retry">重新测试</button>
+      </div>
+      <div class="mq-result" style="display:none;"></div>
+    </div>
+  </div>
+
+  <!-- ========== 学习关卡 ========== -->
+  <div class="card reveal">
+    <h2>🏆 学习关卡</h2>
+    <p>完成以下四个关卡，系统将自动记录你的学习进度。</p>
+    <div data-checkpoints="special">
+      <div class="checkpoint">
+        <div class="cp-icon">🏛️</div>
+        <div class="cp-info">
+          <h4>关卡一：五类场所</h4>
+          <p>掌握古建筑、地铁隧道、地下空间、石油化工、电力设施的火灾特点</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🧪</div>
+        <div class="cp-info">
+          <h4>关卡二：灭火剂选型</h4>
+          <p>掌握六种特殊灭火剂的灭火机理、适用场所和优缺点</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">⚖️</div>
+        <div class="cp-info">
+          <h4>关卡三：对比分析</h4>
+          <p>理解古建筑与现代建筑消防的差异及石化灭火战术流程</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">📝</div>
+        <div class="cp-info">
+          <h4>关卡四：测验通关</h4>
+          <p>完成2个情景分析题和随堂测验，正确率≥80%</p>
+        </div>
+        <button class="cp-btn">完成</button>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /practice panel -->
+
+      <!-- ===== 学习笔记 ===== -->
+      <div class="sub-panel" data-sub-panel="special" data-sub-name="notes">
+
+  <!-- ========== 笔记区 ========== -->
+  <div class="card reveal">
+    <h2>📓 学习笔记</h2>
+    <p>记录你在学习特殊场所消防过程中的心得、疑问和重点内容，笔记自动保存到浏览器本地。</p>
+    <div class="note-editor" data-notes="special">
+      <textarea placeholder="在这里输入你的笔记... 例如：古建筑的核心防火策略是"预防为主"；带电设备火灾不能用水；石油化工火灾要"先冷却后灭火"..."></textarea>
+      <div class="note-actions">
+        <button class="btn btn-red" data-save-note>💾 保存笔记</button>
+      </div>
+      <div class="note-list"></div>
+    </div>
+  </div>
+
+      </div><!-- /notes panel -->
+
+    </main>
+  </div><!-- /doc-layout -->
+
+  <!-- 上下页导航 -->
+  <div class="page-nav">
+    <a href="safety-mgmt.html" class="pn-prev">
+      <span>←</span>
+      <div><span class="pn-label">上一关卡</span><span class="pn-title">安全管理 🛡️</span></div>
+    </a>
+    <a href="smart-fire.html" class="pn-next">
+      <span>→</span>
+      <div><span class="pn-label">下一关卡</span><span class="pn-title">智慧消防 🤖</span></div>
+    </a>
+  </div>
+
+  <div class="note blue">
+    📌 <b>学习建议：</b>特殊场所消防的关键在于"因地制宜"。建议先通过五类场所标签页掌握各自的火灾特点和应对措施，再对比六种特殊灭火剂的选型原则，最后通过情景题和随堂测验检验实战判断能力。完成本页后可继续学习<a href="smart-fire.html">智慧消防</a>。
+  </div>
+
+</div>
+<script src="assets/fire.js"></script>
+</body>
+</html>

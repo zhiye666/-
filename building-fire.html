@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>建筑防火 · 耐火等级与防火分区 · 消防学习中心</title>
+<meta name="description" content="建筑防火核心知识：耐火等级、总平面布局、防火分区面积计算器、安全疏散宽度计算、建筑构造要求、交互式建筑剖面图、疏散情景题和随堂测验。">
+<link rel="stylesheet" href="assets/fire.css">
+<style>
+  .bd-diagram{
+    position:relative;height:380px;
+    background:linear-gradient(180deg,#eaf4fb 0%,#f5f7fa 100%);
+    border-radius:12px;overflow:hidden;border:1px solid var(--line);
+  }
+  .bd-ground{
+    position:absolute;left:0;right:0;bottom:0;height:40px;
+    background:repeating-linear-gradient(45deg,#d7dde3,#d7dde3 10px,#cfd5dc 10px,#cfd5dc 20px);
+  }
+  .bd-building{
+    position:absolute;left:50%;bottom:40px;transform:translateX(-50%);
+    width:60%;height:280px;
+    border:3px solid #4a5568;border-bottom:none;
+    background:repeating-linear-gradient(0deg,transparent,transparent 55px,rgba(74,85,104,.35) 55px,rgba(74,85,104,.35) 58px);
+  }
+  .bd-roof{
+    position:absolute;left:50%;bottom:320px;transform:translateX(-50%);
+    width:64%;height:0;
+    border-left:20px solid transparent;border-right:20px solid transparent;
+    border-bottom:24px solid #c8102e;
+  }
+  .bd-stair{
+    position:absolute;right:6%;bottom:40px;width:18%;height:220px;
+    border:2px dashed #c8102e;border-bottom:none;
+    background:rgba(200,16,46,.06);
+  }
+  .bd-stair::before{
+    content:'疏散楼梯';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(90deg);
+    font-size:11px;color:var(--red);font-weight:700;white-space:nowrap;
+  }
+  .bd-wall{
+    position:absolute;left:55%;bottom:40px;width:6px;height:280px;
+    background:repeating-linear-gradient(0deg,#c8102e,#c8102e 8px,#fff 8px,#fff 12px);
+  }
+  .bd-door{
+    position:absolute;left:54%;bottom:95px;width:14px;height:24px;
+    background:#f6ad55;border:2px solid #dd6b20;border-radius:3px 3px 0 0;z-index:3;
+  }
+  .bd-lane{
+    position:absolute;left:0;right:0;bottom:0;height:40px;
+    background:repeating-linear-gradient(90deg,#5a6573,#5a6573 30px,#ffd700 30px,#ffd700 36px,#5a6573 36px,#5a6573 66px);
+    opacity:.5;
+  }
+  .bd-label{
+    position:absolute;font-size:11px;color:var(--ink-3);font-weight:600;
+  }
+  @media(max-width:640px){
+    .bd-diagram{height:320px;}
+    .bd-building{width:75%;height:220px;}
+    .bd-roof{bottom:260px;}
+    .bd-wall{height:220px;}
+    .bd-stair{height:170px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ========== 页面头部 ========== -->
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">首页</a> / 知识体系 / 建筑防火</div>
+    <h1><span class="ph-ico">🏢</span>建筑防火</h1>
+    <p class="sub">建筑防火是消防安全的"被动防御"体系。本页系统讲解耐火等级、总平面布局、防火分区、安全疏散和建筑构造五大核心，配合防火分区计算器、疏散宽度计算器和交互式建筑剖面图，帮助你建立完整的建筑防火设计思维。</p>
+  </div>
+
+  <!-- ========== 关键数字 ========== -->
+  <div class="stat-row reveal">
+    <div class="stat-box">
+      <b class="count-up" data-count="4">0</b>
+      <span>耐火等级</span>
+    </div>
+    <div class="stat-box">
+      <b>1500<span style="font-size:16px;">㎡</span></b>
+      <span>高层防火分区上限</span>
+    </div>
+    <div class="stat-box">
+      <b>≥5<span style="font-size:16px;">m</span></b>
+      <span>安全出口间距</span>
+    </div>
+    <div class="stat-box">
+      <b>4.0<span style="font-size:16px;">m</span></b>
+      <span>消防车道净宽</span>
+    </div>
+  </div>
+
+  <!-- ========== 主体布局：侧边栏 + 内容 ========== -->
+  <div class="doc-layout">
+    <aside class="doc-sidebar reveal">
+      <div class="ds-title">📂 本页分类</div>
+      <ul class="ds-nav">
+        <li><a href="#" class="active" data-sidebar-tab="core"><span class="ds-num">1</span>核心知识</a></li>
+        <li><a href="#" data-sidebar-tab="diagram"><span class="ds-num">2</span>交互图解</a></li>
+        <li><a href="#" data-sidebar-tab="practice"><span class="ds-num">3</span>实战练习</a></li>
+        <li><a href="#" data-sidebar-tab="notes"><span class="ds-num">4</span>学习笔记</a></li>
+      </ul>
+      <div class="ds-progress">
+        <div class="dsp-label"><span>学习进度</span><span data-sidebar-progress>0%</span></div>
+        <div class="dsp-bar"><div class="dsp-fill" data-sidebar-fill style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main class="doc-content">
+      <div class="sub-tabs" data-sub-tabs="building">
+        <button class="sub-tab active" data-sub-target="core">📚 核心知识</button>
+        <button class="sub-tab" data-sub-target="diagram">🏗️ 交互图解</button>
+        <button class="sub-tab" data-sub-target="practice">🎯 实战练习</button>
+        <button class="sub-tab" data-sub-target="notes">📒 学习笔记</button>
+      </div>
+
+      <!-- ===== 核心知识 ===== -->
+      <div class="sub-panel active" data-sub-panel="building" data-sub-name="core">
+
+  <!-- ========== 耐火等级 ========== -->
+  <section id="resistance" class="card reveal">
+    <h2>🏗️ 建筑耐火等级 <span class="tag">核心基础</span></h2>
+    <p>建筑耐火等级是衡量建筑耐火程度的分级标度，由建筑构件的<b>燃烧性能</b>和<b>耐火极限</b>决定。我国将建筑耐火等级分为<b>一、二、三、四级</b>，一级最高，四级最低。不同耐火等级建筑相应构件的燃烧性能和耐火极限不应低于下表规定。</p>
+
+    <table class="tbl">
+      <thead>
+        <tr><th>构件名称</th><th>一级</th><th>二级</th><th>三级</th><th>四级</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>防火墙</td><td><b>不燃 3.00h</b></td><td>不燃 3.00h</td><td>不燃 3.00h</td><td>不燃 3.00h</td></tr>
+        <tr><td>承重墙、楼梯间及电梯井墙</td><td><b>不燃 3.00h</b></td><td>不燃 2.50h</td><td>不燃 2.00h</td><td>难燃 0.50h</td></tr>
+        <tr><td>疏散走道两侧隔墙</td><td><b>不燃 1.00h</b></td><td>不燃 1.00h</td><td>不燃 0.50h</td><td>难燃 0.25h</td></tr>
+        <tr><td>非承重外墙、房间隔墙</td><td><b>不燃 0.75h</b></td><td>不燃 0.50h</td><td>难燃 0.50h</td><td>难燃 0.25h</td></tr>
+        <tr><td>柱</td><td><b>不燃 3.00h</b></td><td>不燃 2.50h</td><td>不燃 2.00h</td><td>难燃 0.50h</td></tr>
+        <tr><td>梁</td><td><b>不燃 2.00h</b></td><td>不燃 1.50h</td><td>不燃 1.00h</td><td>难燃 0.50h</td></tr>
+        <tr><td>楼板、疏散楼梯、屋顶承重构件</td><td><b>不燃 1.50h</b></td><td>不燃 1.00h</td><td>不燃 0.50h</td><td>可燃</td></tr>
+        <tr><td>吊顶（包括吊顶搁栅）</td><td><b>不燃 0.25h</b></td><td>不燃 0.25h</td><td>难燃 0.15h</td><td>可燃</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note red">
+      🔴 <b>GB 55037-2022 第2.1.1条（强制）：</b>下列建筑的耐火等级不应低于<b>一级</b>：地下或半地下建筑、一类高层建筑；下列建筑不应低于<b>二级</b>：单、多层重要公共建筑，二类高层建筑。建筑面积不大于300㎡的独立甲、乙类单层厂房可采用三级。
+    </div>
+
+    <div class="feature-grid" style="margin-top:16px;">
+      <div class="feature">
+        <span class="f-ico">🥇</span>
+        <h4>一级耐火</h4>
+        <p>全部为不燃材料。钢筋混凝土、剪力墙结构。适用于一类高层、地下建筑。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🥈</span>
+        <h4>二级耐火</h4>
+        <p>主要构件不燃，吊顶可为难燃。广泛用于二类高层、重要公建。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🥉</span>
+        <h4>三级耐火</h4>
+        <p>部分构件可为难燃（如吊顶、隔墙）。适用于普通单多层民用建筑。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📋</span>
+        <h4>四级耐火</h4>
+        <p>屋顶承重构件、吊顶等可为可燃。仅适用于临时性或低风险建筑。</p>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <button class="btn btn-ghost" data-mark-read="building_resistance" data-section="building">✓ 标记已学</button>
+    </div>
+  </section>
+
+  <!-- ========== 总平面布局 ========== -->
+  <section id="layout" class="card reveal">
+    <h2>📐 总平面布局 <span class="tag blue">防火间距</span></h2>
+    <p>总平面布局的核心是合理确定建（构）筑物之间的<b>防火间距</b>、消防车道和消防车登高操作场地，防止火灾向相邻建筑蔓延，并为消防扑救创造条件。</p>
+
+    <h3>民用建筑之间的防火间距（m）</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th colspan="2" rowspan="2">建筑类别</th><th rowspan="2">高层民用建筑</th><th colspan="3">裙房及其他单、多层民用建筑</th></tr>
+        <tr><th>一、二级</th><th>三级</th><th>四级</th></tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="2">高层民用建筑</td><td><b>13</b></td><td>9</td><td>11</td><td>14</td></tr>
+        <tr><td rowspan="3">裙房及单多层</td><td>一、二级</td><td>9</td><td><b>6</b></td><td>7</td><td>9</td></tr>
+        <tr><td>三级</td><td>11</td><td>7</td><td><b>8</b></td><td>10</td></tr>
+        <tr><td>四级</td><td>14</td><td>9</td><td>10</td><td><b>10</b></td></tr>
+      </tbody>
+    </table>
+
+    <div class="note amber">
+      ⚠️ <b>特殊规定：</b>相邻两座单、多层建筑，当相邻外墙为不燃性墙体且无外露的可燃性屋檐，每面外墙上无防火保护的门窗洞口不正对开设且面积之和不大于外墙面积5%时，其防火间距可按上表减少25%。两座建筑相邻较高一面外墙为防火墙，或高出相邻较低一、二级耐火建筑屋面15m及以下范围内的外墙为防火墙时，其防火间距不限。
+    </div>
+
+    <h3>消防车道要求</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🔁</span>
+        <h4>环形车道</h4>
+        <p>高层民用建筑、超过3000座体育馆、超过2000座会堂、占地面积大于3000㎡的商店/展览等公建应设环形消防车道。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📏</span>
+        <h4>净宽净高</h4>
+        <p>消防车道的净宽度和净空高度均<b>不应小于4.0m</b>，车道坡度不宜大于8%。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚒</span>
+        <h4>转弯半径</h4>
+        <p>普通消防车转弯半径≥9m，登高车≥12m，重型消防车≥15m。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚫</span>
+        <h4>间距要求</h4>
+        <p>车道靠建筑外墙一侧边缘距建筑外墙不宜小于5m；消防车道与建筑之间不应设置妨碍登高的树木、管线。</p>
+      </div>
+    </div>
+
+    <h3>消防车登高操作场地</h3>
+    <ul style="padding-left:20px;margin:10px 0;line-height:2;">
+      <li>高层建筑至少沿一个长边或周边长度的1/4且不小于一个长边长度的底边连续布置消防车登高场地。</li>
+      <li>场地长度和宽度分别<b>不应小于15m×10m</b>；对于建筑高度大于50m的建筑，场地长度和宽度分别不应小于20m×10m。</li>
+      <li>场地靠建筑外墙一侧边缘距建筑外墙不宜小于5m，且不应大于10m。</li>
+      <li>场地坡度不宜大于3%，场地与建筑之间不应设车库出入口。</li>
+      <li>建筑物与消防车登高操作场地相对应的范围内，应设置直通室外的楼梯或直通楼梯间的入口。</li>
+    </ul>
+  </section>
+
+  <!-- ========== 防火分区 ========== -->
+  <section id="firezone" class="card reveal">
+    <h2>🧱 防火分区 <span class="tag">面积控制</span></h2>
+    <p>防火分区是指采用防火分隔措施划分出的、能在一定时间内防止火灾向同一建筑的其余部分蔓延的局部区域。防火分区的建筑面积不得超过规范规定的最大允许建筑面积。</p>
+
+    <table class="tbl">
+      <thead>
+        <tr><th>建筑类型</th><th>耐火等级</th><th>每个防火分区最大允许建筑面积（㎡）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>高层民用建筑</td><td>一/二级</td><td><b>1500</b></td></tr>
+        <tr><td>单、多层民用建筑（裙房）</td><td>一/二级</td><td><b>2500</b></td></tr>
+        <tr><td>单、多层民用建筑</td><td>三级</td><td>1200</td></tr>
+        <tr><td>单、多层民用建筑</td><td>四级</td><td>600</td></tr>
+        <tr><td>地下或半地下建筑（室）</td><td>一级</td><td><b>500</b></td></tr>
+        <tr><td>设备用房（地下）</td><td>一级</td><td>1000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note green">
+      ✅ <b>自动灭火系统加倍：</b>建筑内设置自动灭火系统时，该防火分区最大允许建筑面积可按上表规定增加<b>1.0倍</b>；局部设置时，增加面积可按该局部面积的1.0倍计算。裙房与高层建筑之间设防火墙分隔时，裙房防火分区面积可按单、多层建筑确定。
+    </div>
+
+    <h3>🛡️ 防火分隔设施</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🧱</span>
+        <h4>防火墙</h4>
+        <p>耐火极限不低于3.00h，直接设置在建筑基础或框架、梁等承重结构上。严禁开设门窗洞口，确需开设时应设不可开启或火灾时能自动关闭的甲级防火门窗。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚪</span>
+        <h4>防火门</h4>
+        <p>甲级≥1.50h、乙级≥1.00h、丙级≥0.50h。常开门应能在火灾时自行关闭并反馈信号。设置在防火墙的门必须为甲级。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🎭</span>
+        <h4>防火卷帘</h4>
+        <p>宽度一般≤10m，部位宽度大于30m时卷帘宽度不应大于该部位宽度的1/3且≤20m。应具有火灾时靠自重自动关闭功能。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🪟</span>
+        <h4>防火窗</h4>
+        <p>分固定窗扇和活动窗扇，耐火极限分甲级1.50h、乙级1.00h、丙级0.50h。活动防火窗应具有火灾时自动关闭功能。</p>
+      </div>
+    </div>
+
+    <h3>🧮 防火分区面积计算器</h3>
+    <p style="font-size:13px;color:var(--ink-3);">选择建筑类型并设置是否配备自动喷水灭火系统，快速计算允许的最大防火分区面积。</p>
+    <div class="calc-box" data-calc="firezone">
+      <div class="calc-row">
+        <label class="calc-label">基准面积：</label>
+        <select name="base" class="calc-input">
+          <option value="1500">高层民用建筑（1500㎡）</option>
+          <option value="2500" selected>单多层民用建筑一二级（2500㎡）</option>
+          <option value="1200">单多层民用建筑三级（1200㎡）</option>
+          <option value="600">单多层民用建筑四级（600㎡）</option>
+          <option value="500">地下/半地下建筑（500㎡）</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label class="calc-label">自动灭火系统：</label>
+        <select name="sprinkler" class="calc-input">
+          <option value="0">未设置（基准面积）</option>
+          <option value="1">全部设置（面积×2）</option>
+        </select>
+      </div>
+      <div class="calc-result">
+        <span class="cr-val">2,500</span>
+        <span class="cr-unit">㎡（最大允许建筑面积）</span>
+        <span class="cr-note">注：局部设置自动灭火系统时，增加面积按局部面积的1.0倍计算。本表仅适用于民用建筑，厂房仓库另有规定。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 安全疏散 ========== -->
+  <section id="egress" class="card reveal">
+    <h2>🚪 安全疏散 <span class="tag red">生命通道</span></h2>
+    <p>安全疏散是建筑防火设计中最核心的内容之一，直接关系到火灾时人员的生命安全。疏散设计应确保人员能在烟气层降至危险高度之前到达安全区域。</p>
+
+    <h3>安全出口数量</h3>
+    <ul style="padding-left:20px;margin:10px 0;line-height:2;">
+      <li>公共建筑每个防火分区或一个防火分区的每个楼层，安全出口数量<b>不应少于2个</b>。</li>
+      <li>相邻两个安全出口最近边缘之间的水平距离<b>不应小于5m</b>。</li>
+      <li>安全出口应分散布置，保持双向疏散。</li>
+      <li>符合特定条件的小规模建筑可设1个安全出口（如建筑面积≤200㎡且人数≤50人的单层公建等）。</li>
+    </ul>
+
+    <h3>疏散最小净宽度</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>疏散部位</th><th>最小净宽度（m）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>疏散门、安全出口</td><td><b>≥0.90</b></td></tr>
+        <tr><td>疏散走道、疏散楼梯（一般公共建筑）</td><td><b>≥1.10</b></td></tr>
+        <tr><td>高层公共建筑首层疏散外门、走道、楼梯</td><td><b>≥1.20</b></td></tr>
+        <tr><td>人员密集场所（观众厅、营业厅等）疏散门</td><td><b>≥1.40</b></td></tr>
+        <tr><td>人员密集场所室外疏散通道</td><td><b>≥3.00</b></td></tr>
+        <tr><td>办公建筑走道（单面布房/双面布房）</td><td>1.30 / 1.40</td></tr>
+      </tbody>
+    </table>
+
+    <h3>安全疏散距离（一二级耐火等级公共建筑，m）</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th rowspan="2">名称</th><th colspan="2">位于两个安全出口之间的疏散门</th><th colspan="2">位于袋形走道两侧/尽端的疏散门</th></tr>
+        <tr><th>一二级</th><th>设喷淋</th><th>一二级</th><th>设喷淋</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>托儿所、幼儿园、老年人照料设施</td><td>25</td><td>31.25</td><td>20</td><td>25</td></tr>
+        <tr><td>歌舞娱乐放映游艺场所</td><td>25</td><td>31.25</td><td>9</td><td>11.25</td></tr>
+        <tr><td>医疗建筑、旅馆、展览</td><td>30</td><td>37.5</td><td>15</td><td>18.75</td></tr>
+        <tr><td>其他公共建筑</td><td><b>40</b></td><td><b>50</b></td><td><b>22</b></td><td><b>27.5</b></td></tr>
+      </tbody>
+    </table>
+
+    <h3>楼梯间选型</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🪜</span>
+        <h4>敞开楼梯间</h4>
+        <p>适用于低风险、层数较少的建筑，如≤5层的普通公建、≤6层的居住建筑。与走廊之间无门分隔。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🚪</span>
+        <h4>封闭楼梯间</h4>
+        <p>适用于医疗、旅馆、商店、图书馆、6层以上公建、≤32m二类高层等。用乙级防火门与走道分隔。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🛡️</span>
+        <h4>防烟楼梯间</h4>
+        <p>适用于一类高层、高度>32m二类高层、≥10层通廊式住宅等。设前室和防烟设施，安全性最高。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🏥</span>
+        <h4>避难间/避难层</h4>
+        <p>高层病房楼二层及以上设避难间，每个护理单元≥25㎡；>100m公建设避难层，间距≤50m。</p>
+      </div>
+    </div>
+
+    <h3>🧮 疏散宽度计算器</h3>
+    <p style="font-size:13px;color:var(--ink-3);">根据建筑面积、人员密度和百人疏散宽度指标，计算所需总疏散宽度。</p>
+    <div class="calc-box" data-calc="evacuation">
+      <div class="calc-row">
+        <label class="calc-label">建筑面积（㎡）：</label>
+        <input type="number" name="area" class="calc-input" value="1000" min="0" step="100">
+      </div>
+      <div class="calc-row">
+        <label class="calc-label">人员密度（人/㎡）：</label>
+        <select name="density" class="calc-input">
+          <option value="0.5">办公 0.5</option>
+          <option value="0.6">商业（地上一二层）0.6</option>
+          <option value="0.5" selected>一般公建 0.5</option>
+          <option value="0.85">学校 0.85</option>
+          <option value="1.0">歌舞娱乐 1.0</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label class="calc-label">折算系数：</label>
+        <select name="factor" class="calc-input">
+          <option value="1">地上楼层（×1）</option>
+          <option value="2">地下（/2，按50%）</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label class="calc-label">百人宽度（m/百人）：</label>
+        <select name="widthPer100" class="calc-input">
+          <option value="0.65">一二级 1-2层 0.65</option>
+          <option value="0.75" selected>一二级 3层 0.75</option>
+          <option value="1.00">≥4层/地下 1.00</option>
+        </select>
+      </div>
+      <div class="calc-result">
+        <span class="cr-val">3.75</span>
+        <span class="cr-unit">m（所需总疏散净宽度）</span>
+        <span class="cr-note">疏散人数约 <span class="cr-people">500</span> 人。计算值还需满足规范规定的最小净宽度要求。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 建筑构造 ========== -->
+  <section id="construction" class="card reveal">
+    <h2>🔧 建筑构造 <span class="tag">细节设防</span></h2>
+    <p>建筑构造防火是阻止火势竖向和横向蔓延的关键。以下为防火墙、防火门、防火卷帘、电梯井及管道井等关键构造的具体要求。</p>
+
+    <div class="accordion" data-accordion>
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>🧱 防火墙</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul style="line-height:2;padding-left:20px;">
+              <li>防火墙耐火极限<b>不应低于3.00h</b>，直接设置在建筑基础或框架、梁等承重结构上。</li>
+              <li>防火墙应从楼地面基层隔断至梁、楼板或屋面板的底面基层，高出不燃性屋面不小于0.4m，高出可燃性屋面不小于0.5m。</li>
+              <li>防火墙严禁开设可燃气体和甲、乙、丙类液体管道穿过；其他管道不宜穿过，确需穿过时应采用防火封堵材料紧密填实。</li>
+              <li>防火墙上不应开设门窗洞口，确需开设时应设置不可开启或火灾时能自动关闭的<b>甲级</b>防火门窗。</li>
+              <li>建筑内的防火墙不宜设置在转角处，确需设置时，内转角两侧墙上的门窗洞口之间最近边缘水平距离不应小于4m。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>🚪 防火门</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul style="line-height:2;padding-left:20px;">
+              <li><b>甲级</b>耐火极限≥1.50h，用于防火墙、防火分区处的门、消防电梯/防烟楼梯间前室门等。</li>
+              <li><b>乙级</b>耐火极限≥1.00h，用于封闭楼梯间/防烟楼梯间的门、疏散走道通向前室的门等。</li>
+              <li><b>丙级</b>耐火极限≥0.50h，用于电缆井/管道井检查门、垃圾道前室门等。</li>
+              <li>设置在建筑内经常有人通行处的防火门宜采用常开防火门，常开防火门应能在火灾时自行关闭并具有信号反馈功能。</li>
+              <li>除允许设置常开防火门的位置外，其他位置均应采用常闭防火门，并在明显位置设置"保持防火门关闭"等提示标识。</li>
+              <li>防火门应能在其内外两侧手动开启，向疏散方向开启。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>🎭 防火卷帘</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul style="line-height:2;padding-left:20px;">
+              <li>除中庭外，当防火分隔部位宽度<b>不大于30m</b>时，防火卷帘宽度不应大于10m。</li>
+              <li>当分隔部位宽度<b>大于30m</b>时，卷帘宽度不应大于该部位宽度的1/3，且不应大于20m。</li>
+              <li>防火卷帘应具有火灾时靠自重自动关闭功能，耐火极限不应低于所设置部位墙体的耐火极限要求。</li>
+              <li>不宜采用侧式防火卷帘；卷帘的启闭装置应能在消防控制室控制。</li>
+              <li>防火卷帘应具有防烟性能，与楼板、梁、墙、柱之间的空隙应采用防火封堵材料封堵。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>🛗 电梯井与竖向管道井</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul style="line-height:2;padding-left:20px;">
+              <li>电梯井应<b>独立设置</b>，井内严禁敷设可燃气体和甲、乙、丙类液体管道，不应敷设与电梯无关的电缆、电线。</li>
+              <li>电梯井壁除开设电梯门洞、逃生门和通气孔洞外，不应开设其他洞口；电梯门不应采用栅栏门。</li>
+              <li>电缆井、管道井、排烟道、排气道、垃圾道等竖向井道应分别独立设置，井壁耐火极限不应低于1.00h。</li>
+              <li>井壁检查门应采用<b>丙级防火门</b>。</li>
+              <li>建筑内电缆井、管道井应在每层楼板处采用不低于楼板耐火极限的不燃材料或防火封堵材料封堵；井与房间、走道等相连通的孔隙应采用防火封堵材料封堵。</li>
+              <li>消防电梯井、机房与相邻电梯井、机房之间应设耐火极限不低于2.00h的防火隔墙，隔开门采用甲级防火门。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">
+          <span>🧥 建筑外保温与外墙装饰</span>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul style="line-height:2;padding-left:20px;">
+              <li>人员密集场所建筑及各类建筑高度大于一定值的场所，外保温材料燃烧性能应为<b>A级（不燃）</b>。</li>
+              <li>建筑外墙外保温系统与基层墙体、装饰层之间的空腔，应在每层楼板处采用防火封堵材料封堵。</li>
+              <li>建筑外墙的装饰层应采用燃烧性能为A级的材料；建筑高度不大于50m时可采用B1级材料。</li>
+              <li>户外广告牌、外装饰不应直接设置在有可燃、难燃材料的墙体上，不应遮挡排烟窗、消防救援口和防火分区控制标识。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      </div><!-- /core panel -->
+
+      <!-- ===== 交互图解 ===== -->
+      <div class="sub-panel" data-sub-panel="building" data-sub-name="diagram">
+
+  <!-- ========== 交互式建筑图解 ========== -->
+  <section id="diagram" class="card reveal">
+    <h2>🏗️ 交互式建筑防火剖面图 <span class="tag blue">点击热点</span></h2>
+    <p>点击建筑剖面图上的红色热点，查看各防火关键部位的设计要求。该图展示了多层公共建筑的典型防火分区与疏散布局。</p>
+
+    <div class="interactive-diagram" data-diagram>
+      <div class="bd-diagram">
+        <div class="bd-lane"></div>
+        <div class="bd-ground"></div>
+        <div class="bd-building"></div>
+        <div class="bd-roof"></div>
+        <div class="bd-wall"></div>
+        <div class="bd-door"></div>
+        <div class="bd-stair"></div>
+        <span class="bd-label" style="left:8%;bottom:44px;">消防车道（净宽≥4m）</span>
+
+        <div class="id-hotspot" style="left:54%;top:40%;" data-title="① 防火墙" data-desc="防火墙耐火极限不应低于3.00h，应从楼地面隔断至梁、楼板底面基层，高出屋面0.4-0.5m。防火墙严禁穿过可燃气体及甲乙丙类液体管道，必须开门窗时应设甲级防火门窗。">①</div>
+        <div class="id-hotspot" style="left:53%;top:62%;" data-title="② 甲级防火门" data-desc="设置在防火墙上的门必须为甲级防火门，耐火极限≥1.50h。常开门应能在火灾时自行关闭并反馈信号，向疏散方向开启，内外两侧均可手动开启。">②</div>
+        <div class="id-hotspot" style="left:80%;top:45%;" data-title="③ 防烟楼梯间" data-desc="一类高层和高度>32m二类高层应设防烟楼梯间，设前室（合用前室≥10㎡，独立前室≥6㎡）和防烟设施。楼梯间墙耐火极限≥2.00h，疏散楼梯耐火极限≥1.50h。">③</div>
+        <div class="id-hotspot" style="left:15%;bottom:48px;" data-title="④ 消防车道/登高场地" data-desc="消防车道净宽净高均≥4.0m，距建筑外墙不宜小于5m。登高场地长度宽度≥15m×10m（>50m建筑≥20m×10m），距建筑5-10m，坡度≤3%。">④</div>
+        <div class="id-hotspot" style="left:30%;top:25%;" data-title="⑤ 防火分区/楼板" data-desc="高层民用建筑每个防火分区最大允许建筑面积1500㎡，设自动喷淋可加倍至3000㎡。楼板耐火极限一级≥1.50h、二级≥1.00h，上下层开口之间应设≥1.2m实体墙。">⑤</div>
+      </div>
+      <div class="id-info">
+        <h4>👆 点击红色热点查看详情</h4>
+        <p>建筑剖面图中标注了防火墙、防火门、防烟楼梯间、消防车道和防火分区楼板五个关键防火部位。点击任意热点编号即可查看该部位的规范要求。</p>
+      </div>
+    </div>
+  </section>
+
+      </div><!-- /diagram panel -->
+
+      <!-- ===== 实战练习 ===== -->
+      <div class="sub-panel" data-sub-panel="building" data-sub-name="practice">
+
+  <!-- ========== 情景选择题 ========== -->
+  <section class="card reveal">
+    <h2>🎯 情景决策：商场火灾疏散 <span class="tag red">实战演练</span></h2>
+    <div class="scenario" data-scenario data-section="building">
+      <div class="scenario-head">
+        <h3>🏬 某三层商场发生火灾</h3>
+        <p>你是商场安全管理员，请选择正确的疏散组织措施</p>
+      </div>
+      <div class="scenario-body">
+        <div class="scenario-scene">
+          某三层商场（耐火等级二级，设有自动喷水灭火系统和火灾自动报警系统），二层某服装店铺因电气线路短路引发火灾，火势正在蔓延。商场内约有顾客和员工800人，二层有两个安全出口，分别位于东西两端，楼梯间为封闭楼梯间。此时你作为现场安全管理员，应优先采取的正确措施是什么？
+        </div>
+        <div class="choice-list">
+          <button class="choice-btn" data-correct="1" data-explain="正确！火灾确认后应立即启动应急广播，按防火分区有序组织人员经最近安全出口疏散，同时拨打119。应急广播能稳定人员情绪、指引疏散方向，避免拥挤踩踏。二层两个安全出口间距应≥5m，形成双向疏散。">
+            <span class="cb-letter">A</span>
+            <span>立即启动应急广播，组织二层及以上楼层人员经东西两个安全出口有序疏散，同时拨打119报警</span>
+          </button>
+          <button class="choice-btn" data-explain="错误！虽然使用灭火器扑救初起火灾是必要的，但不能作为唯一措施。商场人员密集，火灾可能迅速扩大，必须优先组织人员疏散并报警，不能让800人等待保安灭火。应同步进行：报警、疏散、扑救初起火灾。">
+            <span class="cb-letter">B</span>
+            <span>先让保安拿灭火器去灭火，等火势控制不住再组织疏散和报警</span>
+          </button>
+          <button class="choice-btn" data-explain="错误！普通电梯在火灾时必须迫降至首层并停用，因为电梯井会产生烟囱效应加速烟火蔓延，且断电可能导致人员被困。人员必须经封闭楼梯间疏散。消防电梯仅供消防员使用。">
+            <span class="cb-letter">C</span>
+            <span>组织人员排队乘坐商场扶梯和客用电梯快速下楼，以提高疏散效率</span>
+          </button>
+          <button class="choice-btn" data-explain="错误！二层到首层的疏散距离有严格限制（袋形走道≤27.5m设喷淋），且跳楼会造成严重伤亡。应引导人员经封闭楼梯间疏散。只有在3层及以上、楼梯被火封堵且无法逃生时，才考虑到窗口避难等待救援，绝不能跳楼。">
+            <span class="cb-letter">D</span>
+            <span>让二层人员先向三层屋顶撤离，再从屋顶跳到相邻建筑逃生</span>
+          </button>
+        </div>
+        <div class="choice-feedback"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 学习关卡 ========== -->
+  <section class="card reveal">
+    <h2>🏁 学习关卡 <span class="tag green">进度追踪</span></h2>
+    <p>按顺序完成以下四个关卡，检验你对建筑防火知识的掌握程度。完成后自动记录学习进度。</p>
+
+    <div data-checkpoints="building">
+      <div class="checkpoint">
+        <div class="cp-icon">📖</div>
+        <div class="cp-info">
+          <h4>第一关：耐火等级与总平面</h4>
+          <p>掌握四级耐火等级划分、主要构件耐火极限和防火间距表，理解消防车道与登高场地要求。</p>
+        </div>
+        <button class="cp-btn">完成关卡</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🧱</div>
+        <div class="cp-info">
+          <h4>第二关：防火分区</h4>
+          <p>熟记各类建筑防火分区最大允许面积，掌握自动喷淋加倍规则，了解防火墙、防火门、防火卷帘要求。</p>
+        </div>
+        <button class="cp-btn">完成关卡</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🚪</div>
+        <div class="cp-info">
+          <h4>第三关：安全疏散</h4>
+          <p>掌握安全出口数量、最小净宽度、疏散距离和楼梯间选型，能使用疏散宽度计算器进行实际计算。</p>
+        </div>
+        <button class="cp-btn">完成关卡</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🎯</div>
+        <div class="cp-info">
+          <h4>第四关：综合应用</h4>
+          <p>完成情景决策题和随堂测验，能将建筑防火知识综合应用于实际工程场景。</p>
+        </div>
+        <button class="cp-btn">完成关卡</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 随堂测验 ========== -->
+  <section id="quiz" class="card reveal">
+    <h2>📝 随堂测验 <span class="tag red">5题</span></h2>
+    <p>完成以下5道单选题，检验你对建筑防火知识的掌握。答完后点击"下一题"继续。</p>
+
+    <div data-mini-quiz="building" data-questions='[
+      {"q":"一类高层民用建筑的耐火等级不应低于几级？","opts":["一级","二级","三级","四级"],"ans":0,"explain":"根据GB 55037-2022第2.1.1条，地下或半地下建筑、一类高层建筑的耐火等级不应低于一级。"},
+      {"q":"高层民用建筑每个防火分区最大允许建筑面积是多少（未设自动灭火系统）？","opts":["1000㎡","1500㎡","2500㎡","5000㎡"],"ans":1,"explain":"高层民用建筑耐火等级一二级时，每个防火分区最大允许建筑面积为1500㎡；设自动喷水灭火系统可增加1.0倍即3000㎡。"},
+      {"q":"相邻两个安全出口最近边缘之间的水平距离不应小于多少？","opts":["3m","5m","10m","15m"],"ans":1,"explain":"公共建筑相邻两个安全出口最近边缘之间的水平距离不应小于5m，以保证双向疏散，避免人员集中涌向同一出口。"},
+      {"q":"设置在防火墙上的防火门应为哪个等级？","opts":["丙级（0.50h）","乙级（1.00h）","甲级（1.50h）","无特殊要求"],"ans":2,"explain":"防火墙上确需开设门窗洞口时，应设置不可开启或火灾时能自动关闭的甲级防火门窗，耐火极限不低于1.50h。"},
+      {"q":"消防车道的净宽度和净空高度均不应小于多少？","opts":["3.0m","3.5m","4.0m","6.0m"],"ans":2,"explain":"根据规范，消防车道的净宽度和净空高度均不应小于4.0m，车道坡度不宜大于8%，转弯半径应满足消防车转弯要求。"}
+    ]'>
+      <div style="background:var(--side);border-radius:var(--radius);padding:20px;margin-bottom:16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <span class="mq-prog" style="font-size:13px;color:var(--ink-3);font-weight:600;">第 1/5 题</span>
+          <span class="tag">单选题</span>
+        </div>
+        <div class="mq-q" style="font-size:16px;font-weight:600;margin-bottom:16px;line-height:1.7;"></div>
+        <div class="mq-opts" style="display:flex;flex-direction:column;gap:10px;"></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;">
+        <button class="mq-retry btn btn-ghost" style="display:none;">🔄 重新测试</button>
+        <button class="mq-next btn btn-red">下一题 →</button>
+      </div>
+      <div class="mq-result" style="display:none;"></div>
+    </div>
+  </section>
+
+      </div><!-- /practice panel -->
+
+      <!-- ===== 学习笔记 ===== -->
+      <div class="sub-panel" data-sub-panel="building" data-sub-name="notes">
+
+  <!-- ========== 笔记区 ========== -->
+  <section id="notes" class="card reveal">
+    <h2>📒 我的学习笔记</h2>
+    <p>记录建筑防火学习心得和疑难问题，笔记自动保存在浏览器本地。</p>
+
+    <div class="note-editor" data-notes="building">
+      <textarea placeholder="在这里输入你的笔记... 例如：防火墙与防火隔墙的区别、不同建筑类型楼梯间选型对比、防火分区面积计算要点等。"></textarea>
+      <div class="note-actions">
+        <button class="btn btn-ghost" data-save-note>💾 保存笔记</button>
+      </div>
+      <div class="note-list"></div>
+    </div>
+  </section>
+
+      </div><!-- /notes panel -->
+
+    </main>
+  </div><!-- /doc-layout -->
+
+  <!-- 上下页导航 -->
+  <div class="page-nav">
+    <a href="regulations.html" class="pn-prev">
+      <span>←</span>
+      <div><span class="pn-label">上一关卡</span><span class="pn-title">法规标准 ⚖️</span></div>
+    </a>
+    <a href="fire-systems.html" class="pn-next">
+      <span>→</span>
+      <div><span class="pn-label">下一关卡</span><span class="pn-title">消防系统 💧</span></div>
+    </a>
+  </div>
+
+  <div class="note blue">
+    📌 <b>学习建议：</b>建筑防火是注册消防工程师和CAD消防设计的核心考点。建议结合<a href="regulations.html">法规标准</a>中的 <b>GB 55037-2022《建筑防火通用规范》</b> 和 <b>GB 50016-2014《建筑设计防火规范》</b>对照学习，重点记忆耐火等级表、防火间距表、防火分区面积表和疏散距离表，并善用本页的两个计算器加深理解。
+  </div>
+
+</div>
+
+<script src="assets/fire.js"></script>
+</body>
+</html>

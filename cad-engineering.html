@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工程与CAD · 消防学习中心</title>
+<meta name="description" content="消防工程制图与CAD：CAD技能五级成长路径、制图标准、图层设置、50+快捷键、七类消防图纸组成、出图审查清单，配合随堂测验和学习关卡。">
+<link rel="stylesheet" href="assets/fire.css">
+</head>
+<body>
+<div class="container">
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">首页</a> / 工程与CAD</div>
+    <h1><span class="ph-ico">✒️</span>消防工程制图与CAD</h1>
+    <p class="sub">从CAD基础操作到消防专业制图——掌握图层设置、快捷键、图纸组成与出图审查的全流程技能。</p>
+  </div>
+
+  <div class="stat-row reveal">
+    <div class="stat-box"><b>5级</b><span>CAD技能等级</span></div>
+    <div class="stat-box"><b>50+</b><span>常用快捷键</span></div>
+    <div class="stat-box"><b>7类</b><span>消防图纸</span></div>
+    <div class="stat-box"><b>100+</b><span>审查要点</span></div>
+  </div>
+
+  <!-- ========== 主体布局：侧边栏 + 内容 ========== -->
+  <div class="doc-layout">
+    <aside class="doc-sidebar reveal">
+      <div class="ds-title">📂 本页分类</div>
+      <ul class="ds-nav">
+        <li><a href="#" class="active" data-sidebar-tab="core"><span class="ds-num">1</span>核心知识</a></li>
+        <li><a href="#" data-sidebar-tab="skills"><span class="ds-num">2</span>技能提升</a></li>
+        <li><a href="#" data-sidebar-tab="practice"><span class="ds-num">3</span>实战练习</a></li>
+        <li><a href="#" data-sidebar-tab="notes"><span class="ds-num">4</span>学习笔记</a></li>
+      </ul>
+      <div class="ds-progress">
+        <div class="dsp-label"><span>学习进度</span><span data-sidebar-progress>0%</span></div>
+        <div class="dsp-bar"><div class="dsp-fill" data-sidebar-fill style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main class="doc-content">
+      <div class="sub-tabs" data-sub-tabs="cad">
+        <button class="sub-tab active" data-sub-target="core">📚 核心知识</button>
+        <button class="sub-tab" data-sub-target="skills">⌨️ 技能提升</button>
+        <button class="sub-tab" data-sub-target="practice">🎯 实战练习</button>
+        <button class="sub-tab" data-sub-target="notes">📒 学习笔记</button>
+      </div>
+
+      <!-- ===== 核心知识 ===== -->
+      <div class="sub-panel active" data-sub-panel="cad" data-sub-name="core">
+
+  <!-- ========== CAD技能树 ========== -->
+  <div class="card reveal" id="skilltree">
+    <h2>🌳 CAD技能树 <span class="tag">学习路线</span></h2>
+    <p>从零基础到消防CAD专家的五阶段成长路径。每一级都有明确的技能目标，按顺序学习，稳步提升。</p>
+
+    <div class="roadmap">
+      <div class="rm-step done">
+        <div class="rm-dot">1</div>
+        <div class="rm-content">
+          <h4>🌱 入门级（L1）<span class="tag green">基础</span></h4>
+          <p>认识AutoCAD界面，掌握基本文件操作和视图控制，能看懂图纸。</p>
+          <div class="rm-tags">
+            <span class="rm-tag">软件安装与界面</span>
+            <span class="rm-tag">新建/保存/打开文件</span>
+            <span class="rm-tag">缩放/平移/重生成</span>
+            <span class="rm-tag">坐标系统（世界/用户）</span>
+            <span class="rm-tag">鼠标三键操作</span>
+            <span class="rm-tag">对象捕捉设置</span>
+          </div>
+        </div>
+      </div>
+      <div class="rm-step current">
+        <div class="rm-dot">2</div>
+        <div class="rm-content">
+          <h4>🌿 初级（L2）<span class="tag blue">绘图</span></h4>
+          <p>掌握基本绘图和修改命令，能独立绘制简单的二维图形。</p>
+          <div class="rm-tags">
+            <span class="rm-tag">直线/圆/圆弧/矩形</span>
+            <span class="rm-tag">偏移/修剪/延伸/复制</span>
+            <span class="rm-tag">移动/旋转/镜像/阵列</span>
+            <span class="rm-tag">圆角/倒角/打断/合并</span>
+            <span class="rm-tag">图层创建与管理</span>
+            <span class="rm-tag">线型/线宽/颜色设置</span>
+          </div>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">3</div>
+        <div class="rm-content">
+          <h4>🌳 中级（L3）<span class="tag amber">专业制图</span></h4>
+          <p>掌握标注、文字、图块、打印出图，能绘制符合标准的消防专业图纸。</p>
+          <div class="rm-tags">
+            <span class="rm-tag">尺寸标注样式设置</span>
+            <span class="rm-tag">文字样式/多行文字</span>
+            <span class="rm-tag">图块定义与插入</span>
+            <span class="rm-tag">消防图例符号库</span>
+            <span class="rm-tag">布局空间/视口</span>
+            <span class="rm-tag">打印样式表（CTB）</span>
+            <span class="rm-tag">比例与图幅匹配</span>
+          </div>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">4</div>
+        <div class="rm-content">
+          <h4>🏔️ 高级（L4）<span class="tag">效率提升</span></h4>
+          <p>掌握高级工具、外部参照、设计中心，大幅提升制图效率和规范性。</p>
+          <div class="rm-tags">
+            <span class="rm-tag">外部参照（XREF）</span>
+            <span class="rm-tag">设计中心/工具选项板</span>
+            <span class="rm-tag">动态块（参数化）</span>
+            <span class="rm-tag">图案填充/渐变色</span>
+            <span class="rm-tag">查询（面积/距离/列表）</span>
+            <span class="rm-tag">CAD标准检查</span>
+            <span class="rm-tag">图纸集管理</span>
+            <span class="rm-tag">PDF/DWF参考底图</span>
+          </div>
+        </div>
+      </div>
+      <div class="rm-step">
+        <div class="rm-dot">5</div>
+        <div class="rm-content">
+          <h4>👑 专家级（L5）<span class="tag red">自动化</span></h4>
+          <p>掌握自定义和二次开发，能构建标准化制图体系，解决复杂工程问题。</p>
+          <div class="rm-tags">
+            <span class="rm-tag">AutoLISP/Visual LISP</span>
+            <span class="rm-tag">脚本文件（SCR）</span>
+            <span class="rm-tag">线型/填充图案自定义</span>
+            <span class="rm-tag">消防专业工具集开发</span>
+            <span class="rm-tag">协同设计/天正消防</span>
+            <span class="rm-tag">BIM（Revit）三维设计</span>
+            <span class="rm-tag">碰撞检查/管线综合</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 制图标准 ========== -->
+  <div class="card reveal" id="standard">
+    <h2>📐 消防工程制图标准</h2>
+    <p>消防工程制图应遵循《房屋建筑制图统一标准》GB/T 50001、《建筑给水排水制图标准》GB/T 50106、《暖通空调制图标准》GB/T 50114等国家标准。</p>
+
+    <h3>图幅与图框（GB/T 14689）</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>图幅代号</th><th>尺寸 B×L（mm）</th><th>c（mm）</th><th>a（mm）</th><th>主要用途</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>A0</b></td><td>841 × 1189</td><td>10</td><td>25</td><td>大型总平面图、系统图</td></tr>
+        <tr><td><b>A1</b></td><td>594 × 841</td><td>10</td><td>25</td><td>平面图、系统图（常用）</td></tr>
+        <tr><td><b>A2</b></td><td>420 × 594</td><td>10</td><td>25</td><td>平面图、大样图（常用）</td></tr>
+        <tr><td>A3</td><td>297 × 420</td><td>5</td><td>25</td><td>大样图、详图、目录</td></tr>
+        <tr><td>A4</td><td>210 × 297</td><td>5</td><td>25</td><td>设计变更、计算书、目录</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">注：a为左侧装订边宽度，c为其余三边宽度。需要微缩复制的图纸应设对中标志。图纸可加长，A0/A1/A2按长边1/8倍数，A3按1/4倍数。</p>
+
+    <h3>比例</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>图纸类型</th><th>常用比例</th><th>说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>总平面图</td><td>1:500、1:1000、1:2000</td><td>反映总体布局、消防车道、室外消火栓</td></tr>
+        <tr><td>建筑/消防平面图</td><td><b>1:100</b>、1:150、1:200</td><td>1:100最常用，与建筑底图一致</td></tr>
+        <tr><td>系统图/轴测图</td><td>1:100、1:150（可不按比例）</td><td>一般按45°轴测示意，标注标高管径</td></tr>
+        <tr><td>剖面图</td><td>1:50、1:100、1:150</td><td>表达竖向关系、管道井布置</td></tr>
+        <tr><td>大样图/详图</td><td><b>1:50、1:20、1:10</b></td><td>消控室、水泵房、消火栓箱安装等</td></tr>
+        <tr><td>消防泵房大样</td><td>1:50、1:30</td><td>设备定位、管道连接、基础尺寸</td></tr>
+      </tbody>
+    </table>
+
+    <h3>线型与线宽</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>线型名称</th><th>线型样式</th><th>线宽</th><th>主要用途</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>粗实线</b></td><td>━━━━━</td><td><b>b（0.7~1.0mm）</b></td><td>消防主管道、设备轮廓、图框线、剖切符号</td></tr>
+        <tr><td>中实线</td><td>━━━━━</td><td>0.5b</td><td>消防支管、设备轮廓、尺寸起止符</td></tr>
+        <tr><td>细实线</td><td>━━━━━</td><td>0.25b</td><td>建筑底图、尺寸线、引出线、图例线、填充线</td></tr>
+        <tr><td>粗虚线</td><td>━ ━ ━ ━</td><td>b</td><td>地下消防管道、不可见主管道</td></tr>
+        <tr><td>中虚线</td><td>━ ━ ━ ━</td><td>0.5b</td><td>不可见支管、预留管道、设备轮廓</td></tr>
+        <tr><td>细虚线</td><td>━ ━ ━ ━</td><td>0.25b</td><td>不可见建筑轮廓、次要不可见线</td></tr>
+        <tr><td><b>单点长画线</b></td><td>━·━·━·━</td><td>0.25b</td><td>轴线、中心线、对称线、定位轴线</td></tr>
+        <tr><td>双点长画线</td><td>━··━··━</td><td>0.25b</td><td>假想轮廓线、相邻建筑轮廓、移动设备位置</td></tr>
+        <tr><td>折断线</td><td>∿∿∿</td><td>0.25b</td><td>断开界线（构件较长时省略）</td></tr>
+        <tr><td>波浪线</td><td>〜〜〜</td><td>0.25b</td><td>断开界线、视图/剖视的边界</td></tr>
+      </tbody>
+    </table>
+    <div class="note blue">
+      ℹ️ <b>线宽组选择：</b>消防图纸常用粗线b=0.7mm，中线0.35mm，细线0.18mm。图纸图框线1.0mm，标题栏外框0.7mm。同一图纸相同比例的各图样线宽应一致。
+    </div>
+
+    <h3>字体与文字标注</h3>
+    <ul style="padding-left:20px;margin:10px 0;">
+      <li><b>字体：</b>汉字优先使用<b>长仿宋体</b>（gbenor.shx + gbcbig.shx），也可使用黑体、宋体；字母和数字可使用gbenor.shx（直体）或gbeitc.shx（斜体）</li>
+      <li><b>字高：</b>常用3.5、5、7、10、14、20mm（按√2递增）；图纸正文文字3.5~5mm，图名7~10mm，标题栏10~14mm</li>
+      <li><b>字宽：</b>长仿宋字宽高比约0.7；数字字母的字宽比约0.7~0.8</li>
+      <li><b>方向：</b>文字头朝上或朝左，避免在30°范围内倒置书写；竖向文字从右向左读</li>
+      <li><b>说明文字：</b>设备材料表、设计说明用5mm字高，行距约1.5倍字高</li>
+    </ul>
+
+    <h3>尺寸标注</h3>
+    <ul style="padding-left:20px;margin:10px 0;">
+      <li>尺寸由<b>尺寸线、尺寸界线、尺寸起止符号、尺寸数字</b>四要素组成</li>
+      <li>尺寸线用细实线，两端箭头（建筑图常用45°中粗斜短线，长2~3mm）</li>
+      <li>尺寸界线用细实线，距轮廓线≥2mm，超出尺寸线2~3mm</li>
+      <li>尺寸数字字高3.5mm，单位：建筑图以mm计（总平面以m计），消防系统图管径以mm计、标高以m计</li>
+      <li><b>消防标注要点：</b>管径（DN/De）、标高、喷头间距、消火栓位置及间距、设备定位尺寸、管道坡度</li>
+      <li>标高符号：等腰直角三角形，高3mm，尖端指向被标注面，标注绝对标高或相对标高（±0.000）</li>
+    </ul>
+
+    <h3>常用图例符号</h3>
+    <div class="feature-grid">
+      <div class="feature"><span class="f-ico">🚿</span><h4>洒水喷头</h4><p>直立型/下垂型/边墙型，按实际方向绘制。</p></div>
+      <div class="feature"><span class="f-ico">📦</span><h4>室内消火栓</h4><p>方框半填充，注明SN65，带卷盘加对角线。</p></div>
+      <div class="feature"><span class="f-ico">🔔</span><h4>报警阀组</h4><p>圆圈内阀门符号，标注湿式/干式/预作用。</p></div>
+      <div class="feature"><span class="f-ico">🚨</span><h4>火灾探测器</h4><p>感烟（S形）/感温（W形）/手报（方框加!）。</p></div>
+      <div class="feature"><span class="f-ico">🔊</span><h4>声光警报器</h4><p>扬声器+闪光灯组合符号。</p></div>
+      <div class="feature"><span class="f-ico">🌀</span><h4>排烟/送风机</h4><p>风机叶片符号，标注风量和编号。</p></div>
+      <div class="feature"><span class="f-ico">🚪</span><h4>防火阀/排烟阀</h4><p>70℃防火阀/280℃排烟阀，矩形加对角线。</p></div>
+      <div class="feature"><span class="f-ico">🧯</span><h4>灭火器</h4><p>三角形内加灭火器图标，标注型号数量。</p></div>
+    </div>
+  </div>
+
+  <!-- ========== 图层设置 ========== -->
+  <div class="card reveal" id="layer">
+    <h2>🎨 消防CAD图层设置标准</h2>
+    <p>合理的图层设置是规范制图的基础。图层命名应简明、分类清晰，建议使用"专业-构件"格式（如P-WALL、M-SPRINKLER）。</p>
+
+    <table class="tbl">
+      <thead>
+        <tr><th>图层名</th><th>颜色（色号）</th><th>线型</th><th>线宽(mm)</th><th>用途说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>WALL</b></td><td>白/黑（7）</td><td>Continuous</td><td>0.35</td><td>建筑墙体（粗线）</td></tr>
+        <tr><td><b>WINDOW</b></td><td>黄（2）</td><td>Continuous</td><td>0.18</td><td>门窗、幕墙</td></tr>
+        <tr><td><b>DOOR</b></td><td>黄（2）</td><td>Continuous</td><td>0.18</td><td>门及门的开启线</td></tr>
+        <tr><td><b>AXIS</b></td><td>红（1）</td><td>CENTER</td><td>0.18</td><td>定位轴线、轴网轴号</td></tr>
+        <tr><td><b>SPRINKLER</b></td><td>青（4）</td><td>Continuous</td><td>0.35</td><td>喷淋管道、喷头、报警阀</td></tr>
+        <tr><td><b>HYDRANT</b></td><td>绿（3）</td><td>Continuous</td><td>0.35</td><td>消火栓管道、消火栓箱</td></tr>
+        <tr><td><b>PIPE</b></td><td>蓝（5）</td><td>Continuous</td><td>0.35</td><td>其他消防给水管道</td></tr>
+        <tr><td><b>ALARM</b></td><td>红（1）</td><td>Continuous</td><td>0.25</td><td>火灾报警线路、探测器、模块</td></tr>
+        <tr><td><b>WIRE</b></td><td>洋红（6）</td><td>Continuous</td><td>0.18</td><td>弱电线路、控制线、广播线</td></tr>
+        <tr><td><b>SMOKE</b></td><td>橙（30）</td><td>Continuous</td><td>0.25</td><td>防排烟管道、风口、风机</td></tr>
+        <tr><td><b>EVAC</b></td><td>绿（3）</td><td>Continuous</td><td>0.25</td><td>应急照明、疏散指示、安全出口</td></tr>
+        <tr><td><b>EQUIP</b></td><td>洋红（6）</td><td>Continuous</td><td>0.25</td><td>消防设备（水泵、水箱、气瓶）</td></tr>
+        <tr><td><b>TEXT</b></td><td>白/黑（7）</td><td>Continuous</td><td>0.18</td><td>文字说明、设计说明</td></tr>
+        <tr><td><b>DIM</b></td><td>青（4）</td><td>Continuous</td><td>0.18</td><td>尺寸标注、标高、轴号标注</td></tr>
+        <tr><td><b>GREEN</b></td><td>绿（3）</td><td>Continuous</td><td>0.18</td><td>绿化、景观、道路</td></tr>
+        <tr><td><b>TITLE</b></td><td>白/黑（7）</td><td>Continuous</td><td>0.35</td><td>图框、标题栏、会签栏</td></tr>
+        <tr><td><b>HATCH</b></td><td>灰（8/9）</td><td>Continuous</td><td>0.09</td><td>填充图案（墙体、楼板、防火分区）</td></tr>
+        <tr><td><b>DEFPOINTS</b></td><td>白/黑（7）</td><td>Continuous</td><td>—</td><td>定义点（不打印）</td></tr>
+      </tbody>
+    </table>
+    <div class="note amber">
+      ⚠️ <b>图层管理原则：</b>① 0层尽量不用（用于图块定义）；② Defpoints层不打印；③ 按专业分色，相同构件统一颜色；④ 关闭/冻结不用图层以提高性能；⑤ 出图前清理无用图层（PURGE命令）。
+    </div>
+  </div>
+
+      </div><!-- /core panel -->
+
+      <!-- ===== 技能提升 ===== -->
+      <div class="sub-panel" data-sub-panel="cad" data-sub-name="skills">
+
+  <!-- ========== 快捷键速查 ========== -->
+  <div class="card reveal" id="shortcut">
+    <h2>⌨️ CAD快捷键速查表</h2>
+    <p>熟练使用快捷键是提高CAD制图效率的关键。以下分类列出50+个常用命令别名。</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="tab-draw">✏️ 绘图命令</button>
+      <button class="tab" data-tab="tab-modify">🔧 修改命令</button>
+      <button class="tab" data-tab="tab-dim">📏 标注命令</button>
+      <button class="tab" data-tab="tab-view">👁️ 视图控制</button>
+      <button class="tab" data-tab="tab-other">⚙️ 其他常用</button>
+    </div>
+
+    <div id="tab-draw" class="tab-panel active">
+      <table class="tbl">
+        <thead><tr><th>命令</th><th>快捷键</th><th>功能说明</th></tr></thead>
+        <tbody>
+          <tr><td>LINE</td><td><b>L</b></td><td>绘制直线</td></tr>
+          <tr><td>PLINE</td><td><b>PL</b></td><td>绘制多段线（可设置线宽）</td></tr>
+          <tr><td>CIRCLE</td><td><b>C</b></td><td>绘制圆</td></tr>
+          <tr><td>ARC</td><td><b>A</b></td><td>绘制圆弧</td></tr>
+          <tr><td>RECTANG</td><td><b>REC</b></td><td>绘制矩形</td></tr>
+          <tr><td>POLYGON</td><td><b>POL</b></td><td>绘制正多边形</td></tr>
+          <tr><td>ELLIPSE</td><td><b>EL</b></td><td>绘制椭圆/椭圆弧</td></tr>
+          <tr><td>HATCH</td><td><b>H/BH</b></td><td>图案填充（墙体、防火分区）</td></tr>
+          <tr><td>SPLINE</td><td><b>SPL</b></td><td>绘制样条曲线（波浪线）</td></tr>
+          <tr><td>POINT</td><td><b>PO</b></td><td>绘制点</td></tr>
+          <tr><td>DONUT</td><td><b>DO</b></td><td>绘制圆环（柱子填充）</td></tr>
+          <tr><td>MLINE</td><td><b>ML</b></td><td>绘制多线（双线墙/管道）</td></tr>
+          <tr><td>XLINE</td><td><b>XL</b></td><td>绘制构造线（无限长线）</td></tr>
+          <tr><td>REGION</td><td><b>REG</b></td><td>创建面域（用于面积计算）</td></tr>
+          <tr><td>WIPEOUT</td><td><b>WIP</b></td><td>区域覆盖（遮挡底图）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-modify" class="tab-panel">
+      <table class="tbl">
+        <thead><tr><th>命令</th><th>快捷键</th><th>功能说明</th></tr></thead>
+        <tbody>
+          <tr><td>ERASE</td><td><b>E</b></td><td>删除对象（Delete键同）</td></tr>
+          <tr><td>COPY</td><td><b>CO/CP</b></td><td>复制对象</td></tr>
+          <tr><td>MIRROR</td><td><b>MI</b></td><td>镜像（对称绘制喷头/消火栓）</td></tr>
+          <tr><td>OFFSET</td><td><b>O</b></td><td>偏移（墙体、管道定位）</td></tr>
+          <tr><td>ARRAY</td><td><b>AR</b></td><td>阵列（喷头/探测器规则布置）</td></tr>
+          <tr><td>MOVE</td><td><b>M</b></td><td>移动对象</td></tr>
+          <tr><td>ROTATE</td><td><b>RO</b></td><td>旋转对象</td></tr>
+          <tr><td>SCALE</td><td><b>SC</b></td><td>比例缩放</td></tr>
+          <tr><td>STRETCH</td><td><b>S</b></td><td>拉伸（调整图形局部）</td></tr>
+          <tr><td>TRIM</td><td><b>TR</b></td><td>修剪（最常用修改命令）</td></tr>
+          <tr><td>EXTEND</td><td><b>EX</b></td><td>延伸到边界</td></tr>
+          <tr><td>BREAK</td><td><b>BR</b></td><td>打断（管道断开/两点打断）</td></tr>
+          <tr><td>JOIN</td><td><b>J</b></td><td>合并线段</td></tr>
+          <tr><td>CHAMFER</td><td><b>CHA</b></td><td>倒角</td></tr>
+          <tr><td>FILLET</td><td><b>F</b></td><td>圆角（管道弯头）</td></tr>
+          <tr><td>EXPLODE</td><td><b>X</b></td><td>分解（炸开图块/多段线）</td></tr>
+          <tr><td>MATCHPROP</td><td><b>MA</b></td><td>特性匹配（格式刷）</td></tr>
+          <tr><td>PEDIT</td><td><b>PE</b></td><td>多段线编辑（合并/改线宽）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-dim" class="tab-panel">
+      <table class="tbl">
+        <thead><tr><th>命令</th><th>快捷键</th><th>功能说明</th></tr></thead>
+        <tbody>
+          <tr><td>DIMLINEAR</td><td><b>DLI/DIMLIN</b></td><td>线性标注（水平/垂直）</td></tr>
+          <tr><td>DIMALIGNED</td><td><b>DAL</b></td><td>对齐标注（斜线标注）</td></tr>
+          <tr><td>DIMRADIUS</td><td><b>DRA</b></td><td>半径标注（圆/圆弧）</td></tr>
+          <tr><td>DIMDIAMETER</td><td><b>DDI</b></td><td>直径标注（管道/圆）</td></tr>
+          <tr><td>DIMANGULAR</td><td><b>DAN</b></td><td>角度标注</td></tr>
+          <tr><td>DIMCONTINUE</td><td><b>DCO</b></td><td>连续标注（轴线/喷头间距）</td></tr>
+          <tr><td>DIMBASELINE</td><td><b>DBA</b></td><td>基线标注（统一基准）</td></tr>
+          <tr><td>QLEADER</td><td><b>LE</b></td><td>快速引线（设备注释、管径）</td></tr>
+          <tr><td>MLEADER</td><td><b>MLD</b></td><td>多重引线（更规范的注释）</td></tr>
+          <tr><td>TOLERANCE</td><td><b>TOL</b></td><td>形位公差</td></tr>
+          <tr><td>DIMCENTER</td><td><b>DCE</b></td><td>圆心标记</td></tr>
+          <tr><td>DIMEDIT</td><td><b>DED</b></td><td>编辑标注（倾斜/旋转文字）</td></tr>
+          <tr><td>DIMSTYLE</td><td><b>D</b></td><td>标注样式管理器</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-view" class="tab-panel">
+      <table class="tbl">
+        <thead><tr><th>命令</th><th>快捷键</th><th>功能说明</th></tr></thead>
+        <tbody>
+          <tr><td>ZOOM</td><td><b>Z</b></td><td>缩放视图（Z+A全部/Z+W窗口/Z+E范围）</td></tr>
+          <tr><td>PAN</td><td><b>P</b></td><td>实时平移（按住鼠标中键同效）</td></tr>
+          <tr><td>REGEN</td><td><b>RE</b></td><td>重生成（刷新圆弧/线型显示）</td></tr>
+          <tr><td>REDRAW</td><td><b>R</b></td><td>重画（清除临时标记）</td></tr>
+          <tr><td>ZOOMWHEEL</td><td>滚轮</td><td>滚轮缩放（向前放大/向后缩小）</td></tr>
+          <tr><td>3DORBIT</td><td><b>3DO/ORBIT</b></td><td>三维动态观察</td></tr>
+          <tr><td>VIEW</td><td><b>V</b></td><td>视图管理器（保存/恢复视图）</td></tr>
+          <tr><td>AUDIT</td><td><b>—</b></td><td>核查图形错误</td></tr>
+          <tr><td>PURGE</td><td><b>PU</b></td><td>清理（删除无用图层/样式/块）</td></tr>
+          <tr><td>LAYER</td><td><b>LA</b></td><td>图层特性管理器</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-other" class="tab-panel">
+      <table class="tbl">
+        <thead><tr><th>命令</th><th>快捷键</th><th>功能说明</th></tr></thead>
+        <tbody>
+          <tr><td>BLOCK</td><td><b>B</b></td><td>创建块（消防图例制作）</td></tr>
+          <tr><td>WBLOCK</td><td><b>W</b></td><td>写块（保存为独立DWG文件）</td></tr>
+          <tr><td>INSERT</td><td><b>I</b></td><td>插入块（插入设备/图例）</td></tr>
+          <tr><td>TEXT</td><td><b>DT</b></td><td>单行文字</td></tr>
+          <tr><td>MTEXT</td><td><b>T/MT</b></td><td>多行文字（设计说明）</td></tr>
+          <tr><td>DDEDIT</td><td><b>ED</b></td><td>编辑文字/标注内容</td></tr>
+          <tr><td>STYLE</td><td><b>ST</b></td><td>文字样式设置</td></tr>
+          <tr><td>PROPERTIES</td><td><b>PR/CH</b></td><td>特性面板（Ctrl+1）</td></tr>
+          <tr><td>LIST</td><td><b>LI/LS</b></td><td>查询对象信息（长度/面积）</td></tr>
+          <tr><td>AREA</td><td><b>AA</b></td><td>测量面积和周长</td></tr>
+          <tr><td>DIST</td><td><b>DI</b></td><td>测量距离</td></tr>
+          <tr><td>UNITS</td><td><b>UN</b></td><td>单位设置（小数/精度）</td></tr>
+          <tr><td>LIMITS</td><td><b>—</b></td><td>图形界限</td></tr>
+          <tr><td>OSNAP</td><td><b>OS</b></td><td>草图设置（对象捕捉）</td></tr>
+          <tr><td>SNAP</td><td><b>SN</b></td><td>捕捉模式</td></tr>
+          <tr><td>ORTHO</td><td><b>F8</b></td><td>正交模式（水平/垂直）</td></tr>
+          <tr><td>POLAR</td><td><b>F10</b></td><td>极轴追踪</td></tr>
+          <tr><td>OTRACK</td><td><b>F11</b></td><td>对象捕捉追踪</td></tr>
+          <tr><td>PLOT</td><td><b>Ctrl+P</b></td><td>打印/出图</td></tr>
+          <tr><td>SAVE</td><td><b>Ctrl+S</b></td><td>保存（勤保存！）</td></tr>
+          <tr><td>UNDO</td><td><b>U/Ctrl+Z</b></td><td>撤销</td></tr>
+          <tr><td>REDO</td><td><b>Ctrl+Y</b></td><td>重做</td></tr>
+          <tr><td>GROUP</td><td><b>G</b></td><td>对象编组</td></tr>
+          <tr><td>XREF</td><td><b>XR</b></td><td>外部参照管理器</td></tr>
+          <tr><td>ADCENTER</td><td><b>ADC/Ctrl+2</b></td><td>设计中心（调用其他图纸资源）</td></tr>
+          <tr><td>TOOLPALETTES</td><td><b>Ctrl+3</b></td><td>工具选项板</td></tr>
+          <tr><td>SPELL</td><td><b>SP</b></td><td>拼写检查</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note green">
+      ✅ <b>提速技巧：</b>① 左手键盘快捷键、右手鼠标；② 熟记前10个高频命令（L/PL/O/TR/CO/M/RO/E/MA/LA/Z）；③ 自定义快捷键别名（修改acad.pgp）；④ 使用F3/F8/F10/F11切换捕捉状态；⑤ 善用空格键/回车键重复上一命令。
+    </div>
+  </div>
+
+  <!-- ========== 消防图纸组成 ========== -->
+  <div class="card reveal" id="drawings">
+    <h2>📑 消防图纸组成与内容</h2>
+    <p>一套完整的消防工程施工图通常由以下7类图纸组成，各图纸之间相互配合、索引清晰。</p>
+
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-head">📋 图纸目录与设计说明 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>图纸目录：</b>列出全部图纸的序号、图号、图名、图幅、张数和备注，便于查阅和图纸管理。</p>
+          <p><b>设计说明主要内容：</b></p>
+          <ul>
+            <li>工程概况：建筑名称、地点、规模、高度、耐火等级、火灾危险性分类</li>
+            <li>设计依据：采用的规范标准、建设单位要求、建筑条件图</li>
+            <li>消防系统概述：各系统选型、设计参数、保护范围</li>
+            <li>消火栓系统：用水量、水压、给水方式、水泵参数、水池水箱容积</li>
+            <li>自动喷水系统：危险等级、喷水强度、作用面积、持续时间</li>
+            <li>火灾报警系统：系统形式、探测器选型、联动控制逻辑</li>
+            <li>防排烟系统：防烟分区、排烟量、正压送风参数</li>
+            <li>气体灭火系统：防护区划分、灭火剂类型、设计浓度、喷放时间</li>
+            <li>灭火器配置：危险等级、配置基准、类型规格数量</li>
+            <li>施工安装要求：管道材质、连接方式、试压冲洗、防腐保温</li>
+            <li>设备材料表：设备名称、型号规格、数量、备注</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">🔣 图例与主要设备材料表 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>图例符号表：</b>统一图中所有符号的含义，包括：</p>
+          <ul>
+            <li>消防设备图例：喷头、消火栓、报警阀、水泵、水箱等</li>
+            <li>电气消防图例：探测器、手报、模块、声光报警器、消防电话等</li>
+            <li>防排烟图例：风机、风口、防火阀、排烟阀、风管等</li>
+            <li>管道阀门图例：闸阀、蝶阀、止回阀、安全阀、减压阀、过滤器等</li>
+            <li>管线代号：XH（消火栓）、ZP（喷淋）、PY（排烟）、JY（加压送风）、FG（废气）</li>
+          </ul>
+          <p><b>主要设备材料表：</b>列出设备编号、名称、型号规格、材质、单位、数量、备注，是施工采购和预算的依据。</p>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">🗺️ 总平面图 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>表达内容：</b></p>
+          <ul>
+            <li>建筑红线内建筑物、构筑物的位置和名称</li>
+            <li>消防车道布置（环形/沿长边），宽度≥4m，转弯半径满足要求</li>
+            <li>消防车登高操作场地位置和尺寸（≥15m×10m，距墙5~10m）</li>
+            <li>室外消火栓位置和间距（≤120m，距路边≤2m，距外墙≥5m）</li>
+            <li>消防水泵接合器位置（距室外消火栓15~40m）</li>
+            <li>消防水池、消防水泵房位置及取水口/取水井</li>
+            <li>与市政管网的接口位置、管径、压力</li>
+            <li>防火间距、消防控制室位置</li>
+            <li>指北针、比例尺、经济技术指标</li>
+          </ul>
+          <p><b>常用比例：</b>1:500、1:1000。</p>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">🏢 各层平面图 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>表达内容（各层均应绘制）：</b></p>
+          <ul>
+            <li>建筑轴线、轴号、房间名称、防火分区划分（用粗虚线/填充区分）</li>
+            <li><b>消火栓系统：</b>消火栓箱位置、编号（XH-1）、栓口方向、立管位置及编号、环管走向</li>
+            <li><b>自动喷水：</b>喷头布置（按间距）、配水支管/配水管/干管走向管径、报警阀/水流指示器/信号阀位置、末端试水装置</li>
+            <li><b>火灾报警：</b>感烟/感温探测器、手报、消火栓按钮、模块、声光报警器、消防广播、消防电话、短路隔离器位置及线路</li>
+            <li><b>防排烟：</b>排烟口/送风口位置、风管走向及尺寸、风机位置、防火阀（70℃）/排烟防火阀（280℃）位置</li>
+            <li><b>应急照明：</b>应急照明灯、疏散方向标志灯、安全出口标志灯位置及线路</li>
+            <li><b>灭火器：</b>灭火器设置点位置、类型、数量（MF/ABC4×2）</li>
+            <li>设备定位尺寸、管道标高、喷头间距、保护距离标注</li>
+            <li>剖切符号、详图索引、与系统图/大样图的对照编号</li>
+          </ul>
+          <p><b>常用比例：</b>1:100（最常用）、1:150、1:200。</p>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">🔀 系统图（轴测图） <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>表达内容：</b></p>
+          <ul>
+            <li>按45°正面斜等测绘制，表达管道空间走向和竖向关系</li>
+            <li><b>消火栓系统图：</b>立管编号、各层横管、阀门、水泵接合器、屋顶试验消火栓、水泵、水箱、水池；标注各管径、标高、栓口压力</li>
+            <li><b>喷淋系统图：</b>从水泵→报警阀→干管→配水管→配水支管→喷头的完整流程；标注管径、标高、喷头数、阀门仪表</li>
+            <li><b>报警系统图：</b>回路编号、设备数量统计、控制器→模块→设备的树形/环形拓扑；标注线路型号、敷设方式</li>
+            <li><b>防排烟系统图：</b>风机→风管→风口的竖向关系，标注风量、风压、管径尺寸、标高、阀门编号</li>
+            <li>系统图可不严格按比例，但空间关系和设备连接关系必须正确</li>
+            <li>各立管、设备应与平面图对应编号</li>
+          </ul>
+          <p><b>常用比例：</b>1:100、1:150（或不按比例）。</p>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">📐 剖面图 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>表达内容：</b></p>
+          <ul>
+            <li>管道井、设备层、消防水泵房等管道设备密集部位的竖向布置</li>
+            <li>管道与建筑结构梁、板、柱的空间关系和标高</li>
+            <li>风管、水管、电缆桥架等管线交叉排列和避让关系</li>
+            <li>消防水池、水箱的有效水深、水位标高、吸水管/溢流管/通气管位置</li>
+            <li>报警阀间、气瓶间等设备房间的剖面布置</li>
+            <li>防火卷帘、防火门等防火分隔设施的竖向位置</li>
+            <li>楼层标高、各层层高、管线安装高度</li>
+          </ul>
+          <p><b>常用比例：</b>1:50、1:100、1:150。剖面图应与平面图的剖切符号一一对应。</p>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">🔍 大样图/详图 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>常见大样图类型：</b></p>
+          <ul>
+            <li><b>消防水泵房大样：</b>水泵基础定位、管道连接、阀门附件、排水沟、控制柜、引水方式</li>
+            <li><b>消防水池/水箱大样：</b>水池分格、进水管/出水管/溢流管/排污管、水位计、人孔、通气管</li>
+            <li><b>报警阀间大样：</b>报警阀组安装、水力警铃、压力开关、延迟器、控制阀、排水设施</li>
+            <li><b>消火栓箱安装大样：</b>明装/暗装/半暗装方式、栓口高度1.1m、水带水枪配置</li>
+            <li><b>气体灭火储瓶间大样：</b>储瓶组、选择阀、集流管、启动管路、泄压口布置</li>
+            <li><b>消防控制室大样：</b>机柜布置、接地、防静电地板、电源、照明</li>
+            <li><b>管道穿防火墙/楼板大样：</b>套管设置、防火封堵材料和做法</li>
+            <li><b>喷头安装大样：</b>直立/下垂/边墙/吊顶型喷头与顶板/梁/障碍物的距离</li>
+            <li><b>水泵接合器安装大样：</b>地上/地下/墙壁式安装方式和尺寸</li>
+          </ul>
+          <p><b>常用比例：</b>1:10、1:20、1:30、1:50。详图可引用标准图集（如04S206、01S302等）。</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CAD绘图步骤 ========== -->
+  <div class="card reveal" id="steps">
+    <h2>📝 CAD绘图标准步骤（8步法）</h2>
+    <p>遵循标准化绘图流程，可确保图纸质量、提高协作效率、减少返工。</p>
+    <div class="howto">
+      <div class="howto-step">
+        <div class="hs-num">1</div>
+        <div class="hs-body">
+          <h4>设置绘图环境</h4>
+          <p>新建文件（基于模板.dwt），设置单位（mm，精度0）、图形界限、字体样式、标注样式。加载所需线型（CENTER/DASHED等），设置线型比例（LTSCALE，1:100时约30~50）。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">2</div>
+        <div class="hs-body">
+          <h4>建立图层体系</h4>
+          <p>按标准创建图层（WALL/SPRINKLER/HYDRANT/ALARM等），设置颜色、线型、线宽。图层命名规范统一，不同专业用不同颜色区分。关闭/锁定不需要编辑的图层。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">3</div>
+        <div class="hs-body">
+          <h4>插入或绘制建筑底图</h4>
+          <p>外部参照（XREF）建筑师的建筑底图（不要炸开），或直接绘制轴线、墙体、柱网、门窗、楼梯、房间分隔。底图放在单独图层，颜色宜淡（8号灰度），线宽0.09~0.18mm。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">4</div>
+        <div class="hs-body">
+          <h4>绘制消防设备与管线</h4>
+          <p>按系统分层绘制：先布置消防设备（喷头、消火栓、探测器等），再连接管线。设备用图块插入，保证统一和规范。管道用多段线/直线绘制，按管径设置不同线宽。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">5</div>
+        <div class="hs-body">
+          <h4>标注与注释</h4>
+          <p>标注管径（DN65/DN100等）、标高、喷头间距、设备定位尺寸、保护距离。用引线标注设备编号和型号。添加房间名称、防火分区编号、图纸说明文字。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">6</div>
+        <div class="hs-body">
+          <h4>检查与校核</h4>
+          <p>对照规范和设计条件自查：喷头间距/保护距离、消火栓两股水柱、探测器保护面积、防火分区面积、疏散宽度等。使用DIST/AREA命令测量核对。检查管线碰撞和图层错误。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">7</div>
+        <div class="hs-body">
+          <h4>布图与图框</h4>
+          <p>进入布局空间（Layout），插入标准图框（A1/A2），创建视口并设置比例（1:100等），锁定视口。在图纸空间标注图名、比例、图号、日期。多图纸时使用图纸集管理。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="hs-num">8</div>
+        <div class="hs-body">
+          <h4>打印出图与归档</h4>
+          <p>使用PLOT命令或页面设置，选择打印机/绘图仪、纸张尺寸、打印范围（窗口/布局）、比例（1:1）、打印样式表（monochrome.ctb黑白/彩色ctb）。预览确认后打印。清理文件（PURGE）后归档。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /skills panel -->
+
+      <!-- ===== 实战练习 ===== -->
+      <div class="sub-panel" data-sub-panel="cad" data-sub-name="practice">
+
+  <!-- ========== 出图审查清单 ========== -->
+  <div class="card reveal" id="review">
+    <h2>✅ 消防CAD出图审查清单</h2>
+    <p>出图前逐项检查，确保图纸完整、准确、符合规范。点击可勾选记录审查状态。</p>
+    <ul class="checklist" data-checklist="cad-review">
+      <li><span class="ck-box"></span><span class="ck-text"><b>图签与图框：</b>图框完整，标题栏信息（工程名称、图名、图号、比例、设计/审核/校对签字、日期）齐全正确，会签栏各专业签字完整</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>图纸目录：</b>目录与实际图纸一致，图号连续无遗漏，图幅张数统计正确，版本号/修改记录标注清晰</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>设计说明：</b>工程概况、设计依据、系统参数、施工要求、材料标准完整，引用规范为现行有效版本</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>图例符号：</b>图例表齐全，图中所有符号在图例表中可查，符号使用前后一致，管线代号统一</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>比例正确：</b>各图样比例符合规范，平面图1:100，总平面1:500/1000，大样1:20/50；布局视口比例锁定</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>图层规范：</b>图层按标准设置，颜色/线型/线宽正确，无0层绘制的实体，无多余/无用图层，Defpoints无图形</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>线型线宽：</b>轴线用点划线，不可见物用虚线，消防主管粗实线0.7mm，建筑底图细线0.18mm；线型比例合适，显示正常</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>字体文字：</b>使用标准字体（长仿宋/gbenor+gbcbig），字高符合要求，无乱码/缺字体，文字方向正确，无倒置文字</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>尺寸标注：</b>标注样式统一，尺寸数字清晰不重叠，管径/标高/定位尺寸齐全，标注不与管线文字冲突</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>图块统一：</b>喷头、消火栓、探测器等图例用统一图块，比例一致，无打散后大小不一的情况，块名规范</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>防火分区：</b>防火分区划分清晰，面积标注正确，防火墙/防火卷帘/防火门位置和等级标注正确，不超过规范允许面积</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>疏散宽度：</b>安全出口数量/位置正确，疏散门/走道/楼梯宽度标注并满足最小净宽要求，疏散距离标注</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>喷头布置：</b>喷头间距符合危险等级要求（1.8~3.6m），距墙/梁距离正确，不出现空白保护不到的区域，末端试水装置已设</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>消火栓布置：</b>保证2股充实水柱（或1股，符合条件时），间距≤30m，栓口高度1.1m，消防电梯前室已设</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>报警系统：</b>每个房间至少1只探测器，手报间距≤30m且每个防火分区≥1只，短路隔离器≤32点，消防广播/声光覆盖完整</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>防排烟：</b>防烟分区面积/长边长度符合要求，排烟口距最远点≤30m，防火阀70℃/排烟阀280℃位置正确，风机风量标注</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>管网连接：</b>管道连接闭合无断头，管径变化处标注，阀门附件齐全（信号阀、水流指示器、止回阀、闸阀），管道坡度正确</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>设备编号：</b>设备编号与系统图、设备材料表一致，立管编号各层对应，图中编号无重号/漏号</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>平立面对应：</b>平面图与系统图/剖面图设备位置、管径、标高一致，无矛盾；索引符号和详图编号对应正确</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>灭火器配置：</b>每个计算单元≥2具，每点2~5具，保护距离符合危险等级要求，类型/规格/数量标注清晰</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>应急照明：</b>疏散走道/楼梯间/密集场所照度满足要求，标志灯间距符合要求，安全出口标志设置在出口上方</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>外部参照：</b>XREF路径正确（建议相对路径），参照底图未被意外修改，参照图层颜色已淡化处理</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>打印设置：</b>打印样式表（CTB）正确，黑白/彩色输出符合要求，线宽打印效果预览正常，纸张方向与图框匹配</span></li>
+      <li><span class="ck-box"></span><span class="ck-text"><b>文件清理：</b>执行PURGE清理无用图层/样式/块/线型，AUDIT核查错误，文件大小合理，保存为正确版本（如2014版DWG）</span></li>
+    </ul>
+  </div>
+
+  <!-- ========== 随堂测验 ========== -->
+  <div class="card reveal" id="quiz">
+    <h2>📝 随堂测验</h2>
+    <p>完成以下5道题，检验你对消防CAD知识的掌握。</p>
+    <div class="scenario" data-mini-quiz="cad" data-questions='[
+      {"q":"A2图纸的尺寸是多少？","opts":["594×841mm","420×594mm","297×420mm","841×1189mm"],"ans":1},
+      {"q":"消防平面图最常用的出图比例是？","opts":["1:50","1:100","1:200","1:500"],"ans":1},
+      {"q":"CAD中绘制多段线的快捷键是？","opts":["L","PL","ML","SPL"],"ans":1},
+      {"q":"轴线应使用哪种线型？","opts":["粗实线","细实线","单点长画线","虚线"],"ans":2},
+      {"q":"TRIM（修剪）命令的快捷键是？","opts":["TR","T","TM","TI"],"ans":0}
+    ]'>
+      <div class="scenario-body">
+        <div class="mq-prog" style="color:var(--ink-3);font-size:13px;margin-bottom:12px;font-weight:600;"></div>
+        <div class="mq-q" style="font-weight:600;font-size:15px;margin-bottom:14px;"></div>
+        <div class="mq-opts choice-list"></div>
+        <div class="mq-result" style="display:none;"></div>
+        <div style="display:flex;gap:10px;margin-top:16px;">
+          <button class="btn btn-red mq-next">下一题 →</button>
+          <button class="btn btn-ghost mq-retry">重新测试</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 学习关卡 ========== -->
+  <div class="card reveal" id="checkpoints">
+    <h2>🎯 学习关卡</h2>
+    <p>通过5个关卡，逐步掌握消防CAD技能。</p>
+    <div data-checkpoints="cad">
+      <div class="checkpoint">
+        <div class="cp-icon">🌱</div>
+        <div class="cp-info"><h4>关卡一：CAD基础操作</h4><p>掌握界面、文件操作、视图控制、坐标系统和对象捕捉。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">✏️</div>
+        <div class="cp-info"><h4>关卡二：绘图与修改命令</h4><p>掌握直线/圆/偏移/修剪/复制/镜像等15+常用命令。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🎨</div>
+        <div class="cp-info"><h4>关卡三：图层与标准</h4><p>掌握图幅/比例/线型/字体/标注，能建立标准图层体系。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🏢</div>
+        <div class="cp-info"><h4>关卡四：消防专业制图</h4><p>掌握7类消防图纸内容，能独立绘制平面/系统/大样图。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">✅</div>
+        <div class="cp-info"><h4>关卡五：出图审查与效率</h4><p>掌握打印出图、20+审查要点，能使用外部参照、图块和快捷键提升效率。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /practice panel -->
+
+      <!-- ===== 学习笔记 ===== -->
+      <div class="sub-panel" data-sub-panel="cad" data-sub-name="notes">
+
+  <!-- ========== 笔记区 ========== -->
+  <div class="card reveal" id="notes">
+    <h2>📝 我的学习笔记</h2>
+    <p>记录CAD命令、图层设置、制图规范要点和易错点。</p>
+    <div class="note-editor" data-notes="cad">
+      <textarea placeholder="在这里输入笔记内容，如：TR=修剪，O=偏移，MA=特性匹配；消火栓栓口距地1.1m..."></textarea>
+      <div class="note-actions">
+        <button class="btn btn-ghost" data-save-note>💾 保存笔记</button>
+      </div>
+      <div class="note-list"></div>
+    </div>
+  </div>
+
+      </div><!-- /notes panel -->
+
+    </main>
+  </div><!-- /doc-layout -->
+
+  <!-- 上下页导航 -->
+  <div class="page-nav">
+    <a href="escape.html" class="pn-prev">
+      <span>←</span>
+      <div><span class="pn-label">上一关卡</span><span class="pn-title">科普逃生 🏃</span></div>
+    </a>
+    <a href="safety-mgmt.html" class="pn-next">
+      <span>→</span>
+      <div><span class="pn-label">下一关卡</span><span class="pn-title">安全管理 🛡️</span></div>
+    </a>
+  </div>
+
+  <div class="note blue">
+    📌 <b>学习建议：</b>消防CAD制图的核心在于"规范"和"效率"。建议先掌握图幅、比例、线型、图层等制图标准，再熟记常用快捷键，最后通过绘制完整的消防图纸来巩固技能。出图前务必使用审查清单逐项检查。完成本页后可继续学习<a href="safety-mgmt.html">安全管理</a>或<a href="special-fire.html">特殊消防</a>。
+  </div>
+
+</div>
+<script src="assets/fire.js"></script>
+</body>
+</html>

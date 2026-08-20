@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消防系统 · 自动喷水与火灾报警 · 消防学习中心</title>
+<meta name="description" content="建筑消防系统核心知识：自动喷水灭火、消火栓、火灾自动报警、防排烟、应急照明、气体灭火六大系统，配合系统流程图、消防水池计算器和随堂测验。">
+<link rel="stylesheet" href="assets/fire.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- ========== 页面头部 ========== -->
+  <div class="page-head reveal">
+    <div class="crumb"><a href="index.html">首页</a> / 知识体系 / 消防系统</div>
+    <h1><span class="ph-ico">💧</span>建筑消防系统</h1>
+    <p class="sub">自动喷水灭火、消火栓、火灾自动报警、防排烟、应急照明、气体灭火——六大系统构成建筑消防安全的核心防线。</p>
+  </div>
+
+  <!-- ========== 关键数字 ========== -->
+  <div class="stat-row reveal">
+    <div class="stat-box"><b>6大</b><span>核心消防系统</span></div>
+    <div class="stat-box"><b>≤800只</b><span>单阀组喷头数</span></div>
+    <div class="stat-box"><b>≥0.05MPa</b><span>最不利点压力</span></div>
+    <div class="stat-box"><b>≥1h</b><span>火灾延续时间</span></div>
+  </div>
+
+  <!-- ========== 主体布局：侧边栏 + 内容 ========== -->
+  <div class="doc-layout">
+    <aside class="doc-sidebar reveal">
+      <div class="ds-title">📂 本页分类</div>
+      <ul class="ds-nav">
+        <li><a href="#" class="active" data-sidebar-tab="core"><span class="ds-num">1</span>核心知识</a></li>
+        <li><a href="#" data-sidebar-tab="tools"><span class="ds-num">2</span>计算工具</a></li>
+        <li><a href="#" data-sidebar-tab="practice"><span class="ds-num">3</span>实战练习</a></li>
+        <li><a href="#" data-sidebar-tab="notes"><span class="ds-num">4</span>学习笔记</a></li>
+      </ul>
+      <div class="ds-progress">
+        <div class="dsp-label"><span>学习进度</span><span data-sidebar-progress>0%</span></div>
+        <div class="dsp-bar"><div class="dsp-fill" data-sidebar-fill style="width:0%"></div></div>
+      </div>
+    </aside>
+
+    <main class="doc-content">
+      <div class="sub-tabs" data-sub-tabs="systems">
+        <button class="sub-tab active" data-sub-target="core">📚 核心知识</button>
+        <button class="sub-tab" data-sub-target="tools">🧮 计算工具</button>
+        <button class="sub-tab" data-sub-target="practice">🎯 实战练习</button>
+        <button class="sub-tab" data-sub-target="notes">📒 学习笔记</button>
+      </div>
+
+      <!-- ===== 核心知识 ===== -->
+      <div class="sub-panel active" data-sub-panel="systems" data-sub-name="core">
+
+  <!-- ========== 自动喷水灭火系统 ========== -->
+  <div class="card reveal" id="sprinkler">
+    <h2>💧 自动喷水灭火系统 <span class="tag">最常用</span></h2>
+    <p>自动喷水灭火系统是目前应用最广泛、灭火成功率最高的固定灭火设施。系统由水源、消防水泵、管网、报警阀组、洒水喷头等组成，火灾时喷头受热自动开启喷水灭火。</p>
+
+    <h3>系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="消防水源" data-desc="消防水池、高位消防水箱或市政给水，储存火灾延续时间内的全部消防用水量。" data-detail="消防水池有效容积 = 室内外消防用水量 × 火灾延续时间。高位水箱提供初期火灾10min用水量。">
+        <span class="sn-icon">🗄️</span><div class="sn-label">水源</div><div class="sn-sub">水池/水箱</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="消防水泵" data-desc="喷淋主泵和稳压泵，为系统提供充足的流量和压力。主泵一用一备。" data-detail="喷淋泵流量按设计喷水强度×作用面积计算，零流量时压力为设计压力的120%~140%。">
+        <span class="sn-icon">⚙️</span><div class="sn-label">水泵</div><div class="sn-sub">主泵+备用</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="报警阀组" data-desc="湿式报警阀控制水流，触发水力警铃和压力开关，联动启动消防水泵。" data-detail="一个湿式报警阀控制喷头不宜超过800只，干式不超过500只。">
+        <span class="sn-icon">🔔</span><div class="sn-label">报警阀</div><div class="sn-sub">水流报警</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="配水管网" data-desc="配水干管、配水管、配水支管组成的环状或枝状管网，将水输送至各喷头。" data-detail="配水管道工作压力不应大于1.20MPa，轻中危险级配水管入口压力不宜大于0.40MPa。">
+        <span class="sn-icon">🔗</span><div class="sn-label">管网</div><div class="sn-sub">干管→支管</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="洒水喷头" data-desc="感温元件（玻璃球或易熔合金）受热破裂/熔化，自动喷水灭火。" data-detail="喷头间距1.8~3.6m（视危险等级），溅水盘距顶板75~150mm，最不利点工作压力≥0.05MPa。">
+        <span class="sn-icon">🚿</span><div class="sn-label">喷头</div><div class="sn-sub">感温开启</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="联动控制" data-desc="压力开关动作→报警控制器→启动喷淋泵→声光报警→迫降电梯→启动防排烟。" data-detail="消防联动控制器接收压力开关、水流指示器信号，按预设逻辑启动相关消防设备。">
+        <span class="sn-icon">🎛️</span><div class="sn-label">联动</div><div class="sn-sub">自动控制</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>六种系统类型对比</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">💧</span>
+        <h4>湿式系统</h4>
+        <p>管网内平时充满有压水，喷头开启立即喷水。适用4~70℃场所，<b>应用最广</b>，灭火速度快。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🌬️</span>
+        <h4>干式系统</h4>
+        <p>管网内充压缩空气，喷头开启后先排气再喷水。适用低于4℃或高于70℃场所，喷水延迟约30s。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">⏱️</span>
+        <h4>预作用系统</h4>
+        <p>干式+火灾探测双重控制，报警后预充水。严禁误喷/水渍损失大的场所，如档案室、计算机房。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🌧️</span>
+        <h4>雨淋系统</h4>
+        <p>开式喷头，雨淋阀开启后整片区域同时喷水。火灾蔓延快、危险性大的场所，如舞台、喷漆车间。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">💦</span>
+        <h4>水幕系统</h4>
+        <p>开式水幕喷头形成水墙/水帘，起防火分隔或冷却作用。如舞台口、防火卷帘的防护冷却。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">⚡</span>
+        <h4>自动水炮</h4>
+        <p>红外/紫外探测定位，自动消防炮远距离定点喷水。大空间场所如展厅、体育馆、候机厅。</p>
+      </div>
+    </div>
+
+    <h3>设计基本参数（湿式系统）</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>火灾危险等级</th><th>喷水强度 [L/(min·㎡)]</th><th>作用面积 (㎡)</th><th>典型场所</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>轻危险级</td><td><b>4</b></td><td>160</td><td>旅馆、办公楼、医院病房</td></tr>
+        <tr><td>中危险级 Ⅰ级</td><td><b>6</b></td><td>160</td><td>商场、餐厅、图书馆</td></tr>
+        <tr><td>中危险级 Ⅱ级</td><td><b>8</b></td><td>160</td><td>汽车库、书库、舞台</td></tr>
+        <tr><td>严重危险级 Ⅰ级</td><td><b>12</b></td><td>260</td><td>印刷厂、印刷厂、可燃液体车间</td></tr>
+        <tr><td>严重危险级 Ⅱ级</td><td><b>16</b></td><td>260</td><td>喷漆车间、易燃液体仓库</td></tr>
+      </tbody>
+    </table>
+    <div class="note blue">
+      ℹ️ <b>关键参数：</b>系统最不利点洒水喷头工作压力不应低于 <b>0.05MPa</b>；持续喷水时间（火灾延续时间）不应小于 <b>1h</b>；一个报警阀组控制喷头数：湿式≤800只、干式≤500只。
+    </div>
+
+    <h3>末端试水装置</h3>
+    <div class="def-box">
+      <div class="def-term">末端试水装置</div>
+      <div class="def-text">安装在每个报警阀组控制的最不利点喷头处，用于检验系统的可靠性。由试水阀、压力表、试水接头组成，出水口直径25mm，应采取孔口出流方式间接排入排水管道。打开试水阀应能模拟一只喷头的流量，自动启动报警阀和消防水泵。</div>
+    </div>
+    <ul style="padding-left:20px;margin:10px 0;">
+      <li>每个报警阀组最不利点处应设<b>末端试水装置</b></li>
+      <li>其他防火分区、楼层应设直径<b>25mm</b>的试水阀</li>
+      <li>试水接头出水口流量系数应与同楼层最小流量系数喷头一致</li>
+      <li>排水立管管径不应小于<b>DN75</b></li>
+    </ul>
+  </div>
+
+  <!-- ========== 消火栓系统 ========== -->
+  <div class="card reveal" id="hydrant">
+    <h2>🚒 消火栓系统</h2>
+    <p>消火栓系统是建筑物内最基本的消防给水设施，供消防队员或受训人员连接水带水枪灭火。分为室外消火栓和室内消火栓两大系统。</p>
+
+    <h3>系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="市政/室外水源" data-desc="市政管网或消防水池提供水源，室外消火栓沿道路布置，保护半径不大于150m。" data-detail="市政消火栓沿道路设置，间距不应大于120m，距路边不应大于2m，距建筑外墙不宜小于5m。">
+        <span class="sn-icon">🏙️</span><div class="sn-label">室外水源</div><div class="sn-sub">市政/水池</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="消防水泵接合器" data-desc="消防车通过接合器向室内管网加压供水，是室内系统的外部支援接口。" data-detail="接合器距室外消火栓15~40m，每个流量10~15L/s，超过时应设多个。">
+        <span class="sn-icon">🔌</span><div class="sn-label">接合器</div><div class="sn-sub">消防车接口</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="消防水泵" data-desc="消火栓泵一用一备，从消防水池抽水加压送入室内管网。" data-detail="栓口动压>0.70MPa时必须设减压装置；高层/厂房栓口动压≥0.35MPa，其他≥0.25MPa。">
+        <span class="sn-icon">⚙️</span><div class="sn-label">消火栓泵</div><div class="sn-sub">一用一备</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="室内管网" data-desc="室内消防给水管网应布置成环状，进水管不应少于两条。" data-detail="室外消火栓设计流量≤20L/s且室内消火栓≤10个时可枝状。竖管直径应按DN100计算。">
+        <span class="sn-icon">🔗</span><div class="sn-label">环状管网</div><div class="sn-sub">双向供水</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="室内消火栓箱" data-desc="栓口、水带、水枪、消防卷盘组成，布置在楼梯间、走道等明显易取位置。" data-detail="栓口距地1.1m，出水方向与墙面成90°或向下。2股充实水柱时间距≤30m。">
+        <span class="sn-icon">📦</span><div class="sn-label">消火栓箱</div><div class="sn-sub">栓口+水带+水枪</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="水枪灭火" data-desc="消防队员连接水带和水枪，射出充实水柱灭火。一般场所充实水柱10m，高层13m。" data-detail="充实水柱是指水枪射流中90%水柱穿过38cm圆孔的一段长度，是有效灭火的核心指标。">
+        <span class="sn-icon">💦</span><div class="sn-label">水枪射水</div><div class="sn-sub">充实水柱</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>室内消火栓设置要求</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">📍</span>
+        <h4>布置位置</h4>
+        <p>楼梯间及休息平台、前室、走道等明显易取处。消防电梯前室必须设消火栓。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📏</span>
+        <h4>栓口参数</h4>
+        <p>栓口DN65，距地面高度<b>1.1m</b>，出水方向宜与墙面成90°角或向下。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🎯</span>
+        <h4>水柱要求</h4>
+        <p>同平面应有<b>2支水枪2股充实水柱</b>到达任何部位。一般场所10m，高层/厂房13m。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📐</span>
+        <h4>布置间距</h4>
+        <p>2股水柱时间距<b>≤30m</b>；1股水柱时（仅限特定场所）≤50m。</p>
+      </div>
+    </div>
+
+    <h3>室外消火栓设置要求</h3>
+    <ul style="padding-left:20px;margin:10px 0;">
+      <li>民用建筑、厂房仓库、储罐区、堆场周围应设<b>室外消火栓</b></li>
+      <li>地上式消火栓应有1个DN150或DN100和2个DN65栓口；地下式应有DN100和DN65栓口各1个</li>
+      <li>室外消火栓保护半径<b>不应大于150m</b>，间距<b>不应大于120m</b></li>
+      <li>距路边不应大于2m，距建筑外墙不宜小于5m</li>
+      <li>人防工程、地下建筑出入口附近应设，距出入口5~40m</li>
+    </ul>
+
+    <h3>消防给水方式</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>给水方式</th><th>工作原理</th><th>水压要求</th><th>适用场景</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>高压给水系统</b></td>
+          <td>管网内经常保持足够压力和流量，灭火时不需启动消防水泵</td>
+          <td>最不利点水压满足灭火要求</td>
+          <td>能直接利用高地水池或市政高压给水</td>
+        </tr>
+        <tr>
+          <td><b>临时高压给水系统</b></td>
+          <td>平时水压不高，灭火时启动消防水泵加压</td>
+          <td>设高位水箱提供初期10min用水</td>
+          <td><b>最常用</b>，各类高层建筑、大型公建</td>
+        </tr>
+        <tr>
+          <td><b>稳高压给水系统</b></td>
+          <td>设稳压泵常年维持系统高压，灭火时主泵启动</td>
+          <td>稳压泵维持压力高于主泵零流量压力</td>
+          <td>对水压稳定性要求高的场所</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note amber">
+      ⚠️ <b>减压要求：</b>消火栓栓口动压力不应大于0.50MPa；当大于<b>0.70MPa</b>时，必须设置减压装置（减压孔板、减压稳压消火栓等）。
+    </div>
+  </div>
+
+  <!-- ========== 火灾自动报警系统 ========== -->
+  <div class="card reveal" id="alarm">
+    <h2>🚨 火灾自动报警系统</h2>
+    <p>火灾自动报警系统是建筑物的"感官神经"，通过探测器监测火灾早期的烟、温、光信号，自动发出声光警报并联动各类消防设备。</p>
+
+    <h3>系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="火灾探测器" data-desc="感烟、感温、火焰、可燃气体探测器监测火灾早期信号，转换成电信号。" data-detail="感烟探测器保护面积约60㎡（H≤6m），保护半径5.8m；感温探测器适用于温升快的场所。">
+        <span class="sn-icon">👁️</span><div class="sn-label">探测器</div><div class="sn-sub">烟/温/光/气</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="手动报警按钮" data-desc="人员发现火灾后手动按下，每个防火分区至少1只，步行距离≤30m。" data-detail="手报应设在明显和便于操作的部位，安装在墙上距地1.3~1.5m处。">
+        <span class="sn-icon">🖲️</span><div class="sn-label">手报</div><div class="sn-sub">人工确认</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="火灾报警控制器" data-desc="接收、显示、传递火灾报警信号，记录报警时间和部位，是系统的中枢。" data-detail="区域控制器负责一个防火分区；集中控制器可管理多台区域机。">
+        <span class="sn-icon">🖥️</span><div class="sn-label">报警控制器</div><div class="sn-sub">信号接收</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="消防联动控制器" data-desc="按预设逻辑向受控设备发出联动信号：启动喷淋泵、防排烟、迫降电梯、切断非消防电源等。" data-detail="联动信号包括：自动灭火系统、防排烟系统、防火卷帘、应急照明、消防广播、电梯归底等。">
+        <span class="sn-icon">🎛️</span><div class="sn-label">联动控制器</div><div class="sn-sub">逻辑控制</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="声光警报与广播" data-desc="确认火灾后启动所有声光警报器和消防应急广播，交替工作，指导人员疏散。" data-detail="火灾声光警报器应在确认火灾后全部启动；应急广播应能按防火分区分层播报。">
+        <span class="sn-icon">📢</span><div class="sn-label">警报广播</div><div class="sn-sub">疏散通知</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="消防控制室" data-desc="24小时有人值班，接收显示所有消防信号，可手动控制各类消防设备。" data-detail="消防控制室应设有直通119的专线电话，值班人员持证上岗。">
+        <span class="sn-icon">🏢</span><div class="sn-label">消防控制室</div><div class="sn-sub">指挥中心</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>三种系统形式</h3>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h4>🔵 区域报警系统</h4>
+        <ul>
+          <li>由区域控制器、探测器、手报组成</li>
+          <li>仅需要报警，不需要联动</li>
+          <li>保护对象仅设一台控制器</li>
+          <li>适用：小型建筑、二级保护对象</li>
+          <li>可设消防值班室，不需控制室</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>🟡 集中报警系统</h4>
+        <ul>
+          <li>一台集中控制器+多台区域控制器</li>
+          <li>既报警又联动自动消防设备</li>
+          <li>应设置<b>一个消防控制室</b></li>
+          <li>适用：中大型建筑、一级保护对象</li>
+          <li>包含消防联动控制器、图形显示装置</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>🔴 控制中心报警系统</h4>
+        <ul>
+          <li>两个及以上消防控制室</li>
+          <li>或两个及以上集中报警系统</li>
+          <li>主控制室可控制所有分控制室</li>
+          <li>适用：超大型建筑群、城市综合体</li>
+          <li>各分控制室之间可互相传输、显示</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>四种火灾探测器选型</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>探测器类型</th><th>响应原理</th><th>适用场所</th><th>不宜选用场所</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>感烟探测器</b></td>
+          <td>检测烟雾颗粒（电离/光电）</td>
+          <td>火灾初期有阴燃阶段，产生大量烟：办公楼、旅馆、商场、机房、档案室</td>
+          <td>正常情况下有烟/粉尘滞留、厨房、锅炉房、风速大的场所</td>
+        </tr>
+        <tr>
+          <td><b>感温探测器</b></td>
+          <td>检测环境温度升高速率/绝对值</td>
+          <td>火灾发展迅速、产生大量热：厨房、锅炉房、汽车库、发电机房、烘干车间</td>
+          <td>顶板高度超过8m（A1型）/6m（其他）的场所</td>
+        </tr>
+        <tr>
+          <td><b>火焰探测器</b></td>
+          <td>检测火焰的紫外/红外辐射</td>
+          <td>火灾发展迅速、有强烈火焰辐射：油库、喷漆车间、化工装置、可燃液体储罐</td>
+          <td>火焰出现前有浓烟扩散、探测器易被污染、无焰火灾</td>
+        </tr>
+        <tr>
+          <td><b>可燃气体探测器</b></td>
+          <td>检测可燃气体浓度（催化/红外）</td>
+          <td>使用/生产/聚集可燃气体的场所：燃气厨房、燃气表间、地下室燃气锅炉房、油罐区</td>
+          <td>非可燃气体存在的普通场所</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note green">
+      ✅ <b>探测器布置要点：</b>探测区域每个房间至少设1只；感烟探测器至墙/梁边≥0.5m，至空调送风口≥1.5m；走道内感烟间距≤15m、感温间距≤10m；总线短路隔离器每只保护≤32点。
+    </div>
+
+    <h3>联动控制逻辑</h3>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-head">🔥 火灾确认后的联动动作 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <ul>
+            <li>启动建筑内所有<b>火灾声光警报器</b>和<b>消防应急广播</b></li>
+            <li>切断火灾区域及相关区域的<b>非消防电源</b>（空调、普通照明等）</li>
+            <li>所有电梯<b>迫降至首层</b>（消防电梯供消防员使用）</li>
+            <li>控制防火卷帘下降（疏散通道处两步降：距地1.8m→落地）</li>
+            <li>启动着火防烟分区的<b>排烟阀/排烟风机</b>，关闭空调送风</li>
+            <li>打开相关区域的<b>正压送风口</b>，启动加压送风机</li>
+            <li>消火栓系统：启动消火栓泵；喷淋系统：启动喷淋泵</li>
+            <li>应急照明和疏散指示标志自动点亮</li>
+            <li>门禁系统释放，打开所有疏散门</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head">⚡ 消防联动控制方式 <span class="acc-arrow">▼</span></button>
+        <div class="acc-body"><div class="acc-inner">
+          <p><b>1. 自动联动：</b>火灾探测器报警+满足逻辑条件（如"两点报警"或"探测器+手报"）后，联动控制器自动发出控制信号。</p>
+          <p><b>2. 手动控制：</b>消防控制室可通过多线制手动控制盘直接远程启动消防水泵、防排烟风机等重要设备（"硬拉线"）。</p>
+          <p><b>3. 现场手动：</b>设备现场设置手动操作按钮，如消火栓按钮、湿式报警阀压力开关、排烟阀手动开启装置等。</p>
+          <p><b>联动电源：</b>系统应设主电源（消防电源）和直流备用电源（蓄电池），主电源应能在火灾时持续供电。</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 防排烟系统 ========== -->
+  <div class="card reveal" id="smoke">
+    <h2>💨 防烟排烟系统</h2>
+    <p>火灾中死亡人员约80%是因吸入有毒烟气窒息死亡。防排烟系统的作用是控制烟气流动、保障疏散通道安全、为灭火创造条件。分为<b>防烟系统</b>（防止烟气进入疏散通道）和<b>排烟系统</b>（将火灾产生的烟气排出）。</p>
+
+    <h3>防烟系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="火灾报警" data-desc="探测器确认火灾，联动控制器发出防烟指令。" data-detail="通常需要两个独立的火灾报警信号或一个探测器+一个手报作为联动触发信号。">
+        <span class="sn-icon">🚨</span><div class="sn-label">火灾确认</div><div class="sn-sub">联动触发</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="打开送风口" data-desc="开启着火层及相邻层前室/楼梯间的正压送风口（多叶排烟口/送风口）。" data-detail="楼梯间宜每隔2~3层设一个常开送风口；前室应每层设一个常闭送风口。">
+        <span class="sn-icon">📂</span><div class="sn-label">送风口</div><div class="sn-sub">电动开启</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="启动加压送风机" data-desc="送风机从室外取风，通过竖井送入楼梯间/前室，形成正压阻止烟气侵入。" data-detail="设计风量不应小于计算风量的1.2倍。楼梯间与前室之间应保持压差，楼梯间压力40~50Pa，前室25~30Pa。">
+        <span class="sn-icon">🌀</span><div class="sn-label">加压送风机</div><div class="sn-sub">正压送风</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="保持正压" data-desc="楼梯间、前室维持高于走道的压力，烟气无法进入，保证疏散通道无烟。" data-detail="系统余压值：楼梯间40~50Pa，前室/合用前室/避难层25~30Pa。超过时设泄压阀。">
+        <span class="sn-icon">💨</span><div class="sn-label">正压区</div><div class="sn-sub">无烟安全</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="人员疏散" data-desc="疏散楼梯和前室保持无烟环境，人员安全疏散至室外。" data-detail="加压送风机应在15s内启动，送风口风速不宜大于7m/s。">
+        <span class="sn-icon">🏃</span><div class="sn-label">安全疏散</div><div class="sn-sub">无烟通道</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>防烟部位（应设防烟设施）</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">🪜</span>
+        <h4>防烟楼梯间及其前室</h4>
+        <p>一类高层、高度>32m二类高层必须设防烟楼梯间，是人员疏散的核心通道。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🛗</span>
+        <h4>消防电梯前室/合用前室</h4>
+        <p>消防电梯供消防员使用，前室必须防烟；与防烟楼梯间前室合用时为合用前室。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🛋️</span>
+        <h4>避难走道前室</h4>
+        <p>地下建筑连通多个防火分区的避难走道，其前室必须设防烟设施。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🏥</span>
+        <h4>避难层（间）</h4>
+        <p>建筑高度>100m的公建应设避难层，高层病房楼应设避难间，均需防烟。</p>
+      </div>
+    </div>
+    <div class="note blue">
+      ℹ️ <b>自然通风防烟：</b>建筑高度≤50m的公建、厂房，高度≤100m的住宅，若前室采用敞开阳台/凹廊，或有不同朝向可开启外窗且面积满足要求时，楼梯间可不设机械防烟。封闭/防烟楼梯间最高部位开窗≥1.0㎡，前室开窗≥2.0㎡（合用前室≥3.0㎡）。
+    </div>
+
+    <h3>排烟部位（应设排烟设施）</h3>
+    <ul style="padding-left:20px;margin:10px 0;">
+      <li>设在一~三层且房间建筑面积><b>100㎡</b>的歌舞娱乐放映游艺场所；设在四层及以上、地下的歌舞娱乐场所</li>
+      <li><b>中庭</b>（无论面积大小均应设排烟）</li>
+      <li>公共建筑内建筑面积><b>100㎡</b>且经常有人停留的地上房间</li>
+      <li>公共建筑内建筑面积><b>300㎡</b>且可燃物较多的地上房间</li>
+      <li>建筑内长度><b>20m</b>的疏散走道</li>
+      <li>地下/半地下建筑（室）、地上建筑内的无窗房间，总建筑面积>200㎡或一个房间>50㎡且经常有人停留/可燃物较多</li>
+    </ul>
+
+    <h3>防烟分区面积表</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>空间净高 H</th><th>防烟分区最大允许建筑面积</th><th>长边最大允许长度</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>H ≤ 3m</td><td><b>500㎡</b></td><td>24m</td><td>常见办公楼、商业、住宅</td></tr>
+        <tr><td>3m &lt; H ≤ 6m</td><td><b>1000㎡</b></td><td>36m</td><td>大空间商业、展厅</td></tr>
+        <tr><td>H &gt; 6m</td><td><b>2000㎡</b></td><td>60m</td><td>具有自然对流条件时≤75m</td></tr>
+      </tbody>
+    </table>
+    <div class="note amber">
+      ⚠️ <b>注意：</b>防烟分区不应跨越防火分区。应采用挡烟垂壁、结构梁及隔墙等划分。空间净高≤6m场所，机械排烟量按≥60m³/(h·㎡)计算，且不小于15000m³/h；自然排烟窗有效面积≥房间建筑面积的2%。
+    </div>
+  </div>
+
+  <!-- ========== 应急照明与疏散指示 ========== -->
+  <div class="card reveal" id="lighting">
+    <h2>💡 应急照明与疏散指示</h2>
+    <p>消防应急照明和疏散指示系统在火灾时为人员疏散和消防作业提供照明和方向指引，是保障人员生命安全的关键设施。</p>
+
+    <h3>系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="正常状态" data-desc="应急灯具处于休眠/点亮状态，主电源供电，蓄电池浮充备用。" data-detail="A型灯具（额定电压≤36V）用于地面8m及以下，安全可靠。">
+        <span class="sn-icon">🔌</span><div class="sn-label">市电正常</div><div class="sn-sub">浮充待命</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="火灾报警/断电" data-desc="火灾联动信号或主电源断电，系统立即转入应急状态。" data-detail="应急转换时间不应大于5s；高危险区域不应大于0.25s。">
+        <span class="sn-icon">⚡</span><div class="sn-label">应急启动</div><div class="sn-sub">≤5s转换</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="应急照明灯亮" data-desc="疏散走道、楼梯间、人员密集场所的应急照明灯自动点亮，保证最低照度。" data-detail="走道≥1.0lx，密集场所/避难层≥3.0lx，楼梯间/前室≥5.0lx。">
+        <span class="sn-icon">🔦</span><div class="sn-label">照明点亮</div><div class="sn-sub">保障照度</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="疏散指示标志" data-desc="安全出口标志、方向标志灯按最佳疏散路径动态调整指向，引导人员撤离。" data-detail="方向标志灯距地1m以下，垂直疏散方向间距≤20m，平行时≤10m。">
+        <span class="sn-icon">🟢</span><div class="sn-label">方向指引</div><div class="sn-sub">安全出口</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="蓄电池持续供电" data-desc="备用蓄电池在市电中断后持续供电，满足疏散和救援所需时间。" data-detail=">100m建筑≥1.5h；医疗/养老/≥10万㎡公建/≥2万㎡地下≥1.0h；其他≥0.5h。">
+        <span class="sn-icon">🔋</span><div class="sn-label">持续供电</div><div class="sn-sub">0.5~1.5h</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>照度要求</h3>
+    <div class="stat-row">
+      <div class="stat-box"><b>≥1.0 lx</b><span>疏散走道地面最低照度</span></div>
+      <div class="stat-box"><b>≥3.0 lx</b><span>人员密集场所/避难层</span></div>
+      <div class="stat-box"><b>≥5.0 lx</b><span>楼梯间/前室/避难走道</span></div>
+      <div class="stat-box"><b>正常照度</b><span>消控室/水泵房/配电室</span></div>
+    </div>
+
+    <h3>持续供电时间</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>建筑类型</th><th>蓄电池最少持续供电时间</th><th>典型建筑</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>建筑高度<b>&gt;100m</b>的民用建筑</td><td><b class="red">≥ 1.5h</b></td><td>超高层摩天楼、电视塔</td></tr>
+        <tr><td>医疗建筑、老年人照料设施、总建筑面积≥100000㎡公共建筑、≥20000㎡地下/半地下建筑</td><td><b>≥ 1.0h</b></td><td>医院、养老院、大型商业综合体</td></tr>
+        <tr><td>其他建筑</td><td><b>≥ 0.5h</b></td><td>普通办公楼、旅馆、住宅</td></tr>
+      </tbody>
+    </table>
+    <div class="note red">
+      🔴 <b>关键要求：</b>应急转换时间一般场所≤5s，高危险区域≤0.25s。灯具光源色温不应低于2700K。不应采用蓄光型指示标志替代消防应急标志灯具。
+    </div>
+  </div>
+
+  <!-- ========== 气体灭火系统 ========== -->
+  <div class="card reveal" id="gas">
+    <h2>⚗️ 气体灭火系统</h2>
+    <p>气体灭火系统以气体作为灭火介质，通过全淹没或局部应用方式扑灭防护区内的火灾。适用于不宜用水灭火的重要场所，灭火后无污渍、不损坏设备。</p>
+
+    <h3>系统工作流程</h3>
+    <div class="system-flow" data-system-flow>
+      <div class="sf-node" data-title="火灾探测" data-desc="防护区内设两路独立探测器（感烟+感温），双信号"与"逻辑确认火灾。" data-detail="气体灭火需两种不同类型探测器同时报警，防止误喷。">
+        <span class="sn-icon">👁️</span><div class="sn-label">双路探测</div><div class="sn-sub">烟+温确认</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="声光报警" data-desc="防护区内外声光警报器鸣响，通知人员立即撤离。" data-detail="警报应在喷放前30s发出，给人员足够撤离时间。">
+        <span class="sn-icon">🚨</span><div class="sn-label">报警</div><div class="sn-sub">人员撤离</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="联动关闭" data-desc="自动关闭防火阀、通风空调、门窗，形成封闭空间。" data-detail="防护区围护结构耐压不低于1200Pa，泄压口自动开启泄压。">
+        <span class="sn-icon">🚪</span><div class="sn-label">封闭防护区</div><div class="sn-sub">关阀/关窗</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="延时30s喷放" data-desc="延时30s（人员疏散时间）后，选择阀和容器阀先后打开，灭火剂喷放。" data-detail="延时期间可按"紧急停止"按钮中止喷放；手动/机械应急操作可直接启动。">
+        <span class="sn-icon">⏱️</span><div class="sn-label">延时喷放</div><div class="sn-sub">30s延时</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="灭火剂浸渍" data-desc="气体在防护区内达到灭火浓度并保持一定浸渍时间，确保火灾扑灭。" data-detail="七氟丙烷浸渍时间≥10min（通讯机房/电子计算机房≥5min）；IG541≥10min；CO₂≥20min。">
+        <span class="sn-icon">☁️</span><div class="sn-label">全淹没</div><div class="sn-sub">保持浓度</div>
+      </div>
+      <div class="sf-arrow">→</div>
+      <div class="sf-node" data-title="通风换气" data-desc="灭火后开启通风系统，排除残余气体，人员方可进入。" data-detail="CO₂灭火后人员不得立即进入，必须通风换气并检测氧气浓度≥18%。">
+        <span class="sn-icon">🌀</span><div class="sn-label">排风换气</div><div class="sn-sub">安全进入</div>
+      </div>
+      <div class="sf-info" style="width:100%;margin-top:16px;"></div>
+    </div>
+
+    <h3>适用场所</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <span class="f-ico">⚡</span>
+        <h4>配电室/变压器室</h4>
+        <p>高低压配电室、油浸变压器室、电容器室、柴油发电机房等带电设备火灾。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">📚</span>
+        <h4>档案室/图书馆</h4>
+        <p>珍贵档案、图书、文物资料库，水渍会造成不可挽回的损失。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🖥️</span>
+        <h4>通信/数据机房</h4>
+        <p>电信机房、数据中心、服务器机房、广播电视发射塔等电子设备场所。</p>
+      </div>
+      <div class="feature">
+        <span class="f-ico">🎨</span>
+        <h4>贵重设备间</h4>
+        <p>精密仪器室、博物馆珍品库、手术室、核磁共振室等高价值场所。</p>
+      </div>
+    </div>
+
+    <h3>三种气体灭火剂对比</h3>
+    <table class="tbl">
+      <thead>
+        <tr><th>对比项目</th><th>七氟丙烷（HFC-227ea）</th><th>IG541（惰性气体）</th><th>二氧化碳（CO₂）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>灭火机理</b></td><td>化学抑制+冷却</td><td>物理窒息（降低氧浓度）</td><td>窒息+冷却</td></tr>
+        <tr><td><b>灭火浓度</b></td><td>7%~8%</td><td>37%~43%</td><td>34%（表面）/≥50%（深位）</td></tr>
+        <tr><td><b>喷放时间</b></td><td>≤10s</td><td>≤60s（或≤120s）</td><td>≤60s（表面）/≤7min（深位）</td></tr>
+        <tr><td><b>储存压力</b></td><td>2.5/4.2/5.6MPa（增压）</td><td>15/20MPa</td><td>5.17MPa（高压）</td></tr>
+        <tr><td><b>ODP/GWP</b></td><td>0 / 较高（温室气体）</td><td>0 / 1（天然存在）</td><td>0 / 1（天然存在）</td></tr>
+        <tr><td><b>人员安全性</b></td><td><b>NOAEL 9%</b>，设计浓度≤9%可有人</td><td>安全，可用于有人场所</td><td class="red"><b>危险！</b>有人场所严禁使用</td></tr>
+        <tr><td><b>适用场所</b></td><td>机房、配电室、档案室（有人）</td><td>有人值守的贵重设备间</td><td>无人场所：棉花库、货舱</td></tr>
+        <tr><td><b>优点</b></td><td>灭火快、用量少、相对安全</td><td>无毒、无污染、无温室效应</td><td>便宜、来源广、灭火能力强</td></tr>
+        <tr><td><b>缺点</b></td><td>高温可能产生HF，GWP较高</td><td>储瓶数量多、占地大、压力高</td><td>对人致命、可产生静电</td></tr>
+      </tbody>
+    </table>
+    <div class="note red">
+      🔴 <b>安全警示：</b>二氧化碳灭火系统<b>严禁用于经常有人停留的场所</b>！CO₂浓度达10%以上即可致人昏迷甚至死亡。防护区出口应设手动启动装置，门外应设声光报警和"禁止入内"标志。
+    </div>
+  </div>
+
+      </div><!-- /core panel -->
+
+      <!-- ===== 计算工具 ===== -->
+      <div class="sub-panel" data-sub-panel="systems" data-sub-name="tools">
+
+  <!-- ========== 消防水池计算器 ========== -->
+  <div class="card reveal" id="calculator">
+    <h2>🧮 消防水池有效容积计算器</h2>
+    <p>消防水池有效容积应满足火灾延续时间内室内消防用水量与室外消防用水量不足部分之和。</p>
+    <form class="calc-box" data-calc="watertank" onsubmit="return false;">
+      <div class="calc-row">
+        <label class="calc-label">消防设计流量</label>
+        <input class="calc-input" type="number" name="flow" value="30" min="0" step="1">
+        <span class="muted">L/s（含室内+室外）</span>
+      </div>
+      <div class="calc-row">
+        <label class="calc-label">火灾延续时间</label>
+        <input class="calc-input" type="number" name="hours" value="2" min="0.5" step="0.5">
+        <span class="muted">小时（h）</span>
+      </div>
+      <div class="calc-result">
+        <span class="cr-val">0</span>
+        <span class="cr-unit">m³（有效容积）</span>
+        <span class="cr-note">计算公式：V = 流量(L/s) × 3.6 × 延续时间(h)。常见延续时间：高层商业楼/综合楼3h、住宅2h、自动喷水1h、消火栓2~3h。</span>
+      </div>
+    </form>
+    <div class="note blue">
+      ℹ️ <b>说明：</b>当市政给水管网能保证室外消防用水量时，消防水池有效容积仅需满足室内消防用水量；当市政不能保证时，需计入室外不足部分。消防水池补水时间不宜超过48h。
+    </div>
+  </div>
+
+      </div><!-- /tools panel -->
+
+      <!-- ===== 实战练习 ===== -->
+      <div class="sub-panel" data-sub-panel="systems" data-sub-name="practice">
+
+  <!-- ========== 随堂测验 ========== -->
+  <div class="card reveal" id="quiz">
+    <h2>📝 随堂测验</h2>
+    <p>完成以下5道题，检验你对消防系统知识的掌握程度。</p>
+    <div class="scenario" data-mini-quiz="fire-systems" data-questions='[
+      {"q":"湿式自动喷水灭火系统适用的环境温度范围是？","opts":["0℃~50℃","4℃~70℃","10℃~80℃","-10℃~60℃"],"ans":1},
+      {"q":"中危险级Ⅱ级场所湿式系统的喷水强度不应低于？","opts":["4 L/(min·㎡)","6 L/(min·㎡)","8 L/(min·㎡)","12 L/(min·㎡)"],"ans":2},
+      {"q":"室内消火栓栓口距地面高度宜为多少？","opts":["0.9m","1.0m","1.1m","1.2m"],"ans":2},
+      {"q":"疏散走道地面最低水平照度不应低于？","opts":["0.5lx","1.0lx","3.0lx","5.0lx"],"ans":1},
+      {"q":"一个湿式报警阀组控制的洒水喷头数不宜超过？","opts":["500只","600只","800只","1000只"],"ans":2}
+    ]'>
+      <div class="scenario-body">
+        <div class="mq-prog" style="color:var(--ink-3);font-size:13px;margin-bottom:12px;font-weight:600;"></div>
+        <div class="mq-q" style="font-weight:600;font-size:15px;margin-bottom:14px;"></div>
+        <div class="mq-opts choice-list"></div>
+        <div class="mq-result" style="display:none;"></div>
+        <div style="display:flex;gap:10px;margin-top:16px;">
+          <button class="btn btn-red mq-next">下一题 →</button>
+          <button class="btn btn-ghost mq-retry">重新测试</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 学习关卡 ========== -->
+  <div class="card reveal" id="checkpoints">
+    <h2>🎯 学习关卡</h2>
+    <p>完成以下关卡，逐步掌握消防系统知识。点击"开始考核"标记完成。</p>
+    <div data-checkpoints="fire-systems">
+      <div class="checkpoint">
+        <div class="cp-icon">💧</div>
+        <div class="cp-info"><h4>关卡一：自动喷水系统</h4><p>掌握六种系统类型、设计参数（喷水强度/作用面积）、喷头布置要求。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🚒</div>
+        <div class="cp-info"><h4>关卡二：消火栓与给水</h4><p>掌握室内外消火栓参数、三种给水方式、栓口压力与充实水柱要求。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">🚨</div>
+        <div class="cp-info"><h4>关卡三：报警与防排烟</h4><p>掌握三种报警系统形式、探测器选型、防排烟设置部位与防烟分区参数。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+      <div class="checkpoint">
+        <div class="cp-icon">💡</div>
+        <div class="cp-info"><h4>关卡四：应急照明与气体灭火</h4><p>掌握照度/持续供电时间、气体灭火适用场所及三种灭火剂对比。</p></div>
+        <button class="cp-btn">开始考核</button>
+      </div>
+    </div>
+  </div>
+
+      </div><!-- /practice panel -->
+
+      <!-- ===== 学习笔记 ===== -->
+      <div class="sub-panel" data-sub-panel="systems" data-sub-name="notes">
+
+  <!-- ========== 笔记区 ========== -->
+  <div class="card reveal" id="notes">
+    <h2>📝 我的学习笔记</h2>
+    <p>记录学习心得、易错知识点，笔记保存在本地浏览器中。</p>
+    <div class="note-editor" data-notes="fire-systems">
+      <textarea placeholder="在这里输入笔记内容，如：湿式系统最不利点喷头工作压力不应低于0.05MPa..."></textarea>
+      <div class="note-actions">
+        <button class="btn btn-ghost" data-save-note>💾 保存笔记</button>
+      </div>
+      <div class="note-list"></div>
+    </div>
+  </div>
+
+      </div><!-- /notes panel -->
+
+    </main>
+  </div><!-- /doc-layout -->
+
+  <!-- 上下页导航 -->
+  <div class="page-nav">
+    <a href="building-fire.html" class="pn-prev">
+      <span>←</span>
+      <div><span class="pn-label">上一关卡</span><span class="pn-title">建筑防火 🏢</span></div>
+    </a>
+    <a href="equipment.html" class="pn-next">
+      <span>→</span>
+      <div><span class="pn-label">下一关卡</span><span class="pn-title">器材装备 🧯</span></div>
+    </a>
+  </div>
+
+</div>
+<script src="assets/fire.js"></script>
+</body>
+</html>
